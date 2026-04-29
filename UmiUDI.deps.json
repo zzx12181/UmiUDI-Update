@@ -40,62 +40,29 @@
           "DevExpress.Data.v24.1": "24.1.5.0",
           "DevExpress.DataAccess.v24.1": "24.1.5.0",
           "DevExpress.DataAccess.v24.1.UI": "24.1.5.0",
-          "DevExpress.DataVisualization.v24.1.Core": "24.1.5.0",
-          "DevExpress.Diagram.v24.1.Core": "24.1.5.0",
-          "DevExpress.Dialogs.v24.1.Core": "24.1.5.0",
           "DevExpress.Drawing.v24.1": "24.1.5.0",
           "DevExpress.Images.v24.1": "24.1.5.0",
-          "DevExpress.Map.v24.1.Core": "24.1.5.0",
           "DevExpress.Mvvm.v24.1": "24.1.5.0",
           "DevExpress.Office.v24.1.Core": "24.1.5.0",
           "DevExpress.Pdf.v24.1.Core": "24.1.5.0",
           "DevExpress.Pdf.v24.1.Drawing": "24.1.5.0",
-          "DevExpress.PivotGrid.v24.1.Core": "24.1.5.0",
           "DevExpress.Printing.v24.1.Core": "24.1.5.0",
           "DevExpress.RichEdit.v24.1.Core": "24.1.5.0",
-          "DevExpress.RichEdit.v24.1.Export": "24.1.5.0",
-          "DevExpress.Sparkline.v24.1.Core": "24.1.5.0",
-          "DevExpress.SpellChecker.v24.1.Core": "24.1.5.0",
-          "DevExpress.Spreadsheet.v24.1.Core": "24.1.5.0",
-          "DevExpress.TreeMap.v24.1.Core": "24.1.5.0",
           "DevExpress.Utils.v24.1": "24.1.5.0",
           "DevExpress.Utils.v24.1.UI": "24.1.5.0",
           "DevExpress.Xpo.v24.1": "24.1.5.0",
           "DevExpress.XtraBars.v24.1": "24.1.5.0",
           "DevExpress.XtraCharts.v24.1": "24.1.5.0",
-          "DevExpress.XtraCharts.v24.1.Extensions": "24.1.5.0",
           "DevExpress.XtraCharts.v24.1.UI": "24.1.5.0",
-          "DevExpress.XtraCharts.v24.1.Wizard": "24.1.5.0",
-          "DevExpress.XtraDiagram.v24.1": "24.1.5.0",
-          "DevExpress.XtraDialogs.v24.1": "24.1.5.0",
           "DevExpress.XtraEditors.v24.1": "24.1.5.0",
-          "DevExpress.XtraGantt.v24.1": "24.1.5.0",
-          "DevExpress.XtraGauges.v24.1.Core": "24.1.5.0",
-          "DevExpress.XtraGauges.v24.1.Presets": "24.1.5.0",
-          "DevExpress.XtraGauges.v24.1.Win": "24.1.5.0",
           "DevExpress.XtraGrid.v24.1": "24.1.5.0",
           "DevExpress.XtraLayout.v24.1": "24.1.5.0",
-          "DevExpress.XtraMap.v24.1": "24.1.5.0",
           "DevExpress.XtraNavBar.v24.1": "24.1.5.0",
-          "DevExpress.XtraPdfViewer.v24.1": "24.1.5.0",
-          "DevExpress.XtraPivotGrid.v24.1": "24.1.5.0",
           "DevExpress.XtraPrinting.v24.1": "24.1.5.0",
           "DevExpress.XtraReports.v24.1": "24.1.5.0",
           "DevExpress.XtraReports.v24.1.Extensions": "24.1.5.0",
           "DevExpress.XtraRichEdit.v24.1": "24.1.5.0",
-          "DevExpress.XtraScheduler.v24.1.Core.Desktop": "24.1.5.0",
-          "DevExpress.XtraScheduler.v24.1.Core": "24.1.5.0",
-          "DevExpress.XtraScheduler.v24.1": "24.1.5.0",
-          "DevExpress.XtraScheduler.v24.1.Extensions": "24.1.5.0",
-          "DevExpress.XtraScheduler.v24.1.Reporting": "24.1.5.0",
-          "DevExpress.XtraScheduler.v24.1.Reporting.Extensions": "24.1.5.0",
-          "DevExpress.XtraSpellChecker.v24.1": "24.1.5.0",
-          "DevExpress.XtraSpreadsheet.v24.1": "24.1.5.0",
           "DevExpress.XtraTreeList.v24.1": "24.1.5.0",
-          "DevExpress.XtraTreeMap.v24.1": "24.1.5.0",
-          "DevExpress.XtraTreeMap.v24.1.UI": "24.1.5.0",
-          "DevExpress.XtraVerticalGrid.v24.1": "24.1.5.0",
-          "DevExpress.XtraWizard.v24.1": "24.1.5.0",
           "Kingdee.CDP.WebApi.SDK": "8.0.6.0"
         },
         "runtime": {
@@ -1613,46 +1580,6 @@
           }
         }
       },
-      "DevExpress.DataVisualization.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.DataVisualization.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.Diagram.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Diagram.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.Diagram.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.Diagram.v24.1.Core.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.Dialogs.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Dialogs.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.Dialogs.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.Dialogs.v24.1.Core.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
       "DevExpress.Drawing.v24.1/24.1.5.0": {
         "runtime": {
           "DevExpress.Drawing.v24.1.dll": {
@@ -1674,22 +1601,6 @@
           "DevExpress.Images.v24.1.dll": {
             "assemblyVersion": "24.1.5.0",
             "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.Map.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Map.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.Map.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.Map.v24.1.Core.resources.dll": {
-            "locale": "zh-Hans"
           }
         }
       },
@@ -1741,22 +1652,6 @@
           }
         }
       },
-      "DevExpress.PivotGrid.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.PivotGrid.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.PivotGrid.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.PivotGrid.v24.1.Core.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
       "DevExpress.Printing.v24.1.Core/24.1.5.0": {
         "runtime": {
           "DevExpress.Printing.v24.1.Core.dll": {
@@ -1786,62 +1681,6 @@
           },
           "zh-Hans/DevExpress.RichEdit.v24.1.Core.resources.dll": {
             "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.RichEdit.v24.1.Export/24.1.5.0": {
-        "runtime": {
-          "DevExpress.RichEdit.v24.1.Export.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.Sparkline.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Sparkline.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.Sparkline.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.Sparkline.v24.1.Core.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.SpellChecker.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.SpellChecker.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.Spreadsheet.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Spreadsheet.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.Spreadsheet.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.Spreadsheet.v24.1.Core.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.TreeMap.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.TreeMap.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
           }
         }
       },
@@ -1925,49 +1764,9 @@
           }
         }
       },
-      "DevExpress.XtraCharts.v24.1.Extensions/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraCharts.v24.1.Extensions.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
       "DevExpress.XtraCharts.v24.1.UI/24.1.5.0": {
         "runtime": {
           "DevExpress.XtraCharts.v24.1.UI.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.XtraCharts.v24.1.Wizard/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraCharts.v24.1.Wizard.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraCharts.v24.1.Wizard.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraCharts.v24.1.Wizard.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraDiagram.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraDiagram.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.XtraDialogs.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraDialogs.v24.1.dll": {
             "assemblyVersion": "24.1.5.0",
             "fileVersion": "24.1.5.24252"
           }
@@ -1986,62 +1785,6 @@
           },
           "zh-Hans/DevExpress.XtraEditors.v24.1.resources.dll": {
             "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraGantt.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraGantt.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraGantt.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraGantt.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraGauges.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraGauges.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraGauges.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraGauges.v24.1.Core.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraGauges.v24.1.Presets/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraGauges.v24.1.Presets.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraGauges.v24.1.Presets.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraGauges.v24.1.Presets.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraGauges.v24.1.Win/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraGauges.v24.1.Win.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
           }
         }
       },
@@ -2077,14 +1820,6 @@
           }
         }
       },
-      "DevExpress.XtraMap.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraMap.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
       "DevExpress.XtraNavBar.v24.1/24.1.5.0": {
         "runtime": {
           "DevExpress.XtraNavBar.v24.1.dll": {
@@ -2097,38 +1832,6 @@
             "locale": "zh-CN"
           },
           "zh-Hans/DevExpress.XtraNavBar.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraPdfViewer.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraPdfViewer.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraPdfViewer.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraPdfViewer.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraPivotGrid.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraPivotGrid.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraPivotGrid.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraPivotGrid.v24.1.resources.dll": {
             "locale": "zh-Hans"
           }
         }
@@ -2197,118 +1900,6 @@
           }
         }
       },
-      "DevExpress.XtraScheduler.v24.1.Core.Desktop/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraScheduler.v24.1.Core.Desktop.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.XtraScheduler.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraScheduler.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraScheduler.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraScheduler.v24.1.Core.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraScheduler.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraScheduler.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraScheduler.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraScheduler.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraScheduler.v24.1.Extensions/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraScheduler.v24.1.Extensions.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraScheduler.v24.1.Extensions.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraScheduler.v24.1.Extensions.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraScheduler.v24.1.Reporting/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraScheduler.v24.1.Reporting.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraScheduler.v24.1.Reporting.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraScheduler.v24.1.Reporting.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraScheduler.v24.1.Reporting.Extensions/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraScheduler.v24.1.Reporting.Extensions.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.XtraSpellChecker.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraSpellChecker.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraSpellChecker.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraSpellChecker.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraSpreadsheet.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraSpreadsheet.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraSpreadsheet.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraSpreadsheet.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
       "DevExpress.XtraTreeList.v24.1/24.1.5.0": {
         "runtime": {
           "DevExpress.XtraTreeList.v24.1.dll": {
@@ -2325,19 +1916,35 @@
           }
         }
       },
-      "DevExpress.XtraTreeMap.v24.1/24.1.5.0": {
+      "Kingdee.CDP.WebApi.SDK/8.0.6.0": {
         "runtime": {
-          "DevExpress.XtraTreeMap.v24.1.dll": {
+          "Kingdee.CDP.WebApi.SDK.dll": {
+            "assemblyVersion": "8.0.6.0",
+            "fileVersion": "8.0.6.0"
+          }
+        }
+      },
+      "DevExpress.XtraDiagram.v24.1/24.1.5.0": {
+        "runtime": {
+          "DevExpress.XtraDiagram.v24.1.dll": {
             "assemblyVersion": "24.1.5.0",
             "fileVersion": "24.1.5.24252"
           }
         }
       },
-      "DevExpress.XtraTreeMap.v24.1.UI/24.1.5.0": {
+      "DevExpress.Diagram.v24.1.Core/24.1.5.0": {
         "runtime": {
-          "DevExpress.XtraTreeMap.v24.1.UI.dll": {
+          "DevExpress.Diagram.v24.1.Core.dll": {
             "assemblyVersion": "24.1.5.0",
             "fileVersion": "24.1.5.24252"
+          }
+        },
+        "resources": {
+          "zh-CN/DevExpress.Diagram.v24.1.Core.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "zh-Hans/DevExpress.Diagram.v24.1.Core.resources.dll": {
+            "locale": "zh-Hans"
           }
         }
       },
@@ -2357,27 +1964,99 @@
           }
         }
       },
-      "DevExpress.XtraWizard.v24.1/24.1.5.0": {
+      "DevExpress.Sparkline.v24.1.Core/24.1.5.0": {
         "runtime": {
-          "DevExpress.XtraWizard.v24.1.dll": {
+          "DevExpress.Sparkline.v24.1.Core.dll": {
             "assemblyVersion": "24.1.5.0",
             "fileVersion": "24.1.5.24252"
           }
         },
         "resources": {
-          "zh-CN/DevExpress.XtraWizard.v24.1.resources.dll": {
+          "zh-CN/DevExpress.Sparkline.v24.1.Core.resources.dll": {
             "locale": "zh-CN"
           },
-          "zh-Hans/DevExpress.XtraWizard.v24.1.resources.dll": {
+          "zh-Hans/DevExpress.Sparkline.v24.1.Core.resources.dll": {
             "locale": "zh-Hans"
           }
         }
       },
-      "Kingdee.CDP.WebApi.SDK/8.0.6.0": {
+      "DevExpress.XtraGauges.v24.1.Core/24.1.5.0": {
         "runtime": {
-          "Kingdee.CDP.WebApi.SDK.dll": {
-            "assemblyVersion": "8.0.6.0",
-            "fileVersion": "8.0.6.0"
+          "DevExpress.XtraGauges.v24.1.Core.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        },
+        "resources": {
+          "zh-CN/DevExpress.XtraGauges.v24.1.Core.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "zh-Hans/DevExpress.XtraGauges.v24.1.Core.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
+      "DevExpress.PivotGrid.v24.1.Core/24.1.5.0": {
+        "runtime": {
+          "DevExpress.PivotGrid.v24.1.Core.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        },
+        "resources": {
+          "zh-CN/DevExpress.PivotGrid.v24.1.Core.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "zh-Hans/DevExpress.PivotGrid.v24.1.Core.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
+      "DevExpress.XtraCharts.v24.1.Wizard/24.1.5.0": {
+        "runtime": {
+          "DevExpress.XtraCharts.v24.1.Wizard.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        },
+        "resources": {
+          "zh-CN/DevExpress.XtraCharts.v24.1.Wizard.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "zh-Hans/DevExpress.XtraCharts.v24.1.Wizard.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
+      "DevExpress.XtraPivotGrid.v24.1/24.1.5.0": {
+        "runtime": {
+          "DevExpress.XtraPivotGrid.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        },
+        "resources": {
+          "zh-CN/DevExpress.XtraPivotGrid.v24.1.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "zh-Hans/DevExpress.XtraPivotGrid.v24.1.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
+      "DevExpress.XtraCharts.v24.1.Extensions/24.1.5.0": {
+        "runtime": {
+          "DevExpress.XtraCharts.v24.1.Extensions.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.DataVisualization.v24.1.Core/24.1.5.0": {
+        "runtime": {
+          "DevExpress.DataVisualization.v24.1.Core.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
           }
         }
       }
@@ -3133,32 +2812,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "DevExpress.DataVisualization.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Diagram.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Dialogs.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
     "DevExpress.Drawing.v24.1/24.1.5.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
     "DevExpress.Images.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Map.v24.1.Core/24.1.5.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
@@ -3183,42 +2842,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "DevExpress.PivotGrid.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
     "DevExpress.Printing.v24.1.Core/24.1.5.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
     "DevExpress.RichEdit.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.RichEdit.v24.1.Export/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Sparkline.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.SpellChecker.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Spreadsheet.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.TreeMap.v24.1.Core/24.1.5.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
@@ -3248,52 +2877,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "DevExpress.XtraCharts.v24.1.Extensions/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
     "DevExpress.XtraCharts.v24.1.UI/24.1.5.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "DevExpress.XtraCharts.v24.1.Wizard/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraDiagram.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraDialogs.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
     "DevExpress.XtraEditors.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraGantt.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraGauges.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraGauges.v24.1.Presets/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraGauges.v24.1.Win/24.1.5.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
@@ -3308,22 +2897,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "DevExpress.XtraMap.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
     "DevExpress.XtraNavBar.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraPdfViewer.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraPivotGrid.v24.1/24.1.5.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
@@ -3348,57 +2922,22 @@
       "serviceable": false,
       "sha512": ""
     },
-    "DevExpress.XtraScheduler.v24.1.Core.Desktop/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraScheduler.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraScheduler.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraScheduler.v24.1.Extensions/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraScheduler.v24.1.Reporting/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraScheduler.v24.1.Reporting.Extensions/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraSpellChecker.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraSpreadsheet.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
     "DevExpress.XtraTreeList.v24.1/24.1.5.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "DevExpress.XtraTreeMap.v24.1/24.1.5.0": {
+    "Kingdee.CDP.WebApi.SDK/8.0.6.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "DevExpress.XtraTreeMap.v24.1.UI/24.1.5.0": {
+    "DevExpress.XtraDiagram.v24.1/24.1.5.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.Diagram.v24.1.Core/24.1.5.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
@@ -3408,12 +2947,37 @@
       "serviceable": false,
       "sha512": ""
     },
-    "DevExpress.XtraWizard.v24.1/24.1.5.0": {
+    "DevExpress.Sparkline.v24.1.Core/24.1.5.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Kingdee.CDP.WebApi.SDK/8.0.6.0": {
+    "DevExpress.XtraGauges.v24.1.Core/24.1.5.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.PivotGrid.v24.1.Core/24.1.5.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.XtraCharts.v24.1.Wizard/24.1.5.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.XtraPivotGrid.v24.1/24.1.5.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.XtraCharts.v24.1.Extensions/24.1.5.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.DataVisualization.v24.1.Core/24.1.5.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
