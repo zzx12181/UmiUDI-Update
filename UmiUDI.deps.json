@@ -94,7 +94,6 @@
           "DevExpress.XtraTreeMap.v24.1": "24.1.5.0",
           "DevExpress.XtraTreeMap.v24.1.UI": "24.1.5.0",
           "DevExpress.XtraVerticalGrid.v24.1": "24.1.5.0",
-          "DevExpress.XtraWizard.v24.1": "24.1.5.0",
           "Kingdee.CDP.WebApi.SDK": "8.0.6.0"
         },
         "runtime": {
@@ -1845,19 +1844,6 @@
           }
         }
       },
-      "DevExpress.XtraWizard.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraWizard.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraWizard.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          }
-        }
-      },
       "Kingdee.CDP.WebApi.SDK/8.0.6.0": {
         "runtime": {
           "Kingdee.CDP.WebApi.SDK.dll": {
@@ -2770,11 +2756,6 @@
       "sha512": ""
     },
     "DevExpress.XtraVerticalGrid.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraWizard.v24.1/24.1.5.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

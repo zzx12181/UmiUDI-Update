@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="24.1.5.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" DisplayName="唯一标识（UDI）管理控制程序" Margins="78, 78, 78, 78" PaperKind="A4" PageWidth="827" PageHeight="1169" Version="24.1">
+  <Bands>
+    <Item1 Ref="1" ControlType="DetailBand" HeightF="1165">
+      <Controls>
+        <Item1 Ref="2" ControlType="XRTable" SizeF="670,50" LocationFloat="0,10" BorderColor="Black" Borders="None" BorderWidth="1">
+          <Rows>
+            <Item1 Ref="3" ControlType="XRTableRow" Weight="1">
+              <Cells>
+                <Item1 Ref="4" ControlType="XRTableCell" Weight="1" Multiline="true" Text="文件编号：QP-QA-025" TextAlignment="MiddleLeft" Font="微软雅黑, 9pt" />
+                <Item2 Ref="5" ControlType="XRTableCell" Weight="1" Multiline="true" Text="版本号：A/0" TextAlignment="MiddleRight" Font="微软雅黑, 9pt" />
+              </Cells>
+            </Item1>
+            <Item2 Ref="6" ControlType="XRTableRow" Weight="1">
+              <Cells>
+                <Item1 Ref="7" ControlType="XRTableCell" Weight="1" Multiline="true" Text="编制部门：质量管理部" TextAlignment="MiddleLeft" Font="微软雅黑, 9pt" />
+                <Item2 Ref="8" ControlType="XRTableCell" Weight="1" Multiline="true" Text="生效日期：2026年01月01日" TextAlignment="MiddleRight" Font="微软雅黑, 9pt" />
+              </Cells>
+            </Item2>
+          </Rows>
+        </Item1>
+        <Item2 Ref="9" ControlType="XRLabel" Multiline="true" Text="唯一标识（UDI）管理控制程序" TextAlignment="MiddleCenter" SizeF="670,40" LocationFloat="0,70" Font="微软雅黑, 18pt, style=Bold" />
+        <Item3 Ref="10" ControlType="XRLine" SizeF="670,2" LocationFloat="0,125" ForeColor="Black" />
+        <Item4 Ref="11" ControlType="XRLabel" Multiline="true" Text="1. 目的" TextAlignment="MiddleLeft" SizeF="670,25" LocationFloat="0,140" Font="微软雅黑, 11pt, style=Bold" />
+        <Item5 Ref="12" ControlType="XRLabel" Multiline="true" Text="规范公司医疗器械唯一标识（UDI）的实施与管理，确保产品从源头到使用的全链条可追溯，满足国家药品监督管理局（NMPA）及相关法律法规的要求。" TextAlignment="MiddleLeft" SizeF="650,45" LocationFloat="20,170" Font="微软雅黑, 9.5pt" />
+        <Item6 Ref="13" ControlType="XRLabel" Multiline="true" Text="2. 适用范围" TextAlignment="MiddleLeft" SizeF="670,25" LocationFloat="0,230" Font="微软雅黑, 11pt, style=Bold" />
+        <Item7 Ref="14" ControlType="XRLabel" Multiline="true" Text="适用于公司所有在生产医疗器械产品的 UDI 创建、赋码、数据申报、系统维护、条码校验及质量控制等管理流程。" TextAlignment="MiddleLeft" SizeF="650,45" LocationFloat="20,260" Font="微软雅黑, 9.5pt" />
+        <Item8 Ref="15" ControlType="XRLabel" Multiline="true" Text="3. 职责分配" TextAlignment="MiddleLeft" SizeF="670,25" LocationFloat="0,320" Font="微软雅黑, 11pt, style=Bold" />
+        <Item9 Ref="16" ControlType="XRLabel" Multiline="true" Text="3.1 质量管理部：负责 UDI 编码规则的审核、国家药品监督管理局 UDI 数据库的数据填报与发布、不合格条码的处置机制建立，以及合规内审。" TextAlignment="MiddleLeft" SizeF="650,45" LocationFloat="20,350" Font="微软雅黑, 9.5pt" />
+        <Item10 Ref="17" ControlType="XRLabel" Multiline="true" Text="3.2 技术研发部：负责产品唯一标识中产品标识（DI）的申请和编码规则分配，提供产品技术规格和注册证关联信息。" TextAlignment="MiddleLeft" SizeF="650,45" LocationFloat="20,400" Font="微软雅黑, 9.5pt" />
+        <Item11 Ref="18" ControlType="XRLabel" Multiline="true" Text="3.3 生产部：负责生产过程中 UDI 条码（含生产标识 PI）的打印、贴签和在线赋码操作，确保数据与批次相对应。" TextAlignment="MiddleLeft" SizeF="650,45" LocationFloat="20,450" Font="微软雅黑, 9.5pt" />
+        <Item12 Ref="19" ControlType="XRLabel" Multiline="true" Text="3.4 仓储物流部：负责出入库时的 UDI 条码扫描、数据采集与上传，确保供应链追溯的闭环性。" TextAlignment="MiddleLeft" SizeF="650,45" LocationFloat="20,500" Font="微软雅黑, 9.5pt" />
+        <Item13 Ref="20" ControlType="XRLabel" Multiline="true" Text="4. 工作程序" TextAlignment="MiddleLeft" SizeF="670,25" LocationFloat="0,560" Font="微软雅黑, 11pt, style=Bold" />
+        <Item14 Ref="21" ControlType="XRLabel" Multiline="true" Text="4.1 UDI 编码构成" TextAlignment="MiddleLeft" SizeF="650,22" LocationFloat="20,590" Font="微软雅黑, 9.5pt, style=Bold" />
+        <Item15 Ref="22" ControlType="XRLabel" Multiline="true" Text="公司医疗器械唯一标识由产品标识（DI）和生产标识（PI）组成。&#xA;DI（产品标识）：包含包装指示符、厂商识别代码、商品项目代码 and 校验码。使用 GS1 标准进行注册和分配。&#xA;PI（生产标识）：与生产过程相关，包含产品批号（应用标识符 AI 为 10）、生产日期（AI 为 11）、失效日期（AI 为 17）和序列号（AI 为 21）。" TextAlignment="MiddleLeft" SizeF="650,100" LocationFloat="20,617" Font="微软雅黑, 9.5pt" />
+        <Item16 Ref="23" ControlType="XRLabel" Multiline="true" Text="4.2 UDI 数据申报与维护" TextAlignment="MiddleLeft" SizeF="650,22" LocationFloat="20,727" Font="微软雅黑, 9.5pt, style=Bold" />
+        <Item17 Ref="24" ControlType="XRLabel" Multiline="true" Text="在产品首次上市前、注册变更或规格变更后，技术部与质量部应在 30 日内登录“国家医疗器械唯一标识数据库”完成 DI 数据的填报、校对并发布。" TextAlignment="MiddleLeft" SizeF="650,45" LocationFloat="20,754" Font="微软雅黑, 9.5pt" />
+        <Item18 Ref="25" ControlType="XRLabel" Multiline="true" Text="4.3 条码打印与赋码质量控制" TextAlignment="MiddleLeft" SizeF="650,22" LocationFloat="20,809" Font="微软雅黑, 9.5pt, style=Bold" />
+        <Item19 Ref="26" ControlType="XRLabel" Multiline="true" Text="赋码操作员在打印前必须核对批生产记录中的批号、生产日期、失效日期是否与打印软件设置一致。赋码完毕后，必须使用校验仪器进行首件扫码验证，条码等级必须达到 CC 级及以上方可投产。" TextAlignment="MiddleLeft" SizeF="650,65" LocationFloat="20,836" Font="微软雅黑, 9.5pt" />
+        <Item20 Ref="27" ControlType="XRLabel" Multiline="true" Text="4.4 数据备份与应急响应" TextAlignment="MiddleLeft" SizeF="650,22" LocationFloat="20,911" Font="微软雅黑, 9.5pt, style=Bold" />
+        <Item21 Ref="28" ControlType="XRLabel" Multiline="true" Text="系统管理员应每日备份 UDI 数据库，保障系统连续运行时间不低于 99.9%。发生赋码中断或数据丢失时，应立即启动《数据防灾应急预案》，转入离线模式记录并补录。" TextAlignment="MiddleLeft" SizeF="650,45" LocationFloat="20,938" Font="微软雅黑, 9.5pt" />
+        <Item22 Ref="29" ControlType="XRLabel" Multiline="true" Text="5. 相关记录表单" TextAlignment="MiddleLeft" SizeF="670,25" LocationFloat="0,998" Font="微软雅黑, 11pt, style=Bold" />
+        <Item23 Ref="30" ControlType="XRLabel" Multiline="true" Text="《UDI法规培训记录表》" TextAlignment="MiddleLeft" SizeF="650,22" LocationFloat="20,1028" Font="微软雅黑, 9.5pt" />
+        <Item24 Ref="31" ControlType="XRLabel" Multiline="true" Text="《UDI内审及管理评审记录》" TextAlignment="MiddleLeft" SizeF="650,22" LocationFloat="20,1053" Font="微软雅黑, 9.5pt" />
+        <Item25 Ref="32" ControlType="XRLabel" Multiline="true" Text="《数据备份与防灾恢复演练记录》" TextAlignment="MiddleLeft" SizeF="650,22" LocationFloat="20,1078" Font="微软雅黑, 9.5pt" />
+      </Controls>
+    </Item1>
+  </Bands>
+</XtraReportsLayoutSerializer>
