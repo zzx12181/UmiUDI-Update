@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="24.1.5.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" DisplayName="唯一标识（UDI）培训与考评记录表" Margins="78, 78, 78, 78" PaperKind="A4" PageWidth="827" PageHeight="1169" Version="24.1">
+  <Bands>
+    <Item1 Ref="1" ControlType="DetailBand" HeightF="650">
+      <Controls>
+        <Item1 Ref="2" ControlType="XRLabel" Multiline="true" Text="唯一标识（UDI）培训与考评记录表" TextAlignment="MiddleCenter" SizeF="670,40" LocationFloat="0,10" Font="微软雅黑, 18pt, style=Bold" />
+        <Item2 Ref="3" ControlType="XRTable" SizeF="670,160" LocationFloat="0,65" BorderColor="Black" Borders="All" BorderWidth="1">
+          <Rows>
+            <Item1 Ref="4" ControlType="XRTableRow" Weight="0.23076923076923078">
+              <Cells>
+                <Item1 Ref="5" ControlType="XRTableCell" Weight="0.17543859649122806" Multiline="true" Text=" 培训主题" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item2 Ref="6" ControlType="XRTableCell" Weight="0.19188596491228072" Multiline="true" Text=" 医疗器械唯一标识（UDI）合规与系统操作专项培训" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item3 Ref="7" ControlType="XRTableCell" Weight="0.056998638838475495" Multiline="true" Text=" 培训日期" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item4 Ref="8" ControlType="XRTableCell" Weight="0.10215188153973696" Multiline="true" Text=" 2026年  月  日" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item1>
+            <Item2 Ref="9" ControlType="XRTableRow" Weight="0.053254437869822494">
+              <Cells>
+                <Item1 Ref="10" ControlType="XRTableCell" Weight="0.17543859649122806" Multiline="true" Text=" 主讲人" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item2 Ref="11" ControlType="XRTableCell" Weight="0.19188596491228072" Multiline="true" Text=" 质量管理部 UDI 专员" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item3 Ref="12" ControlType="XRTableCell" Weight="0.056998638838475495" Multiline="true" Text=" 培训时长" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item4 Ref="13" ControlType="XRTableCell" Weight="0.10215188153973696" Multiline="true" Text=" 2.0 小时" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item2>
+            <Item3 Ref="14" ControlType="XRTableRow" Weight="0.22090729783037474">
+              <Cells>
+                <Item1 Ref="15" ControlType="XRTableCell" Weight="0.17543859649122806" Multiline="true" Text=" 培训大纲" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item2 Ref="16" ControlType="XRTableCell" Weight="1" Multiline="true" Text=" 1. 国家药监局 UDI 法规及飞行检查要点解读；&#xA; 2. 本企业 UDI 编码规则及条码载体规范说明；&#xA; 3. 现场赋码打印机操作、贴签位置与外观首件确认；&#xA; 4. 系统发生条码扫描报错、重码、漏码时的应急上报程序；&#xA; 5. 仓储出入库 UDI 数据绑定与数据库同步操作演练。" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item3>
+            <Item4 Ref="17" ControlType="XRTableRow" Weight="0.11652253072371416">
+              <Cells>
+                <Item1 Ref="18" ControlType="XRTableCell" Weight="0.17543859649122806" Multiline="true" Text=" 考核方式" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item2 Ref="19" ControlType="XRTableCell" Weight="1" Multiline="true" Text=" [ ] 闭卷笔试    [ ] 现场实操提问    [ ] 综合考评" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item4>
+          </Rows>
+        </Item2>
+        <Item3 Ref="20" ControlType="XRLabel" Multiline="true" Text="参培人员签到与考核成绩" TextAlignment="MiddleLeft" SizeF="670,25" LocationFloat="0,245" Font="微软雅黑, 11pt, style=Bold" />
+        <Item4 Ref="21" ControlType="XRTable" SizeF="670,180" LocationFloat="0,280" BorderColor="Black" Borders="All" BorderWidth="1">
+          <Rows>
+            <Item1 Ref="22" ControlType="XRTableRow" Weight="0.2">
+              <Cells>
+                <Item1 Ref="23" ControlType="XRTableCell" Weight="0.09836065573770492" Multiline="true" Text="序号" TextAlignment="MiddleCenter" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item2 Ref="24" ControlType="XRTableCell" Weight="0.02837326607818411" Multiline="true" Text="姓名" TextAlignment="MiddleCenter" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item3 Ref="25" ControlType="XRTableCell" Weight="0.04655531821808168" Multiline="true" Text="部门" TextAlignment="MiddleCenter" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item4 Ref="26" ControlType="XRTableCell" Weight="0.041717780008178135" Multiline="true" Text="考核得分" TextAlignment="MiddleCenter" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item5 Ref="27" ControlType="XRTableCell" Weight="0.06202125578138909" Multiline="true" Text="考核判定" TextAlignment="MiddleCenter" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+              </Cells>
+            </Item1>
+            <Item2 Ref="28" ControlType="XRTableRow" Weight="0.04">
+              <Cells>
+                <Item1 Ref="29" ControlType="XRTableCell" Weight="0.09836065573770492" Multiline="true" Text="1" TextAlignment="MiddleCenter" Font="微软雅黑, 9.5pt" />
+                <Item2 Ref="30" ControlType="XRTableCell" Weight="0.02837326607818411" Multiline="true" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item3 Ref="31" ControlType="XRTableCell" Weight="0.04655531821808168" Multiline="true" Text=" 生产部包装组" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item4 Ref="32" ControlType="XRTableCell" Weight="0.041717780008178135" Multiline="true" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item5 Ref="33" ControlType="XRTableCell" Weight="0.06202125578138909" Multiline="true" Text=" [ ] 合格   [ ] 不合格" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item2>
+            <Item3 Ref="34" ControlType="XRTableRow" Weight="0.048">
+              <Cells>
+                <Item1 Ref="35" ControlType="XRTableCell" Weight="0.09836065573770492" Multiline="true" Text="2" TextAlignment="MiddleCenter" Font="微软雅黑, 9.5pt" />
+                <Item2 Ref="36" ControlType="XRTableCell" Weight="0.02837326607818411" Multiline="true" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item3 Ref="37" ControlType="XRTableCell" Weight="0.04655531821808168" Multiline="true" Text=" 生产部赋码组" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item4 Ref="38" ControlType="XRTableCell" Weight="0.041717780008178135" Multiline="true" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item5 Ref="39" ControlType="XRTableCell" Weight="0.06202125578138909" Multiline="true" Text=" [ ] 合格   [ ] 不合格" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item3>
+            <Item4 Ref="40" ControlType="XRTableRow" Weight="0.057600000000000005">
+              <Cells>
+                <Item1 Ref="41" ControlType="XRTableCell" Weight="0.09836065573770492" Multiline="true" Text="3" TextAlignment="MiddleCenter" Font="微软雅黑, 9.5pt" />
+                <Item2 Ref="42" ControlType="XRTableCell" Weight="0.02837326607818411" Multiline="true" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item3 Ref="43" ControlType="XRTableCell" Weight="0.04655531821808168" Multiline="true" Text=" 仓储物流部" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item4 Ref="44" ControlType="XRTableCell" Weight="0.041717780008178135" Multiline="true" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item5 Ref="45" ControlType="XRTableCell" Weight="0.06202125578138909" Multiline="true" Text=" [ ] 合格   [ ] 不合格" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item4>
+            <Item5 Ref="46" ControlType="XRTableRow" Weight="0.06912">
+              <Cells>
+                <Item1 Ref="47" ControlType="XRTableCell" Weight="0.09836065573770492" Multiline="true" Text="4" TextAlignment="MiddleCenter" Font="微软雅黑, 9.5pt" />
+                <Item2 Ref="48" ControlType="XRTableCell" Weight="0.02837326607818411" Multiline="true" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item3 Ref="49" ControlType="XRTableCell" Weight="0.04655531821808168" Multiline="true" Text=" 质量管理部" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item4 Ref="50" ControlType="XRTableCell" Weight="0.041717780008178135" Multiline="true" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item5 Ref="51" ControlType="XRTableCell" Weight="0.06202125578138909" Multiline="true" Text=" [ ] 合格   [ ] 不合格" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item5>
+            <Item6 Ref="52" ControlType="XRTableRow" Weight="0.082944">
+              <Cells>
+                <Item1 Ref="53" ControlType="XRTableCell" Weight="0.09836065573770492" Multiline="true" Text="5" TextAlignment="MiddleCenter" Font="微软雅黑, 9.5pt" />
+                <Item2 Ref="54" ControlType="XRTableCell" Weight="0.02837326607818411" Multiline="true" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item3 Ref="55" ControlType="XRTableCell" Weight="0.04655531821808168" Multiline="true" Text=" 信息中心" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item4 Ref="56" ControlType="XRTableCell" Weight="0.041717780008178135" Multiline="true" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item5 Ref="57" ControlType="XRTableCell" Weight="0.06202125578138909" Multiline="true" Text=" [ ] 合格   [ ] 不合格" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item6>
+          </Rows>
+        </Item4>
+        <Item5 Ref="58" ControlType="XRTable" SizeF="670,100" LocationFloat="0,480" BorderColor="Black" Borders="All" BorderWidth="1">
+          <Rows>
+            <Item1 Ref="59" ControlType="XRTableRow" Weight="1">
+              <Cells>
+                <Item1 Ref="60" ControlType="XRTableCell" Weight="1" Multiline="true" Text=" 培训效果评估及总结：&#xA;&#xA;&#xA;&#xA; 评估人签名：__________________                                      日期：2026年   月   日" TextAlignment="TopLeft" Font="微软雅黑, 9.5pt, style=Bold" />
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item5>
+      </Controls>
+    </Item1>
+  </Bands>
+</XtraReportsLayoutSerializer>

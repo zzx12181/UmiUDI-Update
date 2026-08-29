@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="24.1.5.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" DisplayName="唯一标识（UDI）自查与内部审计记录" Margins="78, 78, 78, 78" PaperKind="A4" PageWidth="827" PageHeight="1169" Version="24.1">
+  <Bands>
+    <Item1 Ref="1" ControlType="DetailBand" HeightF="770">
+      <Controls>
+        <Item1 Ref="2" ControlType="XRLabel" Multiline="true" Text="唯一标识（UDI）自查与内部审计记录" TextAlignment="MiddleCenter" SizeF="670,40" LocationFloat="0,10" Font="微软雅黑, 18pt, style=Bold" />
+        <Item2 Ref="3" ControlType="XRTable" SizeF="670,90" LocationFloat="0,65" BorderColor="Black" Borders="All" BorderWidth="1">
+          <Rows>
+            <Item1 Ref="4" ControlType="XRTableRow" Weight="0.5">
+              <Cells>
+                <Item1 Ref="5" ControlType="XRTableCell" Weight="0.17543859649122806" Multiline="true" Text=" 审计日期" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item2 Ref="6" ControlType="XRTableCell" Weight="0.09477717281710023" Multiline="true" Text=" 2026年  月  日" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item3 Ref="7" ControlType="XRTableCell" Weight="0.04740627531725058" Multiline="true" Text=" 审计人员" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item4 Ref="8" ControlType="XRTableCell" Weight="0.17158892065979547" Multiline="true" Text=" 质量部内审小组" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item1>
+            <Item2 Ref="9" ControlType="XRTableRow" Weight="1">
+              <Cells>
+                <Item1 Ref="10" ControlType="XRTableCell" Weight="0.17543859649122806" Multiline="true" Text=" 审计范围" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item2 Ref="11" ControlType="XRTableCell" Weight="1" Multiline="true" Text=" 涵盖 UDI 编码设计、注册数据库填报、产线赋码检测、出入库追溯和数据安全备份。" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item2>
+          </Rows>
+        </Item2>
+        <Item3 Ref="12" ControlType="XRLabel" Multiline="true" Text="审计核查项目与发现结果" TextAlignment="MiddleLeft" SizeF="670,25" LocationFloat="0,175" Font="微软雅黑, 11pt, style=Bold" />
+        <Item4 Ref="13" ControlType="XRTable" SizeF="670,350" LocationFloat="0,210" BorderColor="Black" Borders="All" BorderWidth="1">
+          <Rows>
+            <Item1 Ref="14" ControlType="XRTableRow" Weight="0.1111111111111111">
+              <Cells>
+                <Item1 Ref="15" ControlType="XRTableCell" Weight="0.072" Multiline="true" Text="序号" TextAlignment="MiddleCenter" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item2 Ref="16" ControlType="XRTableCell" Weight="0.029557894736842102" Multiline="true" Text="核查重点要点" TextAlignment="MiddleCenter" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item3 Ref="17" ControlType="XRTableCell" Weight="0.07291336032388664" Multiline="true" Text="自查情况描述与取证" TextAlignment="MiddleCenter" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item4 Ref="18" ControlType="XRTableCell" Weight="0.05032824665213329" Multiline="true" Text="符合性判定" TextAlignment="MiddleCenter" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+              </Cells>
+            </Item1>
+            <Item2 Ref="19" ControlType="XRTableRow" Weight="0.025341130604288498">
+              <Cells>
+                <Item1 Ref="20" ControlType="XRTableCell" Weight="0.072" Multiline="true" Text="1" TextAlignment="MiddleCenter" Font="微软雅黑, 9.5pt" />
+                <Item2 Ref="21" ControlType="XRTableCell" Weight="0.029557894736842102" Multiline="true" Text=" 管理程序文件&#xA;是否建立完善的 UDI SOP 并且岗位职责明确？" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item3 Ref="22" ControlType="XRTableCell" Weight="0.07291336032388664" Multiline="true" Text=" 检查质量手册与 QP-QA-025 程序文件，确认已受控分发。" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item4 Ref="23" ControlType="XRTableCell" Weight="0.05032824665213329" Multiline="true" Text=" [ ] 符合&#xA; [ ] 不符合（附表）" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item2>
+            <Item3 Ref="24" ControlType="XRTableRow" Weight="0.03112068670702096">
+              <Cells>
+                <Item1 Ref="25" ControlType="XRTableCell" Weight="0.072" Multiline="true" Text="2" TextAlignment="MiddleCenter" Font="微软雅黑, 9.5pt" />
+                <Item2 Ref="26" ControlType="XRTableCell" Weight="0.029557894736842102" Multiline="true" Text=" 数据一致性&#xA;国家 UDI 数据库申报数据是否与产品注册证一致？" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item3 Ref="27" ControlType="XRTableCell" Weight="0.07291336032388664" Multiline="true" Text=" 随机抽取3个注册证项目，与国家系统填报数据核实，完全一致。" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item4 Ref="28" ControlType="XRTableCell" Weight="0.05032824665213329" Multiline="true" Text=" [ ] 符合&#xA; [ ] 不符合（附表）" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item3>
+            <Item4 Ref="29" ControlType="XRTableRow" Weight="0.03821838718406083">
+              <Cells>
+                <Item1 Ref="30" ControlType="XRTableCell" Weight="0.072" Multiline="true" Text="3" TextAlignment="MiddleCenter" Font="微软雅黑, 9.5pt" />
+                <Item2 Ref="31" ControlType="XRTableCell" Weight="0.029557894736842102" Multiline="true" Text=" 首件确认与检测等级&#xA;条码打印是否有首件确认？条码质量等级是否达标？" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item3 Ref="32" ControlType="XRTableCell" Weight="0.07291336032388664" Multiline="true" Text=" 检查生产日志和扫码验证记录，条码质量平均在 B 等级，达标。" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item4 Ref="33" ControlType="XRTableCell" Weight="0.05032824665213329" Multiline="true" Text=" [ ] 符合&#xA; [ ] 不符合（附表）" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item4>
+            <Item5 Ref="34" ControlType="XRTableRow" Weight="0.04693486145410979">
+              <Cells>
+                <Item1 Ref="35" ControlType="XRTableCell" Weight="0.072" Multiline="true" Text="4" TextAlignment="MiddleCenter" Font="微软雅黑, 9.5pt" />
+                <Item2 Ref="36" ControlType="XRTableCell" Weight="0.029557894736842102" Multiline="true" Text=" 物料追溯&#xA;出入库扫码率是否达到 100%？追溯链路是否完整？" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item3 Ref="37" ControlType="XRTableCell" Weight="0.07291336032388664" Multiline="true" Text=" 核查 ERP/WMS 系统，存在局部手工录入情况，无重码。" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item4 Ref="38" ControlType="XRTableCell" Weight="0.05032824665213329" Multiline="true" Text=" [ ] 需纠正预防 (CAPA)&#xA; [ ] 基本符合" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item5>
+            <Item6 Ref="39" ControlType="XRTableRow" Weight="0.05763930354013483">
+              <Cells>
+                <Item1 Ref="40" ControlType="XRTableCell" Weight="0.072" Multiline="true" Text="5" TextAlignment="MiddleCenter" Font="微软雅黑, 9.5pt" />
+                <Item2 Ref="41" ControlType="XRTableCell" Weight="0.029557894736842102" Multiline="true" Text=" 灾备与恢复演练&#xA;是否定期进行数据备份和数据完整性模拟恢复演练？" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item3 Ref="42" ControlType="XRTableCell" Weight="0.07291336032388664" Multiline="true" Text=" 信息中心每日自动备份，半年演练记录显示恢复耗时在 30 分钟内。" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item4 Ref="43" ControlType="XRTableCell" Weight="0.05032824665213329" Multiline="true" Text=" [ ] 符合&#xA; [ ] 不符合（附表）" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item6>
+          </Rows>
+        </Item4>
+        <Item5 Ref="44" ControlType="XRTable" SizeF="670,110" LocationFloat="0,590" BorderColor="Black" Borders="All" BorderWidth="1">
+          <Rows>
+            <Item1 Ref="45" ControlType="XRTableRow" Weight="1">
+              <Cells>
+                <Item1 Ref="46" ControlType="XRTableCell" Weight="1" Multiline="true" Text=" 内部审计结论与整改意见：&#xA;&#xA;&#xA;&#xA; 内审组长签名：_________________                                  质量负责人签名：_________________&#xA; 日期：2026年   月   日                                           日期：2026年   月   日" TextAlignment="TopLeft" Font="微软雅黑, 9.5pt, style=Bold" />
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item5>
+      </Controls>
+    </Item1>
+  </Bands>
+</XtraReportsLayoutSerializer>

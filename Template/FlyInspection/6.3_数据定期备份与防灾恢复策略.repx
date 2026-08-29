@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="24.1.5.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" DisplayName="UDI数据定期备份与防灾恢复策略" Margins="78, 78, 78, 78" PaperKind="A4" PageWidth="827" PageHeight="1169" Version="24.1">
+  <Bands>
+    <Item1 Ref="1" ControlType="DetailBand" HeightF="825">
+      <Controls>
+        <Item1 Ref="2" ControlType="XRLabel" Multiline="true" Text="UDI 追溯系统数据库定期备份与防灾恢复策略" TextAlignment="MiddleCenter" SizeF="670,40" LocationFloat="0,10" Font="微软雅黑, 18pt, style=Bold" />
+        <Item2 Ref="3" ControlType="XRLabel" Multiline="true" Text="1. 备份机制与策略安排" TextAlignment="MiddleLeft" SizeF="670,25" LocationFloat="0,65" Font="微软雅黑, 11pt, style=Bold" />
+        <Item3 Ref="4" ControlType="XRLabel" Multiline="true" Text="1.1 自动备份设定：UDI 数据库应用服务器每日凌晨 02:00 进行全量数据备份，自动生成 .bak 压缩包，并在本地磁盘至少保留 30 天的历史记录。&#xA;1.2 异地双活防灾备份：采用异地云端备份与本地 NAS 物理存储相结合的“三二一”备份策略，每周五自动同步至公司独立物理隔离的网络备份设备中。&#xA;1.3 备份有效性校验：系统管理员每周一上班后必须人工检查备份服务日志，核对生成的备份文件大小及可读性，确保备份有效率达到 100%。" TextAlignment="MiddleLeft" SizeF="650,90" LocationFloat="20,95" Font="微软雅黑, 9.5pt" />
+        <Item4 Ref="5" ControlType="XRLabel" Multiline="true" Text="2. 防灾模拟恢复与演练" TextAlignment="MiddleLeft" SizeF="670,25" LocationFloat="0,200" Font="微软雅黑, 11pt, style=Bold" />
+        <Item5 Ref="6" ControlType="XRLabel" Multiline="true" Text="2.1 半年演练频率：信息中心每半年组织一次 UDI 数据模拟恢复演练，测试在虚拟机或应急备份服务器上从零开始重构数据库的能力。&#xA;2.2 指标控制要求：灾难恢复点目标（RPO）必须小于 24 小时（即数据丢失量不超过24小时生产量），恢复时间目标（RTO）必须小于 2 小时。" TextAlignment="MiddleLeft" SizeF="650,65" LocationFloat="20,230" Font="微软雅黑, 9.5pt" />
+        <Item6 Ref="7" ControlType="XRLabel" Multiline="true" Text="3. 模拟恢复演练记录表" TextAlignment="MiddleLeft" SizeF="670,25" LocationFloat="0,310" Font="微软雅黑, 11pt, style=Bold" />
+        <Item7 Ref="8" ControlType="XRTable" SizeF="670,310" LocationFloat="0,345" BorderColor="Black" Borders="All" BorderWidth="1">
+          <Rows>
+            <Item1 Ref="9" ControlType="XRTableRow" Weight="0.10714285714285714">
+              <Cells>
+                <Item1 Ref="10" ControlType="XRTableCell" Weight="0.17543859649122806" Multiline="true" Text=" 演练时间" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item2 Ref="11" ControlType="XRTableCell" Weight="0.09477717281710023" Multiline="true" Text=" 2026年   月   日" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item3 Ref="12" ControlType="XRTableCell" Weight="0.04740627531725058" Multiline="true" Text=" 演练组织部门" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item4 Ref="13" ControlType="XRTableCell" Weight="0.17158892065979547" Multiline="true" Text=" 信息技术中心" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item1>
+            <Item2 Ref="14" ControlType="XRTableRow" Weight="0.011479591836734693">
+              <Cells>
+                <Item1 Ref="15" ControlType="XRTableCell" Weight="0.17543859649122806" Multiline="true" Text=" 数据量大小" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item2 Ref="16" ControlType="XRTableCell" Weight="0.09477717281710023" Multiline="true" Text=" 约 __________ GB" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item3 Ref="17" ControlType="XRTableCell" Weight="0.04740627531725058" Multiline="true" Text=" 系统软件环境" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item4 Ref="18" ControlType="XRTableCell" Weight="0.17158892065979547" Multiline="true" Text=" MySQL 9.0 + Windows Server" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item2>
+            <Item3 Ref="19" ControlType="XRTableRow" Weight="0.028469387755102042">
+              <Cells>
+                <Item1 Ref="20" ControlType="XRTableCell" Weight="0.17543859649122806" Multiline="true" Text=" 演练模拟场景" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item2 Ref="21" ControlType="XRTableCell" Weight="1" Multiline="true" Text=" [ ] UDI 数据库主服务器硬盘物理损坏，无法读取数据。&#xA; [ ] 操作系统意外感染勒索病毒，数据库文件被恶意锁死。&#xA; [ ] 现场突然断电导致主数据库索引崩溃，数据出现逻辑错乱。" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item3>
+            <Item4 Ref="22" ControlType="XRTableRow" Weight="0.08090051020408162">
+              <Cells>
+                <Item1 Ref="23" ControlType="XRTableCell" Weight="0.17543859649122806" Multiline="true" Text=" 数据恢复 steps" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item2 Ref="24" ControlType="XRTableCell" Weight="1" Multiline="true" Text=" 1. 宣布进入应急响应，开启备份冗余服务器；&#xA; 2. 拔除损坏的存储介质，断开受影响网络；&#xA; 3. 从 NAS 或网络备份端点下载最近一日的备份包；&#xA; 4. 在还原终端导入备份 SQL，重建索引与权限；&#xA; 5. 随机抽取 5 组电子或纸质条码数据进行一致性核验对比。" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item4>
+            <Item5 Ref="25" ControlType="XRTableRow" Weight="0.043844682103610665">
+              <Cells>
+                <Item1 Ref="26" ControlType="XRTableCell" Weight="0.17543859649122806" Multiline="true" Text=" 恢复时间统计" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item2 Ref="27" ControlType="XRTableCell" Weight="0.09477717281710023" Multiline="true" Text=" 开始时间：____:____&#xA; 完成时间：____:____&#xA; 总计耗时：______ 分钟" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+                <Item3 Ref="28" ControlType="XRTableCell" Weight="0.04740627531725058" Multiline="true" Text=" 数据验证结果" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt, style=Bold" BackColor="255,240,240,240" />
+                <Item4 Ref="29" ControlType="XRTableCell" Weight="0.17158892065979547" Multiline="true" Text=" [ ] 完全一致，无遗漏&#xA; [ ] 丢失近 ___ 小时内数据&#xA; [ ] 数据还原失败" TextAlignment="MiddleLeft" Font="微软雅黑, 9.5pt" />
+              </Cells>
+            </Item5>
+          </Rows>
+        </Item7>
+        <Item8 Ref="30" ControlType="XRTable" SizeF="670,80" LocationFloat="0,675" BorderColor="Black" Borders="All" BorderWidth="1">
+          <Rows>
+            <Item1 Ref="31" ControlType="XRTableRow" Weight="1">
+              <Cells>
+                <Item1 Ref="32" ControlType="XRTableCell" Weight="1" Multiline="true" Text=" 信息主管审核意见：&#xA;&#xA;&#xA; 主管签名：_________________                                                  日期：2026年   月   日" TextAlignment="TopLeft" Font="微软雅黑, 9.5pt, style=Bold" />
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item8>
+      </Controls>
+    </Item1>
+  </Bands>
+</XtraReportsLayoutSerializer>
