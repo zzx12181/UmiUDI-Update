@@ -1,0 +1,10 @@
+{
+  "version": "1.2.3",
+  "versionName": "v1.2.3",
+  "versionCode": 123,
+  "wgtUrl": "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/update.wgt",
+  "apkUrl": "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/UmiPDA.apk",
+  "note": "1. 升级至 v1.2.3 最新版本\n2. 优化出入库业务流程与包装拆解\n3. 全面支持在手 PDA 秒级热更新",
+  "force": false,
+  "publishtime": "2026-08-31 16:00:00"
+}
