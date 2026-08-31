@@ -1,9 +1,0 @@
-{
-  "version": "1.2.3",
-  "versionName": "v1.2.3",
-  "wgtUrl": "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/update.wgt",
-  "apkUrl": "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/UmiPDA.apk",
-  "note": "UmiPDA v1.2.3 自动化构建发布，包含最新业务与功能修复。",
-  "force": false,
-  "publishtime": "2026-08-31 08:36:05"
-}

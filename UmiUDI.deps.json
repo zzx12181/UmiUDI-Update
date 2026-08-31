@@ -20,6 +20,7 @@
           "Microsoft.Extensions.Configuration.FileExtensions": "9.0.1",
           "Microsoft.Extensions.Configuration.Json": "9.0.1",
           "Microsoft.Office.Interop.Excel": "15.0.4795.1001",
+          "Microsoft.Web.WebView2": "1.0.2903.40",
           "MySql.EntityFrameworkCore": "9.0.0",
           "Nancy": "2.0.0",
           "Newtonsoft.Json": "13.0.3",
@@ -94,7 +95,10 @@
           "DevExpress.XtraTreeMap.v24.1": "24.1.5.0",
           "DevExpress.XtraTreeMap.v24.1.UI": "24.1.5.0",
           "DevExpress.XtraVerticalGrid.v24.1": "24.1.5.0",
-          "Kingdee.CDP.WebApi.SDK": "8.0.6.0"
+          "Kingdee.CDP.WebApi.SDK": "8.0.6.0",
+          "Microsoft.Web.WebView2.Core": "1.0.2903.40",
+          "Microsoft.Web.WebView2.WinForms": "1.0.2903.40",
+          "Microsoft.Web.WebView2.Wpf": "1.0.2903.40"
         },
         "runtime": {
           "UmiUDI.dll": {}
@@ -126,7 +130,7 @@
       },
       "Autoupdater.NET.Official/1.9.2": {
         "dependencies": {
-          "Microsoft.Web.WebView2": "1.0.2592.51"
+          "Microsoft.Web.WebView2": "1.0.2903.40"
         },
         "runtime": {
           "lib/net8.0-windows7.0/AutoUpdater.NET.dll": {
@@ -714,24 +718,10 @@
           }
         }
       },
-      "Microsoft.Web.WebView2/1.0.2592.51": {
-        "runtime": {
-          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll": {
-            "assemblyVersion": "1.0.2592.51",
-            "fileVersion": "1.0.2592.51"
-          },
-          "lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll": {
-            "assemblyVersion": "1.0.2592.51",
-            "fileVersion": "1.0.2592.51"
-          },
-          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll": {
-            "assemblyVersion": "1.0.2592.51",
-            "fileVersion": "1.0.2592.51"
-          }
-        },
+      "Microsoft.Web.WebView2/1.0.2903.40": {
         "native": {
           "runtimes/win-x64/native/WebView2Loader.dll": {
-            "fileVersion": "1.0.2592.51"
+            "fileVersion": "1.0.2903.40"
           }
         }
       },
@@ -1851,6 +1841,30 @@
             "fileVersion": "8.0.6.0"
           }
         }
+      },
+      "Microsoft.Web.WebView2.Core/1.0.2903.40": {
+        "runtime": {
+          "Microsoft.Web.WebView2.Core.dll": {
+            "assemblyVersion": "1.0.2903.40",
+            "fileVersion": "1.0.2903.40"
+          }
+        }
+      },
+      "Microsoft.Web.WebView2.WinForms/1.0.2903.40": {
+        "runtime": {
+          "Microsoft.Web.WebView2.WinForms.dll": {
+            "assemblyVersion": "1.0.2903.40",
+            "fileVersion": "1.0.2903.40"
+          }
+        }
+      },
+      "Microsoft.Web.WebView2.Wpf/1.0.2903.40": {
+        "runtime": {
+          "Microsoft.Web.WebView2.Wpf.dll": {
+            "assemblyVersion": "1.0.2903.40",
+            "fileVersion": "1.0.2903.40"
+          }
+        }
       }
     }
   },
@@ -2203,12 +2217,12 @@
       "path": "microsoft.sqlserver.server/1.0.0",
       "hashPath": "microsoft.sqlserver.server.1.0.0.nupkg.sha512"
     },
-    "Microsoft.Web.WebView2/1.0.2592.51": {
+    "Microsoft.Web.WebView2/1.0.2903.40": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-AC9aWCthS2JvddYA1jl4dFpLBW3GsLRInhp5dkcBzaFXsRehfoUN9olIUsrH41eNaNYd7z9NRvmy81aUA5aD1g==",
-      "path": "microsoft.web.webview2/1.0.2592.51",
-      "hashPath": "microsoft.web.webview2.1.0.2592.51.nupkg.sha512"
+      "sha512": "sha512-THrzYAnJgE3+cNH+9Epr44XjoZoRELdVpXlWGPs6K9C9G6TqyDfVCeVAR/Er8ljLitIUX5gaSkPsy9wRhD1sgQ==",
+      "path": "microsoft.web.webview2/1.0.2903.40",
+      "hashPath": "microsoft.web.webview2.1.0.2903.40.nupkg.sha512"
     },
     "MVTec.HalconDotNet/23110.0.0": {
       "type": "package",
@@ -2761,6 +2775,21 @@
       "sha512": ""
     },
     "Kingdee.CDP.WebApi.SDK/8.0.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Web.WebView2.Core/1.0.2903.40": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Web.WebView2.WinForms/1.0.2903.40": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Web.WebView2.Wpf/1.0.2903.40": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
