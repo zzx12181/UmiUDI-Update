@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智慧全景溯源图谱</title>
+  <link rel="stylesheet" href="trace-graph.css">
+</head>
+<body>
+  <div id="app">
+    <!-- 顶部悬浮控制栏 -->
+    <div class="toolbar">
+      <div class="toolbar-left">
+        <div class="tool-badge">
+          <span class="pulse-dot"></span>
+          <span>智慧全景溯源图谱</span>
+        </div>
+      </div>
+
+      <div class="toolbar-right">
+        <div class="btn-group">
+          <button class="tool-btn" onclick="graphEngine && graphEngine.fitView()" title="适应画布">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+            <span>居中适应</span>
+          </button>
+        </div>
+        <div class="tool-badge" style="color: #64748b; font-weight: 500;">
+          节点: <strong id="stat-nodes" style="color: #0284c7; margin: 0 4px;">0</strong> |
+          包装: <strong id="stat-packages" style="color: #9333ea; margin: 0 4px;">0</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- 主画布 -->
+    <canvas id="graph-canvas"></canvas>
+
+    <!-- 空状态提示 -->
+    <div class="empty-state" id="empty-state">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M12 3v18M3 12h18"/>
+      </svg>
+      <h3>暂无溯源图谱数据</h3>
+      <p>请在上方搜索栏输入追溯条码或使用扫码枪扫码查询</p>
+    </div>
+
+    <!-- 智能下钻抽屉详情面板 -->
+    <div class="drawer-panel" id="drawer-panel">
+      <div class="drawer-header">
+        <div class="drawer-title-box">
+          <div>
+            <div class="drawer-title" id="drawer-title">节点详情</div>
+            <div class="drawer-subtitle" id="drawer-subtitle">单据与全周期属性</div>
+          </div>
+        </div>
+        <button class="drawer-close" onclick="closeDrawer()">✕</button>
+      </div>
+
+      <div class="drawer-content" id="drawer-content">
+        <!-- 动态注入属性卡片 -->
+      </div>
+    </div>
+  </div>
+
+  <script src="trace-graph.js"></script>
+</body>
+</html>
