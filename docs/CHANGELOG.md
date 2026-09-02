@@ -17,6 +17,7 @@
 - refactor(order): 调整 `ProductionOrderService` 中工单原生状态为 `scd_djzt="创建"`, `scd_ywzt="未下推"`，在列表端由审核逻辑把控单据流通，合规审计留痕。
 - feat(security): 在 `Mian.cs` 与 `Login.cs` 中增加会话上下文销毁与重置逻辑，长期记忆按 `{CompanyId}_{UserId}` 分片落盘。
 - docs(sop): 全量重构 `说明文档/UmiUDI&Drug系统业务标准操作规程(SOP)全集.md` 与内置 AI 知识库，系统性增补下推、上下查与全部表单必填项校验矩阵。
+- feat(ai-config): 创建 `sys_ai_config` 集中管控表并增补 DbMigrator 10016 迁移，API Key 统一由数据库安全加密存储与多企业隔离管理，支持自动迁移与离线降级。
 
 ---
 
