@@ -19,6 +19,7 @@
 - docs(sop): 全量重构 `说明文档/UmiUDI&Drug系统业务标准操作规程(SOP)全集.md` 与内置 AI 知识库，系统性增补下推、上下查与全部表单必填项校验矩阵。
 - feat(ai-config): 创建 `sys_ai_config` 集中管控表并增补 DbMigrator 10016 迁移，API Key 统一由数据库安全加密存储与多企业隔离管理，支持自动迁移与离线降级。
 - feat(ai-quota): 建立 `sys_ai_usage_log` 台账表并增补 DbMigrator 10017 迁移，支持企业积分配额管控、按次/按Token精准扣减计费规则配置、配额充值及历史用量明细台账。
+- feat(ai-tenant-portal): 在公司管理表格中增设“AI配置”列作为企业级大模型与配额入口；在 AI 助手侧栏将原设置按钮改为“用量消耗”，实现配置与用量对账视图彻底解耦。
 
 ---
 
