@@ -7,14 +7,18 @@
 ## [1.2.1.20] - 2026-09-02
 
 ### 生产环境（业务与功能）
-1. 【Umi Copilot 智能助手】全面集成企业级 AI 业务助手，支持自然语言排产、全景追溯问答与库存速查。
-
+1. 【AI智能助手】集成全新 AI 业务助手，支持自然语言工单排产、全景追溯问答与库存速查。
+2. 【打印单上查】打印任务列表新增“上查”功能，支持一键反查来源生产工单与客户订单信息。
+3. 【权限管控】优化 AI 助手权限治理机制，严格匹配当前账号功能权限，保障业务数据安全。
+4. 【标准操作规程】全面升级系统操作规程 (SOP)，完善单据流转下推、双向追溯与表单必填校验指引。
 
 ### 开发环境（技术与构建）
-- feat(ai): 集成 Microsoft Semantic Kernel 与本地 RAG 知识检索，重构 `AiKernelManager`、`AiPermissionService`、`SemanticMemoryEngine`。
-- feat(trace-up): 在 `UDI_DY_List` 与 `DTC_DY_List` 中新增 `dropdown_trace_up` 控件并实现来源生产单及销售单穿透溯源。
-- refactor(order): 调整 `ProductionOrderService` 中工单原生状态为 `scd_djzt="创建"`, `scd_ywzt="未下推"`，严格契合审核流转逻辑。
-- docs(sop): 全量重构系统业务标准操作规程全集，增设 `SOP-LINK-01`、`SOP-LINK-02` 及全部单据必填项校验矩阵。
+- feat(ai): 集成 Microsoft Semantic Kernel 与本地 RAG 向量知识库检索架构，重构 `AiKernelManager`、`AiPermissionService`、`SemanticMemoryEngine`。
+- feat(ai-ui): 采用现代化 Web 技术原生内嵌 AI 抽屉控件 `AiCopilotControl.cs`，实现打字机流式渐进渲染与交互式业务卡片（ActionCard）。
+- feat(trace-up): 在 `UDI_DY_List.Designer.cs` 与 `DTC_DY_List.Designer.cs` 中新增 `dropdown_trace_up` 控件，并于代码后置文件中实现工单与销售单多表关联穿透。
+- refactor(order): 调整 `ProductionOrderService` 中工单原生状态为 `scd_djzt="创建"`, `scd_ywzt="未下推"`，在列表端由审核逻辑把控单据流通，合规审计留痕。
+- feat(security): 在 `Mian.cs` 与 `Login.cs` 中增加会话上下文销毁与重置逻辑，长期记忆按 `{CompanyId}_{UserId}` 分片落盘。
+- docs(sop): 全量重构 `说明文档/UmiUDI&Drug系统业务标准操作规程(SOP)全集.md` 与内置 AI 知识库，系统性增补下推、上下查与全部表单必填项校验矩阵。
 
 ---
 
