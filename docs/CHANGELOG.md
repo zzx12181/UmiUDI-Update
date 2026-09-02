@@ -4,6 +4,20 @@
 
 ---
 
+## [1.2.1.20] - 2026-09-02
+
+### 生产环境（业务与功能）
+1. 【Umi Copilot 智能助手】全面集成企业级 AI 业务助手，支持自然语言排产、全景追溯问答与库存速查。
+
+
+### 开发环境（技术与构建）
+- feat(ai): 集成 Microsoft Semantic Kernel 与本地 RAG 知识检索，重构 `AiKernelManager`、`AiPermissionService`、`SemanticMemoryEngine`。
+- feat(trace-up): 在 `UDI_DY_List` 与 `DTC_DY_List` 中新增 `dropdown_trace_up` 控件并实现来源生产单及销售单穿透溯源。
+- refactor(order): 调整 `ProductionOrderService` 中工单原生状态为 `scd_djzt="创建"`, `scd_ywzt="未下推"`，严格契合审核流转逻辑。
+- docs(sop): 全量重构系统业务标准操作规程全集，增设 `SOP-LINK-01`、`SOP-LINK-02` 及全部单据必填项校验矩阵。
+
+---
+
 ## [1.2.1.19] - 2026-08-31
 
 ### 生产环境（业务与功能）
