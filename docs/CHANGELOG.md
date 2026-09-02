@@ -18,6 +18,7 @@
 - feat(security): 在 `Mian.cs` 与 `Login.cs` 中增加会话上下文销毁与重置逻辑，长期记忆按 `{CompanyId}_{UserId}` 分片落盘。
 - docs(sop): 全量重构 `说明文档/UmiUDI&Drug系统业务标准操作规程(SOP)全集.md` 与内置 AI 知识库，系统性增补下推、上下查与全部表单必填项校验矩阵。
 - feat(ai-config): 创建 `sys_ai_config` 集中管控表并增补 DbMigrator 10016 迁移，API Key 统一由数据库安全加密存储与多企业隔离管理，支持自动迁移与离线降级。
+- feat(ai-quota): 建立 `sys_ai_usage_log` 台账表并增补 DbMigrator 10017 迁移，支持企业积分配额管控、按次/按Token精准扣减计费规则配置、配额充值及历史用量明细台账。
 
 ---
 
