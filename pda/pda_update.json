@@ -1,10 +1,10 @@
 {
-  "version": "1.2.4",
-  "versionName": "v1.2.4",
-  "versionCode": 124,
-  "wgtUrl": "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/update.wgt",
-  "apkUrl": "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/UmiPDA.apk",
-  "note": "1. 修复包装关联模块重大Bug（外箱DI匹配、比例安全回退、多级包装Root级联更新）\n2. 落地批次管理规则（同一批次单品与外箱仅需关联一次，外箱与单品均可出入库，批次产品严禁拆装箱）",
-  "force": false,
-  "publishtime": "2026-09-03 18:50:00"
+    "version":  "1.2.4",
+    "publishtime":  "2026-09-03 21:06:17",
+    "force":  false,
+    "versionCode":  124,
+    "apkUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/UmiPDA.apk",
+    "wgtUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/update.wgt",
+    "note":  "1. Update to v1.2.4\n2. Business workflow optimizations\n3. Bug fixes and performance enhancements",
+    "versionName":  "v1.2.4"
 }
