@@ -1,10 +1,10 @@
 {
-    "version":  "1.2.7",
-    "publishtime":  "2026-09-04 11:07:39",
+    "version":  "1.2.8",
+    "publishtime":  "2026-09-04 11:33:37",
     "force":  false,
-    "versionCode":  127,
+    "versionCode":  128,
     "apkUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/UmiPDA.apk",
     "wgtUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/update.wgt",
-    "note":  "1. 库存查询按单品/中盒/外箱条码DI独立分组显示\n2. 剩余库存与流水明细下钻精确按包装条码DI呈现",
-    "versionName":  "v1.2.7"
+    "note":  "库存查询支持展示多级包装级别（最小单元、一级、二级）并支持跨层级库存穿透",
+    "versionName":  "v1.2.8"
 }
