@@ -249,82 +249,298 @@
       padding: 12px 14px;
       display: flex;
       flex-direction: column;
+      gap: 14px;
+    }
+
+    /* 日期分组容器与标题栏 */
+    .history-date-group {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .history-date-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4px 2px;
+      user-select: none;
+    }
+
+    .history-date-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #334155;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+
+    .history-date-count {
+      font-size: 11px;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    /* 独立新对话会话卡片 (Session Card) */
+    .history-session-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 9px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+
+    .history-session-card:hover {
+      border-color: #91caff;
+      box-shadow: 0 4px 12px rgba(22, 119, 255, 0.1);
+      background: #ffffff;
+    }
+
+    .history-session-header {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      user-select: none;
+    }
+
+    .history-session-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
       gap: 10px;
     }
 
-    .history-item-card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 8px;
-      padding: 10px 12px;
+    .history-session-title {
       display: flex;
-      flex-direction: column;
-      gap: 6px;
-      transition: all 0.2s;
-    }
-
-    .history-item-card:hover {
-      border-color: #91caff;
-      box-shadow: 0 2px 8px rgba(22, 119, 255, 0.08);
-      background: #fafcff;
-    }
-
-    .history-item-meta {
-      display: flex;
-      justify-content: space-between;
       align-items: center;
+      gap: 6px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .history-session-icon {
+      font-size: 15px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .history-session-title-text {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #0f172a;
+      line-height: 1.4;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .history-session-card:hover .history-session-title-text {
+      color: #1677ff;
+    }
+
+    .history-session-time {
       font-size: 11px;
       color: #94a3b8;
+      font-weight: 500;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .history-session-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .history-meta-pill {
+      font-size: 11px;
+      color: #475569;
+      background: #f1f5f9;
+      padding: 1px 7px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .history-meta-pill .pill-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #1677ff;
     }
 
     .history-card-tag {
       background: #f6ffed;
-      color: #52c41a;
+      color: #389e0d;
       border: 1px solid #b7eb8f;
-      padding: 1px 5px;
+      padding: 1px 6px;
       border-radius: 4px;
-      font-size: 10px;
+      font-size: 10.5px;
+      font-weight: 500;
     }
 
-    .history-item-prompt {
-      font-size: 13px;
-      font-weight: 600;
-      color: #1e293b;
-      line-height: 1.4;
-    }
-
-    .history-item-reply {
+    /* 会话摘要预览 */
+    .history-session-summary {
+      background: #f8fafc;
+      border: 1px solid #f1f5f9;
+      border-radius: 6px;
+      padding: 8px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
       font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .summary-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .summary-line .role-icon {
+      font-size: 12px;
+      line-height: 1.3;
+      flex-shrink: 0;
+    }
+
+    .summary-line .summary-text {
+      color: #475569;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      flex: 1;
+    }
+
+    .summary-line.user-line .summary-text {
+      color: #1e293b;
+      font-weight: 500;
+    }
+
+    /* 会话详情展开列表 */
+    .history-session-details {
+      margin-top: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 10px;
+      background: #f8fafc;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+      max-height: 280px;
+      overflow-y: auto;
+    }
+
+    .session-detail-row {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 6px 8px;
+      border-radius: 5px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      font-size: 12px;
+    }
+
+    .session-detail-row.user {
+      border-left: 3px solid #1677ff;
+    }
+
+    .session-detail-row.ai {
+      border-left: 3px solid #52c41a;
+    }
+
+    .detail-speaker {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
       color: #64748b;
-      line-height: 1.5;
-      max-height: 48px;
+      font-weight: 600;
+    }
+
+    .detail-time {
+      font-weight: normal;
+      color: #94a3b8;
+    }
+
+    .detail-content {
+      color: #1e293b;
+      line-height: 1.45;
+      max-height: 60px;
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
     }
 
-    .history-item-actions {
+    .detail-cards-badge {
+      margin-top: 3px;
+      font-size: 10.5px;
+      color: #0958d9;
+      background: #e6f4ff;
+      border-radius: 3px;
+      padding: 1px 5px;
+      width: fit-content;
+    }
+
+    /* 会话操作栏 */
+    .history-session-actions {
       display: flex;
       justify-content: flex-end;
+      align-items: center;
       gap: 8px;
-      margin-top: 4px;
+      margin-top: 2px;
+      padding-top: 6px;
+      border-top: 1px dashed #f1f5f9;
     }
 
-    .history-restore-btn {
+    .history-session-btn {
       font-size: 11.5px;
-      color: var(--primary);
-      background: transparent;
-      border: none;
+      border-radius: 5px;
+      padding: 3px 10px;
       cursor: pointer;
-      font-weight: 500;
-      padding: 2px 6px;
-      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s;
     }
 
-    .history-restore-btn:hover {
-      background: #e6f4ff;
+    .history-session-btn.detail-btn {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      color: #475569;
+    }
+
+    .history-session-btn.detail-btn:hover {
+      background: #f1f5f9;
+      color: #1e293b;
+      border-color: #94a3b8;
+    }
+
+    .history-session-btn.primary-btn {
+      background: #1677ff;
+      border: 1px solid #1677ff;
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+    .history-session-btn.primary-btn:hover {
+      background: #4096ff;
+      border-color: #4096ff;
     }
 
     /* 消息聊天区域 */
@@ -1136,13 +1352,6 @@
       <span class="status-dot" title="在线就绪"></span>
     </div>
     <div class="header-right">
-      <button id="btnMemory" class="header-history-btn" onclick="toggleMemoryDrawer()" title="查看与调整操作员长期偏好记忆" style="margin-right: 6px;">
-        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
-          <path d="M12 6v6l4 2"></path>
-        </svg>
-        <span>AI偏好</span>
-      </button>
       <button id="btnHistory" class="header-history-btn" onclick="toggleHistoryDrawer()" title="查看历史对话与追溯记录">
         <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10"></circle>
@@ -1152,47 +1361,6 @@
       </button>
     </div>
   </header>
-
-  <!-- AI 偏好记忆抽屉侧边栏 -->
-  <div id="memoryDrawerOverlay" class="history-drawer-overlay" onclick="handleMemoryOverlayClick(event)">
-    <div class="history-drawer-panel" onclick="event.stopPropagation()">
-      <div class="history-header">
-        <div class="history-header-title">
-          <span>🧠 AI 操作员偏好记忆</span>
-        </div>
-        <button class="history-close-btn" onclick="closeMemoryDrawer()" title="关闭">✕</button>
-      </div>
-
-      <div style="padding: 16px; display: flex; flex-direction: column; gap: 14px; overflow-y: auto; flex: 1;">
-        <div>
-          <label style="font-size: 12px; font-weight: 600; color: #475569; display: block; margin-bottom: 4px;">默认生产车间</label>
-          <input id="memWorkshop" type="text" style="width: 100%; padding: 7px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 13px;" />
-        </div>
-        <div>
-          <label style="font-size: 12px; font-weight: 600; color: #475569; display: block; margin-bottom: 4px;">常用管理单位</label>
-          <input id="memUnit" type="text" style="width: 100%; padding: 7px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 13px;" />
-        </div>
-        <div>
-          <label style="font-size: 12px; font-weight: 600; color: #475569; display: block; margin-bottom: 4px;">默认排产批量 (件/盒)</label>
-          <input id="memBatchSize" type="number" style="width: 100%; padding: 7px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 13px;" />
-        </div>
-        <div>
-          <label style="font-size: 12px; font-weight: 600; color: #475569; display: block; margin-bottom: 4px;">高频规格偏好</label>
-          <div id="memRecentSpecs" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px; font-size: 12px; color: #475569; min-height: 80px; line-height: 1.6;">
-            暂无记录
-          </div>
-        </div>
-        <div style="font-size: 11px; color: #94a3b8;" id="memLastUpdated">
-          最后更新时间：-
-        </div>
-      </div>
-
-      <div style="padding: 12px 16px; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; background: #f8fafc;">
-        <button class="history-tool-btn" onclick="resetMemoryData()" style="color: #ef4444;">恢复默认</button>
-        <button class="history-tool-btn primary" onclick="saveMemoryData()">保存偏好</button>
-      </div>
-    </div>
-  </div>
 
   <!-- 历史对话抽屉侧边栏 -->
   <div id="historyDrawerOverlay" class="history-drawer-overlay" onclick="handleHistoryOverlayClick(event)">
@@ -1782,7 +1950,11 @@
           payload: payload
         });
       } else {
-        alert('触发操作: ' + actionType + ', 参数: ' + payload);
+        if (actionType === 'OPEN_URL' && payload) {
+          window.open(payload, '_blank');
+        } else {
+          alert('触发操作: ' + actionType + ', 参数: ' + payload);
+        }
       }
     }
 
@@ -2016,8 +2188,9 @@
       }
     }
 
-    // ─── 历史对话抽屉交互逻辑 ────────────────────────────────
-    let cachedHistoryRecords = [];
+    // ─── 历史对话抽屉交互逻辑（按日期、按独立新对话会话多级聚合分组）───
+    let cachedSessionGroups = [];
+    let cachedFlatRecords = [];
 
     function toggleHistoryDrawer() {
       const overlay = document.getElementById('historyDrawerOverlay');
@@ -2053,129 +2226,315 @@
     function fetchHistoryData() {
       const container = document.getElementById('historyListContainer');
       if (container) {
-        container.innerHTML = '<div style="text-align:center;padding:30px 10px;color:#94a3b8;font-size:12.5px;">正在加载历史记录...</div>';
+        container.innerHTML = '<div style="text-align:center;padding:30px 10px;color:#94a3b8;font-size:12.5px;"><span class="status-pulse-dot"></span> 正在加载历史对话记录...</div>';
       }
       if (window.chrome && window.chrome.webview) {
         window.chrome.webview.postMessage({ type: 'GET_HISTORY' });
       } else {
-        // 本地浏览器预览兜底：直接渲染空状态提示
         setTimeout(() => renderHistoryList([]), 300);
       }
     }
 
+    function parseRecordDate(timeStr) {
+      if (!timeStr) return new Date();
+      const normalized = timeStr.replace(/-/g, '/');
+      const d = new Date(normalized);
+      return isNaN(d.getTime()) ? new Date() : d;
+    }
+
+    function formatDateKey(dateObj) {
+      const y = dateObj.getFullYear();
+      const m = String(dateObj.getMonth() + 1).padStart(2, '0');
+      const d = String(dateObj.getDate()).padStart(2, '0');
+      return `${y}-${m}-${d}`;
+    }
+
+    function getFriendlyDateLabel(dateKey) {
+      const today = new Date();
+      const todayKey = formatDateKey(today);
+
+      const yesterday = new Date(today);
+      yesterday.setDate(yesterday.getDate() - 1);
+      const yesterdayKey = formatDateKey(yesterday);
+
+      const beforeYesterday = new Date(today);
+      beforeYesterday.setDate(beforeYesterday.getDate() - 2);
+      const beforeYesterdayKey = formatDateKey(beforeYesterday);
+
+      if (dateKey === todayKey) {
+        return `今天 (${dateKey})`;
+      } else if (dateKey === yesterdayKey) {
+        return `昨天 (${dateKey})`;
+      } else if (dateKey === beforeYesterdayKey) {
+        return `前天 (${dateKey})`;
+      } else {
+        return `${dateKey}`;
+      }
+    }
+
+    function groupRecordsIntoSessions(records) {
+      if (!records || records.length === 0) return [];
+
+      const sessions = [];
+      let currentSession = null;
+
+      for (let i = 0; i < records.length; i++) {
+        const r = records[i];
+        const rDate = parseRecordDate(r.time);
+        const rSessionId = r.sessionId || 'session_default';
+        const rTimeStr = r.time && r.time.length >= 16 ? r.time.substring(11, 16) : '';
+
+        const enhancedRecord = {
+          ...r,
+          dateObj: rDate,
+          timeStr: rTimeStr,
+          index: i
+        };
+
+        let isNewSession = false;
+        if (!currentSession) {
+          isNewSession = true;
+        } else if (currentSession.sessionId !== rSessionId && rSessionId !== 'legacy_session') {
+          isNewSession = true;
+        } else {
+          const lastDate = currentSession.records[currentSession.records.length - 1].dateObj;
+          const diffMinutes = Math.abs((rDate.getTime() - lastDate.getTime()) / (1000 * 60));
+          if (diffMinutes > 45) {
+            isNewSession = true;
+          }
+        }
+
+        if (isNewSession) {
+          if (currentSession) {
+            sessions.push(currentSession);
+          }
+          currentSession = {
+            id: 'sess_' + sessions.length + '_' + (rSessionId || Date.now()),
+            sessionId: rSessionId,
+            dateKey: formatDateKey(rDate),
+            dateObj: rDate,
+            records: [enhancedRecord],
+            firstUserPrompt: '',
+            firstAiReply: '',
+            title: '',
+            turnCount: 0,
+            hasCards: false
+          };
+        } else {
+          currentSession.records.push(enhancedRecord);
+        }
+
+        if (r.role === 'user' && !currentSession.firstUserPrompt) {
+          currentSession.firstUserPrompt = r.content || '';
+        }
+        if (r.role === 'ai' && !currentSession.firstAiReply) {
+          currentSession.firstAiReply = r.content || '';
+        }
+        if (r.role === 'user') {
+          currentSession.turnCount++;
+        }
+        if (r.cards && r.cards.length > 0) {
+          currentSession.hasCards = true;
+        }
+      }
+
+      if (currentSession) {
+        sessions.push(currentSession);
+      }
+
+      sessions.forEach(s => {
+        if (s.firstUserPrompt) {
+          s.title = s.firstUserPrompt.length > 28 ? s.firstUserPrompt.substring(0, 28) + '...' : s.firstUserPrompt;
+        } else if (s.firstAiReply) {
+          s.title = s.firstAiReply.length > 28 ? s.firstAiReply.substring(0, 28) + '...' : s.firstAiReply;
+        } else {
+          s.title = '业务对话';
+        }
+        const firstRec = s.records[0];
+        s.timeStr = firstRec.timeStr || (firstRec.time && firstRec.time.length >= 16 ? firstRec.time.substring(11, 16) : '');
+      });
+
+      return sessions;
+    }
+
+    function groupSessionsByDate(sessions) {
+      const dateMap = new Map();
+
+      sessions.forEach(sess => {
+        const key = sess.dateKey;
+        if (!dateMap.has(key)) {
+          dateMap.set(key, {
+            dateKey: key,
+            dateLabel: getFriendlyDateLabel(key),
+            dateObj: sess.dateObj,
+            sessions: []
+          });
+        }
+        dateMap.get(key).sessions.push(sess);
+      });
+
+      const dateGroups = Array.from(dateMap.values()).sort((a, b) => b.dateKey.localeCompare(a.dateKey));
+
+      dateGroups.forEach(g => {
+        g.sessions.sort((a, b) => b.records[b.records.length - 1].dateObj.getTime() - a.records[a.records.length - 1].dateObj.getTime());
+      });
+
+      return dateGroups;
+    }
+
     function renderHistoryList(records) {
-      cachedHistoryRecords = records || [];
+      cachedFlatRecords = records || [];
+      const sessions = groupRecordsIntoSessions(cachedFlatRecords);
+      cachedSessionGroups = groupSessionsByDate(sessions);
+
+      const totalSessions = sessions.length;
+      const totalMessages = cachedFlatRecords.length;
+
       const badge = document.getElementById('historyCountBadge');
-      if (badge) badge.innerText = `${cachedHistoryRecords.length}条`;
+      if (badge) badge.innerText = `${totalSessions}场对话 · ${totalMessages}条`;
 
       const container = document.getElementById('historyListContainer');
       if (!container) return;
 
-      if (!records || records.length === 0) {
+      if (!records || records.length === 0 || sessions.length === 0) {
         container.innerHTML = `
           <div style="text-align:center;padding:40px 15px;color:#94a3b8;">
             <div style="font-size:32px;margin-bottom:8px;opacity:0.6;">💬</div>
-            <div style="font-size:13px;font-weight:500;color:#64748b;">暂无历史对话记录</div>
-            <div style="font-size:12px;margin-top:4px;">在下方聊天区发起提问后，系统将自动留痕归档。</div>
+            <div style="font-size:13.5px;font-weight:600;color:#64748b;">暂无历史对话记录</div>
+            <div style="font-size:12px;margin-top:6px;color:#94a3b8;line-height:1.5;">在聊天区发起提问或开启新对话后，系统将自动按日期与会话留痕归档。</div>
           </div>
         `;
         return;
       }
 
       let html = '';
-      for (let i = 0; i < records.length; i++) {
-        const item = records[i];
-        const isUser = item.role === 'user';
-        const hasCards = item.cards && item.cards.length > 0;
-
+      for (const group of cachedSessionGroups) {
         html += `
-          <div class="history-item-card" onclick="restoreSingleRecord(${i})">
-            <div class="history-item-meta">
-              <span>${isUser ? '👤 操作员提问' : '🤖 AI解答'}</span>
-              <div style="display:flex;align-items:center;gap:6px;">
-                ${hasCards ? '<span class="history-card-tag">含业务卡片</span>' : ''}
-                <span>${esc(item.time || '')}</span>
+          <div class="history-date-group">
+            <div class="history-date-header">
+              <div class="history-date-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>${group.dateLabel}</span>
+              </div>
+              <span class="history-date-count">${group.sessions.length} 场对话</span>
+            </div>
+        `;
+
+        for (const sess of group.sessions) {
+          const detailRows = sess.records.map(r => `
+            <div class="session-detail-row ${r.role}">
+              <div class="detail-speaker">
+                <span>${r.role === 'user' ? '👤 操作员' : '🤖 Umi Copilot'}</span>
+                <span class="detail-time">${esc(r.timeStr || '')}</span>
+              </div>
+              <div class="detail-content">${esc(r.content || '')}</div>
+              ${r.cards && r.cards.length > 0 ? `<div class="detail-cards-badge">📎 含 ${r.cards.length} 张业务卡片</div>` : ''}
+            </div>
+          `).join('');
+
+          html += `
+            <div class="history-session-card" id="session_card_${sess.id}">
+              <div class="history-session-header" onclick="toggleSessionExpand('${sess.id}')">
+                <div class="history-session-top">
+                  <div class="history-session-title">
+                    <span class="history-session-icon">💬</span>
+                    <span class="history-session-title-text" title="${esc(sess.firstUserPrompt || sess.title)}">${esc(sess.title)}</span>
+                  </div>
+                  <span class="history-session-time">${sess.timeStr}</span>
+                </div>
+                <div class="history-session-meta">
+                  <span class="history-meta-pill"><span class="pill-dot"></span>${Math.max(1, sess.turnCount)} 轮问答 (${sess.records.length}条)</span>
+                  ${sess.hasCards ? '<span class="history-card-tag">🏷️ 含业务卡片</span>' : ''}
+                </div>
+              </div>
+
+              <!-- 会话摘要预览 -->
+              <div class="history-session-summary" id="session_summary_${sess.id}">
+                <div class="summary-line user-line">
+                  <span class="role-icon">👤</span>
+                  <span class="summary-text">${esc(sess.firstUserPrompt || '(开启新对话)')}</span>
+                </div>
+                ${sess.firstAiReply ? `
+                  <div class="summary-line ai-line">
+                    <span class="role-icon">🤖</span>
+                    <span class="summary-text">${esc(sess.firstAiReply)}</span>
+                  </div>
+                ` : ''}
+              </div>
+
+              <!-- 会话全部问答详情 (默认收起，点击展开) -->
+              <div class="history-session-details" id="session_details_${sess.id}" style="display:none;">
+                ${detailRows}
+              </div>
+
+              <!-- 底部操作按钮 -->
+              <div class="history-session-actions">
+                <button class="history-session-btn detail-btn" onclick="toggleSessionExpand('${sess.id}')">
+                  <span id="expand_text_${sess.id}">展开明细 (${sess.records.length})</span>
+                </button>
+                <button class="history-session-btn primary-btn" onclick="restoreSessionToChat('${sess.id}')" title="将本场对话完整载入聊天窗口">
+                  <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="1 4 1 10 7 10"></polyline>
+                    <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                  </svg>
+                  恢复此对话
+                </button>
               </div>
             </div>
-            <div class="history-item-${isUser ? 'prompt' : 'reply'}">
-              ${esc(item.content || '')}
-            </div>
-            <div class="history-item-actions">
-              <button class="history-restore-btn" onclick="event.stopPropagation();restoreSingleRecord(${i})">恢复到聊天</button>
-            </div>
-          </div>
-        `;
+          `;
+        }
+
+        html += `</div>`; // close history-date-group
       }
+
       container.innerHTML = html;
     }
 
-    function restoreSingleRecord(index) {
-      if (!cachedHistoryRecords || index < 0 || index >= cachedHistoryRecords.length) return;
-      const rec = cachedHistoryRecords[index];
-      appendMessage(rec.role === 'user' ? 'user' : 'ai', rec.content, rec.cards || []);
-      closeHistoryDrawer();
+    function toggleSessionExpand(sessionId) {
+      const detailsEl = document.getElementById(`session_details_${sessionId}`);
+      const summaryEl = document.getElementById(`session_summary_${sessionId}`);
+      const textEl = document.getElementById(`expand_text_${sessionId}`);
+      if (!detailsEl) return;
+
+      if (detailsEl.style.display === 'none' || detailsEl.style.display === '') {
+        detailsEl.style.display = 'flex';
+        if (summaryEl) summaryEl.style.display = 'none';
+        if (textEl) textEl.innerText = '收起明细';
+      } else {
+        detailsEl.style.display = 'none';
+        if (summaryEl) summaryEl.style.display = 'flex';
+        if (textEl) textEl.innerText = '展开明细';
+      }
     }
 
-    function restoreAllHistoryToChat() {
-      if (!cachedHistoryRecords || cachedHistoryRecords.length === 0) return;
+    function restoreSessionToChat(sessionId) {
+      if (!cachedSessionGroups) return;
+      let targetSession = null;
+      for (const g of cachedSessionGroups) {
+        const found = g.sessions.find(s => s.id === sessionId);
+        if (found) { targetSession = found; break; }
+      }
+      if (!targetSession || !targetSession.records) return;
+
       chatContainer.innerHTML = '';
-      cachedHistoryRecords.forEach(rec => {
+      targetSession.records.forEach(rec => {
         appendMessage(rec.role === 'user' ? 'user' : 'ai', rec.content, rec.cards || []);
       });
       closeHistoryDrawer();
     }
 
-    // AI 偏好记忆面板操作函数
-    function toggleMemoryDrawer() {
-      const el = document.getElementById('memoryDrawerOverlay');
-      if (el.classList.contains('active')) {
-        closeMemoryDrawer();
-      } else {
-        openMemoryDrawer();
-      }
-    }
-
-    function openMemoryDrawer() {
-      const el = document.getElementById('memoryDrawerOverlay');
-      el.classList.add('active');
-      fetchMemoryData();
-    }
-
-    function closeMemoryDrawer() {
-      const el = document.getElementById('memoryDrawerOverlay');
-      el.classList.remove('active');
-    }
-
-    function handleMemoryOverlayClick(e) {
-      if (e.target && e.target.id === 'memoryDrawerOverlay') {
-        closeMemoryDrawer();
-      }
-    }
-
-    function fetchMemoryData() {
-      if (window.chrome && window.chrome.webview) {
-        window.chrome.webview.postMessage({ type: 'GET_AGENT_MEMORY' });
-      }
-    }
-
-    function saveMemoryData() {
-      const ws = document.getElementById('memWorkshop').value.trim();
-      const u = document.getElementById('memUnit').value.trim();
-      const bs = parseInt(document.getElementById('memBatchSize').value) || 500;
-      if (window.chrome && window.chrome.webview) {
-        window.chrome.webview.postMessage({
-          type: 'SAVE_AGENT_MEMORY',
-          payload: { defaultWorkshop: ws, preferredUnit: u, typicalBatchSize: bs }
-        });
-      }
-      closeMemoryDrawer();
-    }
-
-    function resetMemoryData() {
-      if (window.chrome && window.chrome.webview) {
-        window.chrome.webview.postMessage({ type: 'RESET_AGENT_MEMORY' });
-      }
-      closeMemoryDrawer();
+    function restoreAllHistoryToChat() {
+      if (!cachedFlatRecords || cachedFlatRecords.length === 0) return;
+      chatContainer.innerHTML = '';
+      cachedFlatRecords.forEach(rec => {
+        appendMessage(rec.role === 'user' ? 'user' : 'ai', rec.content, rec.cards || []);
+      });
+      closeHistoryDrawer();
     }
 
     // 监听 C# 回调与 Frappe 风格实时事件流 (Realtime Event Stream)
@@ -2202,32 +2561,6 @@
           }
           isSending = false;
           sendBtn.disabled = false;
-        } else if (data.type === 'AGENT_MEMORY_DATA') {
-          const p = data.payload || {};
-          const wsEl = document.getElementById('memWorkshop');
-          const uEl = document.getElementById('memUnit');
-          const bsEl = document.getElementById('memBatchSize');
-          const upEl = document.getElementById('memLastUpdated');
-          const specBox = document.getElementById('memRecentSpecs');
-          
-          if (wsEl) wsEl.value = p.defaultWorkshop || '一号洁净车间';
-          if (uEl) uEl.value = p.preferredUnit || '盒';
-          if (bsEl) bsEl.value = p.typicalBatchSize || 500;
-          if (upEl) upEl.innerText = '最后更新时间：' + (p.lastUpdated || '-');
-          
-          if (specBox) {
-            if (p.recentSpecs && Object.keys(p.recentSpecs).length > 0) {
-              let html = '';
-              for (const [prod, spec] of Object.entries(p.recentSpecs)) {
-                html += `<div style="margin-bottom:4px;"><b>${escapeHtml(prod)}</b>: ${escapeHtml(spec)}</div>`;
-              }
-              specBox.innerHTML = html;
-            } else {
-              specBox.innerHTML = '<span style="color:#94a3b8;">暂无记录（对话中涉及的规格将自动沉淀）</span>';
-            }
-          }
-        } else if (data.type === 'MEMORY_SAVED') {
-          appendMessage('ai', '✅ AI 操作员偏好记忆已成功保存。');
         } else if (data.type === 'AI_RESPONSE') {
           document.querySelectorAll('[id^="loading_"]').forEach(function (el) { el.remove(); });
           document.querySelectorAll('.message-row.ai.loading-row').forEach(function (el) { el.remove(); });
