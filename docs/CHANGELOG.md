@@ -4,18 +4,15 @@
 
 ---
 
-## [1.2.1.23] - 2026-09-04
+## [1.2.1.22] - 2026-09-04
 
 ### 生产环境（业务与功能）
-1. 【首检管理】彻底修复首检记录保存时因工单主键未回填导致的异常报错（`Column udi_dy_scdid cannot be null`）。
-2. 【自动更新】客户端增量更新增加换行符容错支持，全面解决网络代理或版本归一化导致的下载校验阻断。
+1. 【首检管理】优化生产工单首检记录保存与质检流程，修复首检数据提交时的保存异常，保障质检审核记录正常归档。
 
 ### 开发环境（技术与构建）
 - fix(sj): 在 `UDI_SJ.cs`、`UDI_DY_List.cs`、`UDI_CJ.cs` 中增加工单主键防 null 安全穿透回填。
 - feat(migrator): 注册 DbMigrator Migration 10018，将 `udi_dy_review` 与 `udi_dy` 的 `udi_dy_scdid` 列调整为可空。
-- fix(update): 在 `Mian.cs` 增加 `IsFileHashMatch` 文本换行符归一化容差，分发仓通过 `.gitattributes (* -text)` 锁定二进制。
-- refactor(build): 优化 `UmiUDI.csproj` 排除 `RawDocs` 原始离线训练素材，瘦身发布产物。
-- chore: 递增程序集版本为 1.2.1.23。
+- chore: 升级主程序集版本为 1.2.1.22。
 
 ---
 
