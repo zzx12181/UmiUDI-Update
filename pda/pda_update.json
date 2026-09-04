@@ -1,10 +1,10 @@
 {
     "version":  "1.2.9",
-    "publishtime":  "2026-09-04 17:17:08",
+    "publishtime":  "2026-09-04 17:58:42",
     "force":  false,
     "versionCode":  129,
     "apkUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/UmiPDA.apk",
     "wgtUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/update.wgt",
-    "note":  "修复批次关联状态卡片实时更新显示问题，支持关联后立即展示外箱码",
+    "note":  "Release PDA WGT v1.2.9",
     "versionName":  "v1.2.9"
 }
