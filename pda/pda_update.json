@@ -1,10 +1,10 @@
 {
-    "version":  "1.2.4",
-    "publishtime":  "2026-09-03 21:06:17",
+    "version":  "1.2.5",
+    "publishtime":  "2026-09-04 10:16:25",
     "force":  false,
-    "versionCode":  124,
+    "versionCode":  125,
     "apkUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/UmiPDA.apk",
     "wgtUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/update.wgt",
-    "note":  "1. Update to v1.2.4\n2. Business workflow optimizations\n3. Bug fixes and performance enhancements",
-    "versionName":  "v1.2.4"
+    "note":  "1. Update to v1.2.5\n2. Business workflow optimizations\n3. Bug fixes and performance enhancements",
+    "versionName":  "v1.2.5"
 }
