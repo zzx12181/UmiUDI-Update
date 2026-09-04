@@ -1,0 +1,10 @@
+{
+    "version":  "1.2.8",
+    "publishtime":  "2026-09-04 15:41:23",
+    "force":  false,
+    "versionCode":  128,
+    "apkUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/UmiPDA.apk",
+    "wgtUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/update.wgt",
+    "note":  "优化连续扫码性能，预处理条码显示属性，消除模板高频重绘卡顿；规范扫码生命周期为onShow/onHide",
+    "versionName":  "v1.2.8"
+}
