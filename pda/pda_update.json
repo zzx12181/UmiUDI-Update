@@ -1,10 +1,10 @@
 {
-    "version":  "1.2.6",
-    "publishtime":  "2026-09-04 10:44:53",
+    "version":  "1.2.7",
+    "publishtime":  "2026-09-04 11:07:39",
     "force":  false,
-    "versionCode":  126,
+    "versionCode":  127,
     "apkUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/UmiPDA.apk",
     "wgtUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/update.wgt",
-    "note":  "1. 库存查询与PC端设计完全对齐（按实物出入库流水ck_inout_record统计Sum(sl*type)）\n2. 增加时间筛选切换（全部/今日/本周/本月）\n3. 列表支持【出入库明细】与【剩余库存】双通道独立下钻\n4. 批号精确过滤与展示优化",
-    "versionName":  "v1.2.6"
+    "note":  "1. 库存查询按单品/中盒/外箱条码DI独立分组显示\n2. 剩余库存与流水明细下钻精确按包装条码DI呈现",
+    "versionName":  "v1.2.7"
 }
