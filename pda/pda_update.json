@@ -1,10 +1,10 @@
 {
-    "version":  "1.2.9",
-    "publishtime":  "2026-09-04 17:58:42",
-    "force":  false,
-    "versionCode":  129,
-    "apkUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/UmiPDA.apk",
-    "wgtUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/update.wgt",
-    "note":  "Release PDA WGT v1.2.9",
-    "versionName":  "v1.2.9"
+  "version": "1.3.0",
+  "publishtime": "2026-09-05 13:19:19",
+  "force": false,
+  "versionCode": 130,
+  "apkUrl": "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/UmiPDA.apk",
+  "wgtUrl": "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/update.wgt",
+  "note": "配合PC端v1.2.1.24全量版本升级，同步防呆与包装装量更新",
+  "versionName": "v1.3.0"
 }
