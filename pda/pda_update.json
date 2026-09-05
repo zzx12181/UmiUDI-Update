@@ -1,10 +1,10 @@
 {
-    "version":  "1.3.0",
-    "publishtime":  "2026-09-05 13:43:55",
+    "version":  "1.3.1",
+    "publishtime":  "2026-09-05 14:02:14",
     "force":  false,
-    "versionCode":  130,
+    "versionCode":  131,
     "apkUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/UmiPDA.apk",
     "wgtUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/update.wgt",
-    "note":  "Release PDA WGT v1.3.0",
-    "versionName":  "v1.3.0"
+    "note":  "Release PDA WGT v1.3.1",
+    "versionName":  "v1.3.1"
 }
