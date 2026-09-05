@@ -21,6 +21,13 @@
    - **多包装规格自动识别**：无论包装规格来自企业自主登记还是国家药监局数据库，扫码时系统均能自动精准识别对应包装层级与装箱数量；
    - **不同位数条码通用识别**：全面兼容 13 位与 14 位商品条码扫码，自动识别包装层级（最小单元、一级、二级、三级）与装箱倍率，彻底杜绝外箱条码误判或层级错乱。
 
+3. **【生产入库单据保存与数量格式容错】**
+   - **工单生产数量智能格式化**：全面支持工单带入或录入的各形态生产数量（自动兼容规整包含小数位或浮点数值的工单数据），彻底消除保存入库单时的格式异常报错，保障各类 ERP 接口与工单格式下的入库单据稳定保存。
+
+4. **【包装关联层级关系全景拓扑展示】**
+   - **批次产品包装层级树自动呈现**：彻底解决批次管理产品在点击查看条码关联关系时显示“暂无数据”的问题；
+   - **双轨全景层级拓扑与装量展开**：支持“扫码物理组包”与“包装规格主数据拓扑”双轨解析。无论点击外箱、中盒还是单品，均自顶向下完整展开各级包装层级树，标明各层级条码、法定包装等级（外箱/中盒/最小销售单元）与内含装量比例，并高亮定位当前所选条码。
+
 ---
 
 ### 开发环境（完整原日志与技术变更详情）
@@ -29,6 +36,12 @@
   - PC 端 `CK_IN.cs`：以所选生产单明细 `scd_detail_isxlh == "1"` 为基准；对启用序列号产品引入 `GetOccupiedPendingInboundBillNo` 排查未审核入库单在途占用互斥，并阻断已有库存；纯批次管理产品彻底放行；
   - PDA 端 `inbound/index.vue`：引入 `formData.isSerialManaged` 严格联动生产单明细 `scd_detail_isxlh`；扫码时分流序列号与纯批次逻辑；
   - API 端 `InboundService.cs` 与 `CkInoutRecordService.cs`：`CheckSerialInboundAvailable` 与 `AddInoutRecords` 均根据关联生产单 `scd_detail_isxlh` 精准研判，纯批次管理免序列号产品直接放行。
+- **单据保存数值转换容错与格式健壮性**：
+  - `Pages/CK_IN.cs`、`Pages/CK_IN_List.cs`、`Pages/UDI_DY.cs`：封装 `ParseQuantity` 辅助方法，全面改用 `decimal.TryParse` 安全转换并取整，替换原始 `Convert.ToInt32`，彻底解决工单生产数量带浮点小数（如 `'2.0000'`）触发 `System.FormatException` 的缺陷；在生产单带入时自动格式化为标准整数展示。
+- **条码多级包装关联层级（批次号管理产品）全景拓扑重构**：
+  - `Forms/UDI_View.cs`：重构包装层级树构建逻辑，引入双轨查询模式。
+  - 轨 1（物理组包）：查询 `udi_package` 扫码物理绑定表，增加向上追溯 `root` 根节点逻辑，即使操作人员点击单品或中盒也能自顶向下展示完整物理包装树；
+  - 轨 2（批次规格拓扑）：针对无物理绑定记录的批次管理产品，提取条码 DI，联合 `di_devicepackage` 与 `di_download_devicepackage` 关系表，向上自动回溯至顶层根包装（外箱），自顶向下递归构建包装层级树，自动匹配同批次打印记录或同批条码，标注包装等级、装量比例与 `(当前条码)`，并默认全展开呈现。
 - **底层通用逻辑加固**：
   - 包装规格表 `di_devicepackage` 与 `di_download_devicepackage` 双表联合穿透与前导零容差；
   - `Core/PackageLevelHelper.cs`：全面增强 `GetDiPackagingLevelRank`、`GetDiPackagingMultiplier`、`IsOuterPackagingDi` 及 `GetMinimalUnitDi`，增加 `TrimStart('0')` 与 `PadLeft(14, '0')` 规范化支持；
