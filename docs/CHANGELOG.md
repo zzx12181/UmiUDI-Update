@@ -13,7 +13,11 @@
 
 ### 生产环境（业务与操作变动）
 
-1. **【包装条码识别与层级计算优化】**
+1. **【生产入库序列号管控与防重拦截】**
+   - **严格限制序列号产品重复入库**：精准联动所选生产单的序列号管控模式，对于启用序列号的一件一码产品（含单品与外箱条码），若在仓库中已有在库库存、或已被其他未审核入库单录入占用，扫码与保存时系统自动拦截并弹出醒目提示，彻底杜绝重复入库与单据占用冲突；
+   - **批次管理产品支持多次分批入库**：对于未启用序列号的纯批次管理产品，系统全面放行，支持同一批次产品分多次扫码正常入库作业。
+
+2. **【包装条码识别与层级计算优化】**
    - **多包装规格自动识别**：无论包装规格来自企业自主登记还是国家药监局数据库，扫码时系统均能自动精准识别对应包装层级与装箱数量；
    - **不同位数条码通用识别**：全面兼容 13 位与 14 位商品条码扫码，自动识别包装层级（最小单元、一级、二级、三级）与装箱倍率，彻底杜绝外箱条码误判或层级错乱。
 
@@ -21,6 +25,10 @@
 
 ### 开发环境（完整原日志与技术变更详情）
 
+- **入库防呆与条码占用排他机制**：
+  - PC 端 `CK_IN.cs`：以所选生产单明细 `scd_detail_isxlh == "1"` 为基准；对启用序列号产品引入 `GetOccupiedPendingInboundBillNo` 排查未审核入库单在途占用互斥，并阻断已有库存；纯批次管理产品彻底放行；
+  - PDA 端 `inbound/index.vue`：引入 `formData.isSerialManaged` 严格联动生产单明细 `scd_detail_isxlh`；扫码时分流序列号与纯批次逻辑；
+  - API 端 `InboundService.cs` 与 `CkInoutRecordService.cs`：`CheckSerialInboundAvailable` 与 `AddInoutRecords` 均根据关联生产单 `scd_detail_isxlh` 精准研判，纯批次管理免序列号产品直接放行。
 - **底层通用逻辑加固**：
   - 包装规格表 `di_devicepackage` 与 `di_download_devicepackage` 双表联合穿透与前导零容差；
   - `Core/PackageLevelHelper.cs`：全面增强 `GetDiPackagingLevelRank`、`GetDiPackagingMultiplier`、`IsOuterPackagingDi` 及 `GetMinimalUnitDi`，增加 `TrimStart('0')` 与 `PadLeft(14, '0')` 规范化支持；
