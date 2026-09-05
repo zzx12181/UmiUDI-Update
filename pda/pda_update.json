@@ -1,10 +1,10 @@
 {
     "version":  "1.3.4",
-    "publishtime":  "2026-09-05 21:03:10",
+    "publishtime":  "2026-09-05 21:21:47",
     "force":  false,
     "versionCode":  134,
     "apkUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/UmiPDA.apk",
     "wgtUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/update.wgt",
-    "note":  "1. 优化在库拆包数量动态核算：对齐PC端包装树穿透算法，母箱拆包后动态扣减在箱件数，确保件数守恒与账实相符\n2. 优化入库单据详情：单品DI与包装码精准提取隔离，单据单号规范回显\n3. 优化表格交互体验：隐藏冗余原生滚动条，优化初始滚动位置",
+    "note":  "优化入库单详情核算：支持包装重新装回后单品件数自动恢复，对齐PC端统计",
     "versionName":  "v1.3.4"
 }
