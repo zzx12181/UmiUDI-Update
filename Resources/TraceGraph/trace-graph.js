@@ -11,6 +11,7 @@ class TraceGraphEngine {
     this.edges = [];
     this.rawGraphData = null;
     this.collapsedNodes = new Set(); // 折叠的节点 ID
+    this.showRemoved = false; // 默认排除已拆除的历史关系
 
     // 画布变换
     this.scale = 1.0;
@@ -74,6 +75,21 @@ class TraceGraphEngine {
     if (statNodes) statNodes.innerText = this.nodes.length;
     if (statPackages) statPackages.innerText = this.nodes.filter(n => n.type === 'package').length;
     if (emptyState) emptyState.style.display = this.nodes.length === 0 ? 'block' : 'none';
+
+    // 刷新已拆除历史关系切换栏状态
+    const removedCount = (this.rawGraphData.nodes || []).filter(n => n.isRemoved).length;
+    const toggleContainer = document.getElementById('toggle-removed-container');
+    const toggleText = document.getElementById('toggle-removed-text');
+    const toggleInput = document.getElementById('toggle-removed');
+    if (toggleContainer) {
+      toggleContainer.style.display = removedCount > 0 ? 'inline-flex' : 'none';
+    }
+    if (toggleText) {
+      toggleText.innerText = `显示已拆除历史 (${removedCount})`;
+    }
+    if (toggleInput) {
+      toggleInput.checked = this.showRemoved;
+    }
   }
 
   calculateNodeSize(node) {
@@ -119,14 +135,20 @@ class TraceGraphEngine {
     const allNodes = this.rawGraphData.nodes || [];
     const allEdges = this.rawGraphData.edges || [];
 
-    // 过滤掉被折叠隐藏的子节点
+    // 过滤掉被折叠隐藏的子节点，以及已拆除节点（若未开启显示已拆除）
     const hiddenNodeIds = new Set();
     this.collapsedNodes.forEach(parentId => {
       this.collectDescendants(parentId, allEdges, hiddenNodeIds);
     });
 
+    if (!this.showRemoved) {
+      allNodes.forEach(n => {
+        if (n.isRemoved) hiddenNodeIds.add(n.id);
+      });
+    }
+
     this.nodes = allNodes.filter(n => !hiddenNodeIds.has(n.id)).map(n => {
-      const childCount = allEdges.filter(e => e.source === n.id).length;
+      const childCount = allEdges.filter(e => e.source === n.id && (this.showRemoved || !e.isRemoved)).length;
       const dims = this.calculateNodeSize({ ...n, childCount });
       return {
         ...n,
@@ -143,13 +165,19 @@ class TraceGraphEngine {
     });
 
     const nodeMap = new Map(this.nodes.map(n => [n.id, n]));
-    this.edges = allEdges.filter(e => nodeMap.has(e.source) && nodeMap.has(e.target)).map(e => ({
+    this.edges = allEdges.filter(e => nodeMap.has(e.source) && nodeMap.has(e.target) && (this.showRemoved || !e.isRemoved)).map(e => ({
       ...e,
       sourceNode: nodeMap.get(e.source),
       targetNode: nodeMap.get(e.target)
     }));
 
     this.applyLayout();
+  }
+
+  toggleShowRemoved(show) {
+    this.showRemoved = !!show;
+    this.rebuildGraph();
+    this.fitView();
   }
 
   collectDescendants(parentId, edges, hiddenSet) {
@@ -283,17 +311,25 @@ class TraceGraphEngine {
     this.ctx.moveTo(startX, startY);
     this.ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, endX, endY);
 
+    const isRemoved = edge.isRemoved || edge.style === 'removed';
     if (isHighlight) {
       this.ctx.strokeStyle = '#0284c7';
       this.ctx.lineWidth = 3;
       this.ctx.shadowColor = 'rgba(2, 132, 199, 0.4)';
       this.ctx.shadowBlur = 8;
+    } else if (isRemoved) {
+      this.ctx.strokeStyle = '#ef4444';
+      this.ctx.lineWidth = 2;
     } else {
       this.ctx.strokeStyle = '#cbd5e1';
       this.ctx.lineWidth = 2;
     }
 
-    this.ctx.setLineDash([6, 4]);
+    if (isRemoved) {
+      this.ctx.setLineDash([4, 4]);
+    } else {
+      this.ctx.setLineDash([6, 4]);
+    }
     this.ctx.lineDashOffset = -this.flowOffset * (isHighlight ? 1.5 : 1);
     this.ctx.stroke();
 
@@ -302,14 +338,19 @@ class TraceGraphEngine {
       const midX = (startX + endX) / 2;
       const midY = (startY + endY) / 2;
       this.ctx.setLineDash([]);
-      this.ctx.font = '11px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+      this.ctx.font = 'bold 11px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
       
       const textW = this.ctx.measureText(edge.label).width;
-      this.ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
-      this.roundRect(this.ctx, midX - textW / 2 - 5, midY - 15, textW + 10, 18, 4);
+      this.ctx.fillStyle = isRemoved ? 'rgba(254, 242, 242, 0.96)' : 'rgba(255, 255, 255, 0.95)';
+      this.roundRect(this.ctx, midX - textW / 2 - 6, midY - 15, textW + 12, 18, 4);
       this.ctx.fill();
+      if (isRemoved) {
+        this.ctx.strokeStyle = 'rgba(239, 68, 68, 0.4)';
+        this.ctx.lineWidth = 1;
+        this.ctx.stroke();
+      }
       
-      this.ctx.fillStyle = isHighlight ? '#0284c7' : '#64748b';
+      this.ctx.fillStyle = isRemoved ? '#ef4444' : (isHighlight ? '#0284c7' : '#64748b');
       this.ctx.textAlign = 'center';
       this.ctx.textBaseline = 'middle';
       this.ctx.fillText(edge.label, midX, midY - 6);
@@ -342,22 +383,34 @@ class TraceGraphEngine {
       this.ctx.shadowOffsetY = 2;
     }
 
-    // 卡片背景 (纯白 / 核心蓝)
+    const isRemovedNode = node.isRemoved || node.tag === '已拆除';
+
+    // 卡片背景 (纯白 / 核心蓝 / 浅红)
     this.roundRect(this.ctx, x, y, w, h, r);
     if (node.type === 'central') {
       const grad = this.ctx.createLinearGradient(x, y, x + w, y + h);
       grad.addColorStop(0, '#0284c7');
       grad.addColorStop(1, '#1d4ed8');
       this.ctx.fillStyle = grad;
+    } else if (isRemovedNode) {
+      this.ctx.fillStyle = '#fff5f5';
     } else {
       this.ctx.fillStyle = '#ffffff';
     }
     this.ctx.fill();
 
     // 边框
-    this.ctx.strokeStyle = isSelected ? '#0284c7' : (isHover ? '#38bdf8' : (node.type === 'central' ? '#0284c7' : '#e2e8f0'));
-    this.ctx.lineWidth = isSelected ? 2.5 : (isHover ? 2 : 1.2);
+    if (isRemovedNode) {
+      this.ctx.setLineDash([4, 3]);
+      this.ctx.strokeStyle = '#ef4444';
+      this.ctx.lineWidth = isSelected ? 2.5 : 1.5;
+    } else {
+      this.ctx.setLineDash([]);
+      this.ctx.strokeStyle = isSelected ? '#0284c7' : (isHover ? '#38bdf8' : (node.type === 'central' ? '#0284c7' : '#e2e8f0'));
+      this.ctx.lineWidth = isSelected ? 2.5 : (isHover ? 2 : 1.2);
+    }
     this.ctx.stroke();
+    this.ctx.setLineDash([]);
 
     // 节点左侧色条
     this.ctx.fillStyle = node.color || '#0284c7';
