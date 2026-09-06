@@ -12,6 +12,7 @@
           "AlipaySDKNet.Standard": "4.9.809",
           "AntdUI": "2.1.13",
           "Autoupdater.NET.Official": "1.9.2",
+          "DevExpress.Win.Design": "24.1.6-pre-24252",
           "EPPlus": "4.5.3.3",
           "FontAwesome.Sharp": "6.6.0",
           "InputSimulatorCore": "1.0.5",
@@ -36,67 +37,6 @@
           "ZXing.Net": "0.16.10",
           "ZXing.Net.Bindings.Windows.Compatibility": "0.16.12",
           "log4net": "3.1.0",
-          "DevExpress.Charts.v24.1.Core": "24.1.5.0",
-          "DevExpress.CodeParser.v24.1": "24.1.5.0",
-          "DevExpress.Data.Desktop.v24.1": "24.1.5.0",
-          "DevExpress.Data.v24.1": "24.1.5.0",
-          "DevExpress.DataAccess.v24.1": "24.1.5.0",
-          "DevExpress.DataAccess.v24.1.UI": "24.1.5.0",
-          "DevExpress.DataVisualization.v24.1.Core": "24.1.5.0",
-          "DevExpress.Diagram.v24.1.Core": "24.1.5.0",
-          "DevExpress.Dialogs.v24.1.Core": "24.1.5.0",
-          "DevExpress.Drawing.v24.1": "24.1.5.0",
-          "DevExpress.Images.v24.1": "24.1.5.0",
-          "DevExpress.Map.v24.1.Core": "24.1.5.0",
-          "DevExpress.Mvvm.v24.1": "24.1.5.0",
-          "DevExpress.Office.v24.1.Core": "24.1.5.0",
-          "DevExpress.Pdf.v24.1.Core": "24.1.5.0",
-          "DevExpress.Pdf.v24.1.Drawing": "24.1.5.0",
-          "DevExpress.PivotGrid.v24.1.Core": "24.1.5.0",
-          "DevExpress.Printing.v24.1.Core": "24.1.5.0",
-          "DevExpress.RichEdit.v24.1.Core": "24.1.5.0",
-          "DevExpress.RichEdit.v24.1.Export": "24.1.5.0",
-          "DevExpress.Sparkline.v24.1.Core": "24.1.5.0",
-          "DevExpress.SpellChecker.v24.1.Core": "24.1.5.0",
-          "DevExpress.Spreadsheet.v24.1.Core": "24.1.5.0",
-          "DevExpress.TreeMap.v24.1.Core": "24.1.5.0",
-          "DevExpress.Utils.v24.1": "24.1.5.0",
-          "DevExpress.Utils.v24.1.UI": "24.1.5.0",
-          "DevExpress.Xpo.v24.1": "24.1.5.0",
-          "DevExpress.XtraBars.v24.1": "24.1.5.0",
-          "DevExpress.XtraCharts.v24.1": "24.1.5.0",
-          "DevExpress.XtraCharts.v24.1.Extensions": "24.1.5.0",
-          "DevExpress.XtraCharts.v24.1.UI": "24.1.5.0",
-          "DevExpress.XtraCharts.v24.1.Wizard": "24.1.5.0",
-          "DevExpress.XtraDiagram.v24.1": "24.1.5.0",
-          "DevExpress.XtraDialogs.v24.1": "24.1.5.0",
-          "DevExpress.XtraEditors.v24.1": "24.1.5.0",
-          "DevExpress.XtraGantt.v24.1": "24.1.5.0",
-          "DevExpress.XtraGauges.v24.1.Core": "24.1.5.0",
-          "DevExpress.XtraGauges.v24.1.Presets": "24.1.5.0",
-          "DevExpress.XtraGauges.v24.1.Win": "24.1.5.0",
-          "DevExpress.XtraGrid.v24.1": "24.1.5.0",
-          "DevExpress.XtraLayout.v24.1": "24.1.5.0",
-          "DevExpress.XtraMap.v24.1": "24.1.5.0",
-          "DevExpress.XtraNavBar.v24.1": "24.1.5.0",
-          "DevExpress.XtraPdfViewer.v24.1": "24.1.5.0",
-          "DevExpress.XtraPivotGrid.v24.1": "24.1.5.0",
-          "DevExpress.XtraPrinting.v24.1": "24.1.5.0",
-          "DevExpress.XtraReports.v24.1": "24.1.5.0",
-          "DevExpress.XtraReports.v24.1.Extensions": "24.1.5.0",
-          "DevExpress.XtraRichEdit.v24.1": "24.1.5.0",
-          "DevExpress.XtraScheduler.v24.1.Core.Desktop": "24.1.5.0",
-          "DevExpress.XtraScheduler.v24.1.Core": "24.1.5.0",
-          "DevExpress.XtraScheduler.v24.1": "24.1.5.0",
-          "DevExpress.XtraScheduler.v24.1.Extensions": "24.1.5.0",
-          "DevExpress.XtraScheduler.v24.1.Reporting": "24.1.5.0",
-          "DevExpress.XtraScheduler.v24.1.Reporting.Extensions": "24.1.5.0",
-          "DevExpress.XtraSpellChecker.v24.1": "24.1.5.0",
-          "DevExpress.XtraSpreadsheet.v24.1": "24.1.5.0",
-          "DevExpress.XtraTreeList.v24.1": "24.1.5.0",
-          "DevExpress.XtraTreeMap.v24.1": "24.1.5.0",
-          "DevExpress.XtraTreeMap.v24.1.UI": "24.1.5.0",
-          "DevExpress.XtraVerticalGrid.v24.1": "24.1.5.0",
           "Kingdee.CDP.WebApi.SDK": "8.0.6.0",
           "Microsoft.Web.WebView2.Core": "1.0.2903.40",
           "Microsoft.Web.WebView2.WinForms": "1.0.2903.40",
@@ -250,6 +190,966 @@
           "lib/net6.0/BouncyCastle.Cryptography.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.3.1.17862"
+          }
+        }
+      },
+      "DevExpress.Charts/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Charts.Core": "24.1.6-pre-24252",
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.DataVisualization.Core": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.XtraCharts.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Charts.Core/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.Charts.v24.1.Core.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.CodeParser/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.CodeParser.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Data/24.1.6-pre-24252": {
+        "runtime": {
+          "lib/net6.0/DevExpress.Data.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Data.Desktop/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.Data.Desktop.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.DataAccess/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.CodeParser": "24.1.6-pre-24252",
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Office.Core": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.RichEdit.Core": "24.1.6-pre-24252",
+          "DevExpress.Xpo": "24.1.6-pre-24252",
+          "System.Data.SqlClient": "4.8.6"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.DataAccess.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.DataAccess.UI/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.CodeParser": "24.1.6-pre-24252",
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.DataAccess": "24.1.6-pre-24252",
+          "DevExpress.Diagram.Core": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.RichEdit.Core": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Utils.UI": "24.1.6-pre-24252",
+          "DevExpress.Win.Diagram": "24.1.6-pre-24252",
+          "DevExpress.Win.Grid": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.Printing": "24.1.6-pre-24252",
+          "DevExpress.Win.RichEdit": "24.1.6-pre-24252",
+          "DevExpress.Win.TreeList": "24.1.6-pre-24252",
+          "DevExpress.Xpo": "24.1.6-pre-24252",
+          "System.Data.SqlClient": "4.8.6"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.DataAccess.v24.1.UI.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.DataVisualization.Core/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.DataVisualization.v24.1.Core.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Diagram.Core/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.Diagram.v24.1.Core.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Drawing/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.Drawing.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Gauges.Core/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.XtraGauges.v24.1.Core.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Images/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.Images.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Map.Core/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.Map.v24.1.Core.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Mvvm/24.1.6-pre-24252": {
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.Mvvm.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Office.Core/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Pdf.Core": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.Office.v24.1.Core.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Pdf.Core/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.Pdf.v24.1.Core.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Pdf.Drawing/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Pdf.Core": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.Pdf.v24.1.Drawing.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.PivotGrid.Core/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.PivotGrid.v24.1.Core.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Printing.Core/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Pdf.Core": "24.1.6-pre-24252",
+          "DevExpress.Pdf.Drawing": "24.1.6-pre-24252",
+          "System.ServiceModel.Http": "6.2.0"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.Printing.v24.1.Core.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Reporting.Core/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Charts": "24.1.6-pre-24252",
+          "DevExpress.Charts.Core": "24.1.6-pre-24252",
+          "DevExpress.CodeParser": "24.1.6-pre-24252",
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.DataAccess": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Gauges.Core": "24.1.6-pre-24252",
+          "DevExpress.Office.Core": "24.1.6-pre-24252",
+          "DevExpress.Pdf.Core": "24.1.6-pre-24252",
+          "DevExpress.Pdf.Drawing": "24.1.6-pre-24252",
+          "DevExpress.PivotGrid.Core": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.RichEdit.Core": "24.1.6-pre-24252",
+          "DevExpress.RichEdit.Export": "24.1.6-pre-24252",
+          "DevExpress.Sparkline.Core": "24.1.6-pre-24252",
+          "DevExpress.Xpo": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.XtraReports.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.RichEdit.Core/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Office.Core": "24.1.6-pre-24252",
+          "DevExpress.Pdf.Core": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.RichEdit.v24.1.Core.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.RichEdit.Export/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Office.Core": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.RichEdit.Core": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.RichEdit.v24.1.Export.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Scheduler.Core/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.XtraScheduler.v24.1.Core.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Scheduler.CoreDesktop/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Images": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.Scheduler.Core": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraScheduler.v24.1.Core.Desktop.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Sparkline.Core/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.Sparkline.v24.1.Core.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.SpellChecker.Core/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.SpellChecker.v24.1.Core.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Spreadsheet.Core/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.DataAccess": "24.1.6-pre-24252",
+          "DevExpress.DataVisualization.Core": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Office.Core": "24.1.6-pre-24252",
+          "DevExpress.Pdf.Core": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.Sparkline.Core": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.Spreadsheet.v24.1.Core.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.TreeMap/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.DataVisualization.Core": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.TreeMap.Core": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.XtraTreeMap.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.TreeMap.Core/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.TreeMap.v24.1.Core.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Utils/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.Utils.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Utils.UI/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.DataAccess": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.RichEdit.Core": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.Printing": "24.1.6-pre-24252",
+          "DevExpress.Win.RichEdit": "24.1.6-pre-24252",
+          "DevExpress.Win.TreeList": "24.1.6-pre-24252",
+          "DevExpress.Win.VerticalGrid": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.Utils.v24.1.UI.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.RichEdit.Export": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Win.Grid": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.PivotGrid": "24.1.6-pre-24252",
+          "DevExpress.Win.Printing": "24.1.6-pre-24252",
+          "DevExpress.Win.TreeList": "24.1.6-pre-24252",
+          "DevExpress.Win.VerticalGrid": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraNavBar.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          },
+          "lib/net6.0-windows/DevExpress.XtraWizard.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.Charts/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Charts": "24.1.6-pre-24252",
+          "DevExpress.Charts.Core": "24.1.6-pre-24252",
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.DataAccess.UI": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Utils.UI": "24.1.6-pre-24252",
+          "DevExpress.Win": "24.1.6-pre-24252",
+          "DevExpress.Win.Grid": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.Printing": "24.1.6-pre-24252",
+          "DevExpress.Win.TreeList": "24.1.6-pre-24252",
+          "DevExpress.Win.VerticalGrid": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraCharts.v24.1.Extensions.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          },
+          "lib/net6.0-windows/DevExpress.XtraCharts.v24.1.UI.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          },
+          "lib/net6.0-windows/DevExpress.XtraCharts.v24.1.Wizard.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.Design/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Mvvm": "24.1.6-pre-24252",
+          "DevExpress.Win": "24.1.6-pre-24252",
+          "DevExpress.Win.Charts": "24.1.6-pre-24252",
+          "DevExpress.Win.Diagram": "24.1.6-pre-24252",
+          "DevExpress.Win.Dialogs": "24.1.6-pre-24252",
+          "DevExpress.Win.Gantt": "24.1.6-pre-24252",
+          "DevExpress.Win.Gauges": "24.1.6-pre-24252",
+          "DevExpress.Win.Map": "24.1.6-pre-24252",
+          "DevExpress.Win.PdfViewer": "24.1.6-pre-24252",
+          "DevExpress.Win.Reporting": "24.1.6-pre-24252",
+          "DevExpress.Win.RichEdit": "24.1.6-pre-24252",
+          "DevExpress.Win.SchedulerExtensions": "24.1.6-pre-24252",
+          "DevExpress.Win.SpellChecker": "24.1.6-pre-24252",
+          "DevExpress.Win.Spreadsheet": "24.1.6-pre-24252",
+          "DevExpress.Win.TreeMap": "24.1.6-pre-24252",
+          "DevExpress.Xpo": "24.1.6-pre-24252"
+        }
+      },
+      "DevExpress.Win.Diagram/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Diagram.Core": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Pdf.Core": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.Printing": "24.1.6-pre-24252",
+          "DevExpress.Win.VerticalGrid": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraDiagram.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.Dialogs/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Win.Dialogs.Core": "24.1.6-pre-24252",
+          "DevExpress.Win.Grid": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.TreeList": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraDialogs.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.Dialogs.Core/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.Dialogs.v24.1.Core.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.Gantt/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.Printing": "24.1.6-pre-24252",
+          "DevExpress.Win.TreeList": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraGantt.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.Gauges/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Gauges.Core": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.Printing": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraGauges.v24.1.Presets.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          },
+          "lib/net6.0-windows/DevExpress.XtraGauges.v24.1.Win.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.Grid/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.Printing": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraGrid.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.Map/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Map.Core": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.Printing": "24.1.6-pre-24252",
+          "System.Data.SqlClient": "4.8.6"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraMap.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.Navigation/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.Sparkline.Core": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraBars.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          },
+          "lib/net6.0-windows/DevExpress.XtraEditors.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          },
+          "lib/net6.0-windows/DevExpress.XtraLayout.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.PdfViewer/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Pdf.Core": "24.1.6-pre-24252",
+          "DevExpress.Pdf.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.TreeList": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraPdfViewer.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.PivotGrid/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.PivotGrid.Core": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraPivotGrid.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.Printing/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.RichEdit.Core": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.TreeList": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraPrinting.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.Reporting/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Charts": "24.1.6-pre-24252",
+          "DevExpress.Charts.Core": "24.1.6-pre-24252",
+          "DevExpress.CodeParser": "24.1.6-pre-24252",
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.DataAccess": "24.1.6-pre-24252",
+          "DevExpress.DataAccess.UI": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Gauges.Core": "24.1.6-pre-24252",
+          "DevExpress.Office.Core": "24.1.6-pre-24252",
+          "DevExpress.PivotGrid.Core": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.Reporting.Core": "24.1.6-pre-24252",
+          "DevExpress.RichEdit.Core": "24.1.6-pre-24252",
+          "DevExpress.Sparkline.Core": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Utils.UI": "24.1.6-pre-24252",
+          "DevExpress.Win": "24.1.6-pre-24252",
+          "DevExpress.Win.Charts": "24.1.6-pre-24252",
+          "DevExpress.Win.Grid": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.PivotGrid": "24.1.6-pre-24252",
+          "DevExpress.Win.Printing": "24.1.6-pre-24252",
+          "DevExpress.Win.RichEdit": "24.1.6-pre-24252",
+          "DevExpress.Win.TreeList": "24.1.6-pre-24252",
+          "DevExpress.Win.VerticalGrid": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraReports.v24.1.Extensions.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.RichEdit/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Images": "24.1.6-pre-24252",
+          "DevExpress.Office.Core": "24.1.6-pre-24252",
+          "DevExpress.Pdf.Core": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.RichEdit.Core": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Win.Grid": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.Printing": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraRichEdit.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.Scheduler/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.Scheduler.Core": "24.1.6-pre-24252",
+          "DevExpress.Scheduler.CoreDesktop": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Win.Grid": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.Printing": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraScheduler.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.SchedulerExtensions/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.Reporting.Core": "24.1.6-pre-24252",
+          "DevExpress.Scheduler.Core": "24.1.6-pre-24252",
+          "DevExpress.Scheduler.CoreDesktop": "24.1.6-pre-24252",
+          "DevExpress.SpellChecker.Core": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.Printing": "24.1.6-pre-24252",
+          "DevExpress.Win.Reporting": "24.1.6-pre-24252",
+          "DevExpress.Win.Scheduler": "24.1.6-pre-24252",
+          "DevExpress.Win.SchedulerReporting": "24.1.6-pre-24252",
+          "DevExpress.Win.SpellChecker": "24.1.6-pre-24252",
+          "DevExpress.Win.TreeList": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraScheduler.v24.1.Extensions.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          },
+          "lib/net6.0-windows/DevExpress.XtraScheduler.v24.1.Reporting.Extensions.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.SchedulerReporting/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.Reporting.Core": "24.1.6-pre-24252",
+          "DevExpress.Scheduler.Core": "24.1.6-pre-24252",
+          "DevExpress.Scheduler.CoreDesktop": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.Printing": "24.1.6-pre-24252",
+          "DevExpress.Win.Scheduler": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraScheduler.v24.1.Reporting.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.SpellChecker/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.SpellChecker.Core": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraSpellChecker.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.Spreadsheet/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Charts": "24.1.6-pre-24252",
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.DataAccess": "24.1.6-pre-24252",
+          "DevExpress.DataAccess.UI": "24.1.6-pre-24252",
+          "DevExpress.DataVisualization.Core": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Images": "24.1.6-pre-24252",
+          "DevExpress.Office.Core": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.RichEdit.Core": "24.1.6-pre-24252",
+          "DevExpress.Spreadsheet.Core": "24.1.6-pre-24252",
+          "DevExpress.TreeMap": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Utils.UI": "24.1.6-pre-24252",
+          "DevExpress.Win": "24.1.6-pre-24252",
+          "DevExpress.Win.Grid": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.Printing": "24.1.6-pre-24252",
+          "DevExpress.Win.RichEdit": "24.1.6-pre-24252",
+          "DevExpress.Win.TreeList": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraSpreadsheet.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.TreeList/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraTreeList.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.TreeMap/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.TreeMap": "24.1.6-pre-24252",
+          "DevExpress.TreeMap.Core": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.Printing": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraTreeMap.v24.1.UI.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Win.VerticalGrid/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "DevExpress.Data.Desktop": "24.1.6-pre-24252",
+          "DevExpress.Drawing": "24.1.6-pre-24252",
+          "DevExpress.Printing.Core": "24.1.6-pre-24252",
+          "DevExpress.Utils": "24.1.6-pre-24252",
+          "DevExpress.Win.Navigation": "24.1.6-pre-24252",
+          "DevExpress.Win.Printing": "24.1.6-pre-24252"
+        },
+        "runtime": {
+          "lib/net6.0-windows/DevExpress.XtraVerticalGrid.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
+          }
+        }
+      },
+      "DevExpress.Xpo/24.1.6-pre-24252": {
+        "dependencies": {
+          "DevExpress.Data": "24.1.6-pre-24252",
+          "Microsoft.Extensions.DependencyInjection": "10.0.2",
+          "System.Data.SqlClient": "4.8.6",
+          "System.ServiceModel.Http": "6.2.0",
+          "System.ServiceModel.NetTcp": "6.2.0"
+        },
+        "runtime": {
+          "lib/net6.0/DevExpress.Xpo.v24.1.dll": {
+            "assemblyVersion": "24.1.5.0",
+            "fileVersion": "24.1.5.24252"
           }
         }
       },
@@ -679,6 +1579,14 @@
           "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll": {
             "assemblyVersion": "10.0.0.0",
             "fileVersion": "10.0.626.17701"
+          }
+        }
+      },
+      "Microsoft.Extensions.ObjectPool/6.0.16": {
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.ObjectPool.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.1623.17406"
           }
         }
       },
@@ -1271,6 +2179,215 @@
           }
         }
       },
+      "System.ServiceModel.Http/6.2.0": {
+        "dependencies": {
+          "System.ServiceModel.Primitives": "6.2.0"
+        },
+        "runtime": {
+          "lib/net6.0/System.ServiceModel.Http.dll": {
+            "assemblyVersion": "6.2.0.0",
+            "fileVersion": "6.200.23.55602"
+          }
+        },
+        "resources": {
+          "lib/net6.0/cs/System.ServiceModel.Http.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net6.0/de/System.ServiceModel.Http.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0/es/System.ServiceModel.Http.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0/fr/System.ServiceModel.Http.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0/it/System.ServiceModel.Http.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net6.0/ja/System.ServiceModel.Http.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0/ko/System.ServiceModel.Http.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0/pl/System.ServiceModel.Http.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net6.0/pt-BR/System.ServiceModel.Http.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0/ru/System.ServiceModel.Http.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0/tr/System.ServiceModel.Http.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0/zh-Hans/System.ServiceModel.Http.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net6.0/zh-Hant/System.ServiceModel.Http.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "System.ServiceModel.NetFramingBase/6.2.0": {
+        "dependencies": {
+          "System.ServiceModel.Primitives": "6.2.0"
+        },
+        "runtime": {
+          "lib/net6.0/System.ServiceModel.NetFramingBase.dll": {
+            "assemblyVersion": "6.2.0.0",
+            "fileVersion": "6.200.23.55602"
+          }
+        },
+        "resources": {
+          "lib/net6.0/cs/System.ServiceModel.NetFramingBase.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net6.0/de/System.ServiceModel.NetFramingBase.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0/es/System.ServiceModel.NetFramingBase.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0/fr/System.ServiceModel.NetFramingBase.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0/it/System.ServiceModel.NetFramingBase.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net6.0/ja/System.ServiceModel.NetFramingBase.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0/ko/System.ServiceModel.NetFramingBase.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0/pl/System.ServiceModel.NetFramingBase.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net6.0/pt-BR/System.ServiceModel.NetFramingBase.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0/ru/System.ServiceModel.NetFramingBase.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0/tr/System.ServiceModel.NetFramingBase.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0/zh-Hans/System.ServiceModel.NetFramingBase.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net6.0/zh-Hant/System.ServiceModel.NetFramingBase.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "System.ServiceModel.NetTcp/6.2.0": {
+        "dependencies": {
+          "System.ServiceModel.NetFramingBase": "6.2.0",
+          "System.ServiceModel.Primitives": "6.2.0"
+        },
+        "runtime": {
+          "lib/net6.0/System.ServiceModel.NetTcp.dll": {
+            "assemblyVersion": "6.2.0.0",
+            "fileVersion": "6.200.23.55602"
+          }
+        },
+        "resources": {
+          "lib/net6.0/cs/System.ServiceModel.NetTcp.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net6.0/de/System.ServiceModel.NetTcp.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0/es/System.ServiceModel.NetTcp.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0/fr/System.ServiceModel.NetTcp.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0/it/System.ServiceModel.NetTcp.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net6.0/ja/System.ServiceModel.NetTcp.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0/ko/System.ServiceModel.NetTcp.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0/pl/System.ServiceModel.NetTcp.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net6.0/pt-BR/System.ServiceModel.NetTcp.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0/ru/System.ServiceModel.NetTcp.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0/tr/System.ServiceModel.NetTcp.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0/zh-Hans/System.ServiceModel.NetTcp.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net6.0/zh-Hant/System.ServiceModel.NetTcp.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "System.ServiceModel.Primitives/6.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.ObjectPool": "6.0.16"
+        },
+        "runtime": {
+          "lib/net6.0/System.ServiceModel.Primitives.dll": {
+            "assemblyVersion": "6.2.0.0",
+            "fileVersion": "6.200.23.55602"
+          }
+        },
+        "resources": {
+          "lib/net6.0/cs/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net6.0/de/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0/es/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0/fr/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0/it/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net6.0/ja/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0/ko/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0/pl/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net6.0/pt-BR/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0/ru/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0/tr/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0/zh-Hans/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net6.0/zh-Hant/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
       "System.Text.Encodings.Web/10.0.6": {
         "runtime": {
           "runtimes/win/lib/net9.0/System.Text.Encodings.Web.dll": {
@@ -1331,771 +2448,6 @@
           "lib/net7.0/ZXing.Windows.Compatibility.dll": {
             "assemblyVersion": "0.16.12.0",
             "fileVersion": "0.16.12.0"
-          }
-        }
-      },
-      "DevExpress.Charts.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Charts.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.CodeParser.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.CodeParser.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.Data.Desktop.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Data.Desktop.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.Data.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Data.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.Data.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.Data.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.DataAccess.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.DataAccess.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.DataAccess.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.DataAccess.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.DataAccess.v24.1.UI/24.1.5.0": {
-        "runtime": {
-          "DevExpress.DataAccess.v24.1.UI.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.DataAccess.v24.1.UI.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.DataAccess.v24.1.UI.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.DataVisualization.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.DataVisualization.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.Diagram.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Diagram.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.Diagram.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          }
-        }
-      },
-      "DevExpress.Dialogs.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Dialogs.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.Dialogs.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          }
-        }
-      },
-      "DevExpress.Drawing.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Drawing.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.Drawing.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.Drawing.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.Images.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Images.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.Map.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Map.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.Map.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          }
-        }
-      },
-      "DevExpress.Mvvm.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Mvvm.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.Office.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Office.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.Office.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.Office.v24.1.Core.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.Pdf.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Pdf.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.Pdf.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.Pdf.v24.1.Core.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.Pdf.v24.1.Drawing/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Pdf.v24.1.Drawing.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.PivotGrid.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.PivotGrid.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.PivotGrid.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          }
-        }
-      },
-      "DevExpress.Printing.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Printing.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.Printing.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.Printing.v24.1.Core.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.RichEdit.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.RichEdit.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.RichEdit.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.RichEdit.v24.1.Core.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.RichEdit.v24.1.Export/24.1.5.0": {
-        "runtime": {
-          "DevExpress.RichEdit.v24.1.Export.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.Sparkline.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Sparkline.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.Sparkline.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.Sparkline.v24.1.Core.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.SpellChecker.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.SpellChecker.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.Spreadsheet.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Spreadsheet.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.Spreadsheet.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          }
-        }
-      },
-      "DevExpress.TreeMap.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.TreeMap.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.Utils.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Utils.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.Utils.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.Utils.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.Utils.v24.1.UI/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Utils.v24.1.UI.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.Utils.v24.1.UI.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.Utils.v24.1.UI.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.Xpo.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.Xpo.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.Xpo.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.Xpo.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraBars.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraBars.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraBars.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraBars.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraCharts.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraCharts.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraCharts.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraCharts.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraCharts.v24.1.Extensions/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraCharts.v24.1.Extensions.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.XtraCharts.v24.1.UI/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraCharts.v24.1.UI.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.XtraCharts.v24.1.Wizard/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraCharts.v24.1.Wizard.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraCharts.v24.1.Wizard.resources.dll": {
-            "locale": "zh-CN"
-          }
-        }
-      },
-      "DevExpress.XtraDiagram.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraDiagram.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.XtraDialogs.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraDialogs.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.XtraEditors.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraEditors.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraEditors.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraEditors.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraGantt.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraGantt.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraGantt.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          }
-        }
-      },
-      "DevExpress.XtraGauges.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraGauges.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraGauges.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          }
-        }
-      },
-      "DevExpress.XtraGauges.v24.1.Presets/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraGauges.v24.1.Presets.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraGauges.v24.1.Presets.resources.dll": {
-            "locale": "zh-CN"
-          }
-        }
-      },
-      "DevExpress.XtraGauges.v24.1.Win/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraGauges.v24.1.Win.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.XtraGrid.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraGrid.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraGrid.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraGrid.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraLayout.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraLayout.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraLayout.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraLayout.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraMap.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraMap.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.XtraNavBar.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraNavBar.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraNavBar.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraNavBar.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraPdfViewer.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraPdfViewer.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraPdfViewer.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          }
-        }
-      },
-      "DevExpress.XtraPivotGrid.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraPivotGrid.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraPivotGrid.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          }
-        }
-      },
-      "DevExpress.XtraPrinting.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraPrinting.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraPrinting.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraPrinting.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraReports.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraReports.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraReports.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraReports.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraReports.v24.1.Extensions/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraReports.v24.1.Extensions.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraReports.v24.1.Extensions.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraReports.v24.1.Extensions.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraRichEdit.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraRichEdit.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraRichEdit.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraRichEdit.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraScheduler.v24.1.Core.Desktop/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraScheduler.v24.1.Core.Desktop.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.XtraScheduler.v24.1.Core/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraScheduler.v24.1.Core.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraScheduler.v24.1.Core.resources.dll": {
-            "locale": "zh-CN"
-          }
-        }
-      },
-      "DevExpress.XtraScheduler.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraScheduler.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraScheduler.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          }
-        }
-      },
-      "DevExpress.XtraScheduler.v24.1.Extensions/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraScheduler.v24.1.Extensions.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraScheduler.v24.1.Extensions.resources.dll": {
-            "locale": "zh-CN"
-          }
-        }
-      },
-      "DevExpress.XtraScheduler.v24.1.Reporting/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraScheduler.v24.1.Reporting.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraScheduler.v24.1.Reporting.resources.dll": {
-            "locale": "zh-CN"
-          }
-        }
-      },
-      "DevExpress.XtraScheduler.v24.1.Reporting.Extensions/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraScheduler.v24.1.Reporting.Extensions.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.XtraSpellChecker.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraSpellChecker.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraSpellChecker.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          }
-        }
-      },
-      "DevExpress.XtraSpreadsheet.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraSpreadsheet.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraSpreadsheet.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          }
-        }
-      },
-      "DevExpress.XtraTreeList.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraTreeList.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraTreeList.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraTreeList.v24.1.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "DevExpress.XtraTreeMap.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraTreeMap.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.XtraTreeMap.v24.1.UI/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraTreeMap.v24.1.UI.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        }
-      },
-      "DevExpress.XtraVerticalGrid.v24.1/24.1.5.0": {
-        "runtime": {
-          "DevExpress.XtraVerticalGrid.v24.1.dll": {
-            "assemblyVersion": "24.1.5.0",
-            "fileVersion": "24.1.5.24252"
-          }
-        },
-        "resources": {
-          "zh-CN/DevExpress.XtraVerticalGrid.v24.1.resources.dll": {
-            "locale": "zh-CN"
-          },
-          "zh-Hans/DevExpress.XtraVerticalGrid.v24.1.resources.dll": {
-            "locale": "zh-Hans"
           }
         }
       },
@@ -2187,6 +2539,398 @@
       "sha512": "sha512-buwoISwecYke3CmgG1AQSg+sNZjJeIb93vTAtJiHZX35hP/teYMxsfg0NDXGUKjGx6BKBTNKc77O2M3vKvlXZQ==",
       "path": "bouncycastle.cryptography/2.3.1",
       "hashPath": "bouncycastle.cryptography.2.3.1.nupkg.sha512"
+    },
+    "DevExpress.Charts/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5GmpYC56d6YsC3DSZubIvJR2pJSB8NvMLuUftfcOafnh0pkb6OeuD2oCY9s5fEheddyfQ+ovLQm6rvh/Vnjwuw==",
+      "path": "devexpress.charts/24.1.6-pre-24252",
+      "hashPath": "devexpress.charts.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Charts.Core/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/JF4ZRaJM/lS25uzay1carZ3X6zVv1nXbs5XIdUbZKpwjBxQEzXoH6GNTBNnpj653ehHaNjhtmu2jLQF4Aek0A==",
+      "path": "devexpress.charts.core/24.1.6-pre-24252",
+      "hashPath": "devexpress.charts.core.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.CodeParser/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-99sNnM0Trb/4frE228gjz65/AfU0XyCq2wKTA9R0GEcf4APSCZauVw2o7r5QZ+W8m/ktcPMYW+yVNMMaIgM8wQ==",
+      "path": "devexpress.codeparser/24.1.6-pre-24252",
+      "hashPath": "devexpress.codeparser.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Data/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xSmOzmmoUFmKi+EJi487DAMV4pNNPrFa7pz3bg7C6s/XNzb6WzC+0T79ii3qYyWbtiZdrwjBBMD205YB+BcJXw==",
+      "path": "devexpress.data/24.1.6-pre-24252",
+      "hashPath": "devexpress.data.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Data.Desktop/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-66NNH17QMvInBSDfp5cwNQGLwOPWM8OMCbMYBz4cjaEXOqbS+owiCV/XS6mrayhZlbCMK5zgHrRfl76dX6Xs7A==",
+      "path": "devexpress.data.desktop/24.1.6-pre-24252",
+      "hashPath": "devexpress.data.desktop.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.DataAccess/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lvr8Jdt17lbQ86YClzdzPH/0MMwVIZoUyF60Vj4DmPvTPCo5dO9wS9mcZoEt/atHyZHmqn4WPJ3n1DNDoD37pg==",
+      "path": "devexpress.dataaccess/24.1.6-pre-24252",
+      "hashPath": "devexpress.dataaccess.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.DataAccess.UI/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XLNjGkCJ5Ww5i3Cm6Nf8pEKew8dq/Mrhx5Qd6/k8A0Py6YSefsUvs4klfvYQf3W16C615drQ+QE9o8DPivpK2g==",
+      "path": "devexpress.dataaccess.ui/24.1.6-pre-24252",
+      "hashPath": "devexpress.dataaccess.ui.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.DataVisualization.Core/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9pyqSpmV21Jo2XRu/IfDdYZPbg+oLQLlLv623qo19SgXJGthUtq673pvH4KVoBqrG6PWvtrIeM5mIbrwU2c9eg==",
+      "path": "devexpress.datavisualization.core/24.1.6-pre-24252",
+      "hashPath": "devexpress.datavisualization.core.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Diagram.Core/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XAIQ805yI/nGw1IjZA/j/zQzGF85gxoXg9tYgQ40xKp7JUvMwlauTmHCAEYtX3QlkS7+8fJ16o3NIs9H2VMsdg==",
+      "path": "devexpress.diagram.core/24.1.6-pre-24252",
+      "hashPath": "devexpress.diagram.core.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Drawing/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-r20W/qje/kZtqIeXKV+sidxXOshTdRztcO1FktvpQ6VIGlzPd7nwv/nxVlkSNoyiQbHRccBe86++qGjq3d+0Cg==",
+      "path": "devexpress.drawing/24.1.6-pre-24252",
+      "hashPath": "devexpress.drawing.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Gauges.Core/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qfO4qUnY5VGkFlO4dVFDG9RpxJTtIqrdqYQlKBQ/63XnoLNXsl62xQ8wC/D/jtQl4noC9GHsCISn0rfBoJ3sFA==",
+      "path": "devexpress.gauges.core/24.1.6-pre-24252",
+      "hashPath": "devexpress.gauges.core.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Images/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-e2MrKNn6MnLypHTfIuAzhen1e7dFwYyG6txiXV8Pll+mGTf+VJMisCKujUIJ+1JhfA2dt9OG2iNwfTcQj4EdJg==",
+      "path": "devexpress.images/24.1.6-pre-24252",
+      "hashPath": "devexpress.images.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Map.Core/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4FU6kXwQV+ZNwmZ4n7RcyaXDXVc2v1ZdmunBJi/vuLsmaVVhfOYK1oSDZwalHMsfm91xNfVYSUUoRdraVMM1xw==",
+      "path": "devexpress.map.core/24.1.6-pre-24252",
+      "hashPath": "devexpress.map.core.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Mvvm/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0pvSsnBXRkcDEB2Gc0m67X6S5CB9X9mpgZQTc0Vwajzh1iULAYfh2CTndFriwGQWfCkfQDxr0wshHK/P0u6hdw==",
+      "path": "devexpress.mvvm/24.1.6-pre-24252",
+      "hashPath": "devexpress.mvvm.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Office.Core/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PPevNFuGZ3l0TX0fxojG712Y1MB8E6lsydCY12SgSz6pjpp6UYEoeP/Fh6pEVqwNzxZ6q+9EIyC2FlesesRbrw==",
+      "path": "devexpress.office.core/24.1.6-pre-24252",
+      "hashPath": "devexpress.office.core.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Pdf.Core/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VoB2ygkO+C+6XvRtJjxj3KYSJtUSHlzFnpB/Pu1l4vTxGRk9ER3POrqx4eR3iRMufz/X+eh1OXfPw22DgdLV7A==",
+      "path": "devexpress.pdf.core/24.1.6-pre-24252",
+      "hashPath": "devexpress.pdf.core.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Pdf.Drawing/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/lOPMJqjC1s9xxqqy9TalcGcPc9j+vD8IrQje1bHUE+ogG3O62OTlfNuFG7opxjO38PG+XPue7pJ9cEFprEDDQ==",
+      "path": "devexpress.pdf.drawing/24.1.6-pre-24252",
+      "hashPath": "devexpress.pdf.drawing.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.PivotGrid.Core/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-O0I4cbJbbonYB2796Sq4ds+LK4e6FYRGctOf8DAoZJqJQ6IakoLl9kh3ifP649TWGJK5DMTSL5lScV7x9X18Tw==",
+      "path": "devexpress.pivotgrid.core/24.1.6-pre-24252",
+      "hashPath": "devexpress.pivotgrid.core.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Printing.Core/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wU1XCYR++oV4y7f/DD604xqymByF6VbDXyoqzr2vPsrzt6WFT2xYQypD8cyTuIvb2XKgcxGt2qKMKzdE95MPSA==",
+      "path": "devexpress.printing.core/24.1.6-pre-24252",
+      "hashPath": "devexpress.printing.core.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Reporting.Core/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-X+ew7VpY2zR3nNbH+UVp0jtB5CnZF24uYWPuRWHPVPEu5RrZUfqCxQzXqHsX4am8XqiOihQJK0sxWR+nnpPMdA==",
+      "path": "devexpress.reporting.core/24.1.6-pre-24252",
+      "hashPath": "devexpress.reporting.core.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.RichEdit.Core/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-C5Fz88/LN7EqtxgMlM91ZEKNuD47Z78ZdCXBtN6pzbiZWTcUIu19Xoudlfc9E3el7Y0SFXZHd/Yh1IWuWV1d5A==",
+      "path": "devexpress.richedit.core/24.1.6-pre-24252",
+      "hashPath": "devexpress.richedit.core.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.RichEdit.Export/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NcA9T1BX61NnEC6et1Esi8g2TTXHKiwqMbLUM4Bci7wUrO937rCaZM1wyaWQAjUwUE5Iv8GtJcAua/UEF3/vzQ==",
+      "path": "devexpress.richedit.export/24.1.6-pre-24252",
+      "hashPath": "devexpress.richedit.export.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Scheduler.Core/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ncoItQgydW4+Zt+wN4cECiwt1eIgbboC9RyK01JE4SKBsOsLKoIT+1vgfnUKdbdGZibL7W2bX0Q1CBMf2cHNbw==",
+      "path": "devexpress.scheduler.core/24.1.6-pre-24252",
+      "hashPath": "devexpress.scheduler.core.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Scheduler.CoreDesktop/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hB9bZlx3zeJWKT+oiCR50LU8aFwQM0dp/GGBAZdXQFMAm6a+qCmjZuuEc3j6CsRlP/UrA0obE7wsKuWZIUQxXg==",
+      "path": "devexpress.scheduler.coredesktop/24.1.6-pre-24252",
+      "hashPath": "devexpress.scheduler.coredesktop.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Sparkline.Core/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PPRXpQO5B0neNyflRez0injg6qgrmzAnlyg0sVra/s/tya3q6IfWecuXCs+uPaNkInzDmcU5iw6Sz+TUWgp3sQ==",
+      "path": "devexpress.sparkline.core/24.1.6-pre-24252",
+      "hashPath": "devexpress.sparkline.core.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.SpellChecker.Core/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0JXwHEHgytJsKVq4c36LWbGDlcGNkn+wqW+hlLfjrvC5vHV17LDJNFCFLp7ue+JL8Tz+CKso7C/h9VOhwds4aw==",
+      "path": "devexpress.spellchecker.core/24.1.6-pre-24252",
+      "hashPath": "devexpress.spellchecker.core.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Spreadsheet.Core/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/O17Hpwz4upy9lohYZCgBbZslMRtoXSRVMXeO1L3cZEEMmkQPSdvSS3yc+yOjg8Ohq212BPutO1xLtqWs54klQ==",
+      "path": "devexpress.spreadsheet.core/24.1.6-pre-24252",
+      "hashPath": "devexpress.spreadsheet.core.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.TreeMap/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kqi84V0Lfrc6/pOW4RJ0+1Vc7erW/w+ibb774gbbLYReLLCzmmIPPCUEU4xNBXo8tWFMwiTln59NoisfNU4EuQ==",
+      "path": "devexpress.treemap/24.1.6-pre-24252",
+      "hashPath": "devexpress.treemap.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.TreeMap.Core/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MSeFj77hhts/2bZe2/FPpBJ6mD6YydnA3JsqWuk3QWS2kSzu9FjZuY2mjkVeViZPC8GOgSwMC+S88wd8lLLwMg==",
+      "path": "devexpress.treemap.core/24.1.6-pre-24252",
+      "hashPath": "devexpress.treemap.core.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Utils/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dD+CjBeyEg3npqf2y1KkTF7zwCF1MZDH+VkohaPnc/zZvSjM10qlQntN2v9aoNMqdwjZ2WE8hhLtbLMtruviJQ==",
+      "path": "devexpress.utils/24.1.6-pre-24252",
+      "hashPath": "devexpress.utils.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Utils.UI/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yfh5V6e8x/jlsPh2KeGQo1OLIli8VJaMCB8KS1HzzZrPh47Tg/jChUoVZdwy7sozIVi/LdTxZtqjxSXPc3beiA==",
+      "path": "devexpress.utils.ui/24.1.6-pre-24252",
+      "hashPath": "devexpress.utils.ui.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YUbzbQSMM/IVeTXNOhqHBTJy/ZLtxOLvEQWayOT0cxYAv0cNMYID+EwA/f2sO0yjX8baalVOMcz6E4ZbDZIUww==",
+      "path": "devexpress.win/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.Charts/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-v7lq60JxNuwN7F8r2wTk6WwEKgD+oEpoSFTGxzVrmFZPtyKVtI97IkfEH5JNtujQChYxuGzwSCOzldEE5MeRiw==",
+      "path": "devexpress.win.charts/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.charts.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.Design/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-d1+dPrFrA2ykAsiBltXgBrvtE1kHfe48rELBthYTeeuMJ3Ysg1SB1pmmQz47zqGB0FnVUPnXLfqqTZStyqqDXg==",
+      "path": "devexpress.win.design/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.design.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.Diagram/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Aok+x7kxxCAKm4eKoTDOXkuAgvPTglLG7emRtggAVR32pKHadYHkqOTHhczMKzKNJAR/MN2v0goT47uiDHECTA==",
+      "path": "devexpress.win.diagram/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.diagram.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.Dialogs/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Xy8us4CthISXrHlUv1H3DtauNq+pxTHb/juiuGk9Xgx4dq5Dh/51GWKSkO+rlqsZNtraP6/cplK/w5ERn8IcWg==",
+      "path": "devexpress.win.dialogs/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.dialogs.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.Dialogs.Core/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HrhhVLEm1Bg7ZQnxAQiVVrnNKm563s02QL7Elcx21SMjk7Im6NHb54+TBMwB7dJqLopGrFWtdtHUG8S/nHuQ7Q==",
+      "path": "devexpress.win.dialogs.core/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.dialogs.core.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.Gantt/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-v7xqZGFqNZYkbojXNvEwZ9h9XAeu1MVSKC/7/BlPb53MD5TsYnDXOaWInkufeSGHEXAnOWJUx2aiGGIuBcSNKQ==",
+      "path": "devexpress.win.gantt/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.gantt.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.Gauges/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gAiP8dVtIoV3aRf5TuYWKU5EO1ZfxO1kmTwW7dWqo79MvEJMNvwxdttVYPzP18UGcXTfiYOojLCdp8LMjOhQgg==",
+      "path": "devexpress.win.gauges/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.gauges.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.Grid/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-N5wfVn21oHyJSe4p5zq9mPvtKPgyU0drKCfZycdTEllgm4jnjKfGvt9GV0sUjplTaIc2C1H7bFhyQGlSQIEKHw==",
+      "path": "devexpress.win.grid/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.grid.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.Map/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BjwnW62h+1Fjy6zjV0GoAydnXNV0TVZB5UMgF62yhfs5NCiVQhBi+p9XNtsxtLSXbyruuS17hWNXCK3dnb2GPA==",
+      "path": "devexpress.win.map/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.map.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.Navigation/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-q/a4HbTjpOLKY7kLVI7JT+Kl2sTFdZ230EuL8DftdUEurwh+XJqrd6NonVzsayxz35gZI9pCTWkpRYHdC+GJVQ==",
+      "path": "devexpress.win.navigation/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.navigation.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.PdfViewer/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1GWKo0nu7WehRm7XVwK8nPSQUrYbfghkeAyea6JWPSQQ3jKK3hxr6yWUH7fURKIAWwmEZnc0pvWgIVvEa5Zd0A==",
+      "path": "devexpress.win.pdfviewer/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.pdfviewer.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.PivotGrid/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Wp8C63NfzJ00QTEY2/ksDLnOcplHcxxkTjh7qc8yVZGqNUA6cWcAuqTL+QuEcEsVapVHRSSgVWVg8gUdBoQPXg==",
+      "path": "devexpress.win.pivotgrid/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.pivotgrid.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.Printing/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R38n0cX6kcrfbocUHZwoFC6EKtNS6CPemzcTUMQZNLbrLZgPzgW9JyDm0FakKdP6bSPxOUQMWvItOKsxrFf0nw==",
+      "path": "devexpress.win.printing/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.printing.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.Reporting/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-j9Az3dY6L0Y8B/IWjfHrakaaGMWzU60DmCbEb3BR9hHNQPQF12xnl+n/opg2YLz+xw9npmriXr8AUHLT64Seog==",
+      "path": "devexpress.win.reporting/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.reporting.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.RichEdit/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/9xG6V8X5TJuQ9H/HPwbSC7FhEroAjt1teRhbtstsuQnQ7czTuGEoXqHTA5ZJbiKKrhRr4qHnH+bfJj6rsIeTw==",
+      "path": "devexpress.win.richedit/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.richedit.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.Scheduler/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6kva69miRobVgIpDlGrpY4xMS0nEW1CtfE2YmkwbuIaeUg9CAmrDFf12t5uWEXZ6gpTmsRUqRN1+rBvfGLVoAg==",
+      "path": "devexpress.win.scheduler/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.scheduler.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.SchedulerExtensions/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5F1loGakFY0f/Di81tAkE10tjdd2dj0+Eoa3NCqZG+NTSfTnxsk3GBt6hqrU8OK2Aov4Gx1Q+NLuglO0y9sg5w==",
+      "path": "devexpress.win.schedulerextensions/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.schedulerextensions.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.SchedulerReporting/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tl0MvUriNtJJyukU3y1vajbj+zehg08by8fcAoxCFBjuU/ruLKjTYL9a3NFTGQnGxj8aoyRjVq2GaWMlIKqBuA==",
+      "path": "devexpress.win.schedulerreporting/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.schedulerreporting.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.SpellChecker/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YL5hIkMfDjDPw+JgpCZBND3EjE4OF2LzWklczwg172+Ecwz8iB9W4hrkpwmJREhuja9SCFO9uwMm8kwjz4kBig==",
+      "path": "devexpress.win.spellchecker/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.spellchecker.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.Spreadsheet/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tDE4pGkq/6BQs65U4lwi9gFKUGLaCKspjEHK06O17EvJhGMdRlaKsKqjZi8b0S/2v5yNCK17uk5gX3j5TM0g2g==",
+      "path": "devexpress.win.spreadsheet/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.spreadsheet.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.TreeList/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZoQwAdSJs1Xgv4EcHaz6xyhGdByLntbDkvk2nl66dWM2ddWUxbX+5F08Qk1jBLwMK0Ssn0IAjM4omLNCs4Wdhw==",
+      "path": "devexpress.win.treelist/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.treelist.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.TreeMap/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sBm9bKe5Dgay7tF3TxMB08oWfsPRy3jK76mhcOHOS6ZJifJ1dB7vGCPaWj3lc5WIxCmFqnw4UKGr28IALnVqHQ==",
+      "path": "devexpress.win.treemap/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.treemap.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Win.VerticalGrid/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KQkl7q6SL5k7MHBXiOuYxlkTQUPEUysws/gB6gkD138eJ+MwMqE2S1cm7zRpxb1LRE8j9S+M7A8apPU7FkjyRg==",
+      "path": "devexpress.win.verticalgrid/24.1.6-pre-24252",
+      "hashPath": "devexpress.win.verticalgrid.24.1.6-pre-24252.nupkg.sha512"
+    },
+    "DevExpress.Xpo/24.1.6-pre-24252": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lDuRysL4gkuw7TP8a+AnR4GlbkFyguGnbttazMDbQcY/Pbx8pOIDrpxclljFPw4Auy2mZVCwsdjXkB474ns/7g==",
+      "path": "devexpress.xpo/24.1.6-pre-24252",
+      "hashPath": "devexpress.xpo.24.1.6-pre-24252.nupkg.sha512"
     },
     "EPPlus/4.5.3.3": {
       "type": "package",
@@ -2439,6 +3183,13 @@
       "sha512": "sha512-1YgBO3wAy0dlpQyVTKWBSPND/t0yZHsvd3shGpbeEwH8JSb2hnFI2pNFrOOUi/stsp+T/dqwqmRIGh47ibo9bw==",
       "path": "microsoft.extensions.logging.abstractions/10.0.6",
       "hashPath": "microsoft.extensions.logging.abstractions.10.0.6.nupkg.sha512"
+    },
+    "Microsoft.Extensions.ObjectPool/6.0.16": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OVX5tlKg6LY+XKqlUn7i9KY+6Liut0iewWff2DNr7129i/NJ8rpUzbmxavPydZgcLREEWHklXZiPKCS895tNIQ==",
+      "path": "microsoft.extensions.objectpool/6.0.16",
+      "hashPath": "microsoft.extensions.objectpool.6.0.16.nupkg.sha512"
     },
     "Microsoft.Extensions.Options/10.0.3": {
       "type": "package",
@@ -2839,6 +3590,34 @@
       "path": "system.runtime.caching/8.0.0",
       "hashPath": "system.runtime.caching.8.0.0.nupkg.sha512"
     },
+    "System.ServiceModel.Http/6.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lMk8MEw1OCvyyKY4HMg4ro1eYtWY7azIoDc2FBEGP8uOTJouWn3DemOQvM/GUpgrFbkpjuHPbEG5hgUbNtpiYA==",
+      "path": "system.servicemodel.http/6.2.0",
+      "hashPath": "system.servicemodel.http.6.2.0.nupkg.sha512"
+    },
+    "System.ServiceModel.NetFramingBase/6.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-204c9SNDKyQrDKv6F9MLlWKnM7UthRErFByJCHj8y9DtcgMAQnEB5xJvh+9ECmJgG13LJLOAMB5f3CjMatzz/A==",
+      "path": "system.servicemodel.netframingbase/6.2.0",
+      "hashPath": "system.servicemodel.netframingbase.6.2.0.nupkg.sha512"
+    },
+    "System.ServiceModel.NetTcp/6.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FXTDhh8DgCfNyY5k9sNlqvhBVYqVM+0GZBsJfFMH5P5q7qGmTxql3bG9tae1Z+uMXJpG2jLbo1CfgusZ75lADA==",
+      "path": "system.servicemodel.nettcp/6.2.0",
+      "hashPath": "system.servicemodel.nettcp.6.2.0.nupkg.sha512"
+    },
+    "System.ServiceModel.Primitives/6.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ro+c4JKNuX6dDpTWh9ZICYr4pIe7uJToauPPgZt2qqFPjVB78ZDUz3rPCZX89dA+IoRZ+9T1ngLBKsgkTmx7UA==",
+      "path": "system.servicemodel.primitives/6.2.0",
+      "hashPath": "system.servicemodel.primitives.6.2.0.nupkg.sha512"
+    },
     "System.Text.Encodings.Web/10.0.6": {
       "type": "package",
       "serviceable": true,
@@ -2887,311 +3666,6 @@
       "sha512": "sha512-bmwWQ4mOQEJOD0IkxSNZScU+kjMT1YliZPLIQtuh1LbxolKqJLcvyIY/9xv/2g3tNO3mZlcCIUOx756Xu3kE6w==",
       "path": "zxing.net.bindings.windows.compatibility/0.16.12",
       "hashPath": "zxing.net.bindings.windows.compatibility.0.16.12.nupkg.sha512"
-    },
-    "DevExpress.Charts.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.CodeParser.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Data.Desktop.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Data.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.DataAccess.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.DataAccess.v24.1.UI/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.DataVisualization.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Diagram.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Dialogs.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Drawing.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Images.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Map.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Mvvm.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Office.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Pdf.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Pdf.v24.1.Drawing/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.PivotGrid.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Printing.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.RichEdit.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.RichEdit.v24.1.Export/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Sparkline.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.SpellChecker.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Spreadsheet.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.TreeMap.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Utils.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Utils.v24.1.UI/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.Xpo.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraBars.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraCharts.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraCharts.v24.1.Extensions/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraCharts.v24.1.UI/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraCharts.v24.1.Wizard/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraDiagram.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraDialogs.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraEditors.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraGantt.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraGauges.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraGauges.v24.1.Presets/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraGauges.v24.1.Win/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraGrid.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraLayout.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraMap.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraNavBar.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraPdfViewer.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraPivotGrid.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraPrinting.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraReports.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraReports.v24.1.Extensions/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraRichEdit.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraScheduler.v24.1.Core.Desktop/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraScheduler.v24.1.Core/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraScheduler.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraScheduler.v24.1.Extensions/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraScheduler.v24.1.Reporting/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraScheduler.v24.1.Reporting.Extensions/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraSpellChecker.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraSpreadsheet.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraTreeList.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraTreeMap.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraTreeMap.v24.1.UI/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DevExpress.XtraVerticalGrid.v24.1/24.1.5.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
     },
     "Kingdee.CDP.WebApi.SDK/8.0.6.0": {
       "type": "reference",
