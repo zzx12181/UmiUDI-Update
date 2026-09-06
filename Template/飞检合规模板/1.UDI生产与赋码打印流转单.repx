@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="24.1.5.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" SnapGridSize="25" ReportUnit="TenthsOfAMillimeter" Margins="100, 100, 80, 80" PaperKind="A4" PageWidth="2100" PageHeight="2970" Version="24.1" DataMember="明细信息" DataSource="#Ref-0" Dpi="254">
+  <Bands>
+    <Item1 Ref="2" ControlType="ReportHeaderBand" HeightF="355" Dpi="254">
+      <Controls>
+        <Item1 Ref="3" ControlType="XRLabel" TextAlignment="MiddleLeft" SizeF="1200,45" LocationFloat="0,0" Dpi="254" Font="微软雅黑, 10.5pt, style=Bold">
+          <ExpressionBindings>
+            <Item1 Ref="4" EventName="BeforePrint" PropertyName="Text" Expression="[企业资质.公司全称]" />
+          </ExpressionBindings>
+        </Item1>
+        <Item2 Ref="5" ControlType="XRLabel" Text="SMP-SC-001-R11-A2" TextAlignment="MiddleRight" SizeF="500,45" LocationFloat="1400,0" Dpi="254" Font="Arial, 9pt" />
+        <Item3 Ref="6" ControlType="XRTable" SizeF="1900,60" LocationFloat="0,50" Dpi="254" BackColor="255,242,246,250" BorderColor="255,60,60,60" Borders="All">
+          <Rows>
+            <Item1 Ref="7" ControlType="XRTableRow" Weight="1" Dpi="254">
+              <Cells>
+                <Item1 Ref="8" ControlType="XRTableCell" Weight="1" Text="医疗器械生产指令与UDI赋码流转单" TextAlignment="MiddleCenter" Dpi="254" Font="微软雅黑, 13pt, style=Bold" />
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item3>
+        <Item4 Ref="9" ControlType="XRTable" SizeF="1900,205" LocationFloat="0,110" Dpi="254" BackColor="White" BorderColor="255,60,60,60" Borders="All">
+          <Rows>
+            <Item1 Ref="10" ControlType="XRTableRow" Weight="1" Dpi="254">
+              <Cells>
+                <Item1 Ref="11" ControlType="XRTableCell" Weight="0.1368421052631579" Text="任务单号:" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt, style=Bold" BackColor="255,246,248,250" />
+                <Item2 Ref="12" ControlType="XRTableCell" Weight="0.3631578947368421" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="13" EventName="BeforePrint" PropertyName="Text" Expression="[单头信息.任务单号]" />
+                  </ExpressionBindings>
+                </Item2>
+                <Item3 Ref="14" ControlType="XRTableCell" Weight="0.1368421052631579" Text="生产单号:" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt, style=Bold" BackColor="255,246,248,250" />
+                <Item4 Ref="15" ControlType="XRTableCell" Weight="0.3631578947368421" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="16" EventName="BeforePrint" PropertyName="Text" Expression="[单头信息.生产单号]" />
+                  </ExpressionBindings>
+                </Item4>
+              </Cells>
+            </Item1>
+            <Item2 Ref="17" ControlType="XRTableRow" Weight="1" Dpi="254">
+              <Cells>
+                <Item1 Ref="18" ControlType="XRTableCell" Weight="0.1368421052631579" Text="单据日期:" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt, style=Bold" BackColor="255,246,248,250" />
+                <Item2 Ref="19" ControlType="XRTableCell" Weight="0.3631578947368421" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="20" EventName="BeforePrint" PropertyName="Text" Expression="[单头信息.单据日期]" />
+                  </ExpressionBindings>
+                </Item2>
+                <Item3 Ref="21" ControlType="XRTableCell" Weight="0.1368421052631579" Text="生产车间:" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt, style=Bold" BackColor="255,246,248,250" />
+                <Item4 Ref="22" ControlType="XRTableCell" Weight="0.3631578947368421" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="23" EventName="BeforePrint" PropertyName="Text" Expression="[单头信息.生产车间]" />
+                  </ExpressionBindings>
+                </Item4>
+              </Cells>
+            </Item2>
+            <Item3 Ref="24" ControlType="XRTableRow" Weight="1" Dpi="254">
+              <Cells>
+                <Item1 Ref="25" ControlType="XRTableCell" Weight="0.1368421052631579" Text="客户名称:" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt, style=Bold" BackColor="255,246,248,250" />
+                <Item2 Ref="26" ControlType="XRTableCell" Weight="0.3631578947368421" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="27" EventName="BeforePrint" PropertyName="Text" Expression="[单头信息.客户名称]" />
+                  </ExpressionBindings>
+                </Item2>
+                <Item3 Ref="28" ControlType="XRTableCell" Weight="0.1368421052631579" Text="业务状态:" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt, style=Bold" BackColor="255,246,248,250" />
+                <Item4 Ref="29" ControlType="XRTableCell" Weight="0.3631578947368421" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="30" EventName="BeforePrint" PropertyName="Text" Expression="[单头信息.业务状态]" />
+                  </ExpressionBindings>
+                </Item4>
+              </Cells>
+            </Item3>
+            <Item4 Ref="31" ControlType="XRTableRow" Weight="1" Dpi="254">
+              <Cells>
+                <Item1 Ref="32" ControlType="XRTableCell" Weight="0.1368421052631579" Text="制单人:" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt, style=Bold" BackColor="255,246,248,250" />
+                <Item2 Ref="33" ControlType="XRTableCell" Weight="0.3631578947368421" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="34" EventName="BeforePrint" PropertyName="Text" Expression="[单头信息.制单人]" />
+                  </ExpressionBindings>
+                </Item2>
+                <Item3 Ref="35" ControlType="XRTableCell" Weight="0.1368421052631579" Text="审核人:" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt, style=Bold" BackColor="255,246,248,250" />
+                <Item4 Ref="36" ControlType="XRTableCell" Weight="0.3631578947368421" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="37" EventName="BeforePrint" PropertyName="Text" Expression="[单头信息.审核人]" />
+                  </ExpressionBindings>
+                </Item4>
+              </Cells>
+            </Item4>
+            <Item5 Ref="38" ControlType="XRTableRow" Weight="1" Dpi="254">
+              <Cells>
+                <Item1 Ref="39" ControlType="XRTableCell" Weight="0.1368421052631579" Text="赋码打印人:" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt, style=Bold" BackColor="255,246,248,250" />
+                <Item2 Ref="40" ControlType="XRTableCell" Weight="0.3631578947368421" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="41" EventName="BeforePrint" PropertyName="Text" Expression="[单头信息.打印人]" />
+                  </ExpressionBindings>
+                </Item2>
+                <Item3 Ref="42" ControlType="XRTableCell" Weight="0.1368421052631579" Text="打印时间:" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt, style=Bold" BackColor="255,246,248,250" />
+                <Item4 Ref="43" ControlType="XRTableCell" Weight="0.3631578947368421" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="44" EventName="BeforePrint" PropertyName="Text" Expression="[单头信息.打印时间]" />
+                  </ExpressionBindings>
+                </Item4>
+              </Cells>
+            </Item5>
+            <Item6 Ref="45" ControlType="XRTableRow" Weight="1" Dpi="254">
+              <Cells>
+                <Item1 Ref="46" ControlType="XRTableCell" Weight="0.1368421052631579" Text="单据备注:" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt, style=Bold" BackColor="255,246,248,250" />
+                <Item2 Ref="47" ControlType="XRTableCell" Weight="0.3631578947368421" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="48" EventName="BeforePrint" PropertyName="Text" Expression="[单头信息.单据备注]" />
+                  </ExpressionBindings>
+                </Item2>
+                <Item3 Ref="49" ControlType="XRTableCell" Weight="0.1368421052631579" Text="执行规范:" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt, style=Bold" BackColor="255,246,248,250" />
+                <Item4 Ref="50" ControlType="XRTableCell" Weight="0.3631578947368421" Text="严格执行标签领用与废签销毁平衡管理" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt" />
+              </Cells>
+            </Item6>
+          </Rows>
+        </Item4>
+        <Item5 Ref="51" ControlType="XRLabel" Text="生产计划与产品赋码明细" TextAlignment="MiddleCenter" SizeF="1900,40" LocationFloat="0,315" Dpi="254" Font="微软雅黑, 9pt, style=Bold" BackColor="255,248,248,248" BorderColor="255,60,60,60" Borders="All" />
+      </Controls>
+    </Item1>
+    <Item2 Ref="52" ControlType="GroupHeaderBand" RepeatEveryPage="true" HeightF="60" Dpi="254">
+      <Controls>
+        <Item1 Ref="53" ControlType="XRTable" SizeF="1900,60" LocationFloat="0,0" Dpi="254" BackColor="255,242,246,250" BorderColor="255,60,60,60" Borders="All">
+          <Rows>
+            <Item1 Ref="54" ControlType="XRTableRow" Weight="1" Dpi="254">
+              <Cells>
+                <Item1 Ref="55" ControlType="XRTableCell" Weight="0.03684210526315789" Text="序号" TextAlignment="MiddleCenter" Dpi="254" Font="微软雅黑, 8.5pt, style=Bold" />
+                <Item2 Ref="56" ControlType="XRTableCell" Weight="0.10526315789473684" Text="物料编码" TextAlignment="MiddleCenter" Dpi="254" Font="微软雅黑, 8.5pt, style=Bold" />
+                <Item3 Ref="57" ControlType="XRTableCell" Weight="0.2736842105263158" Text="产品名称与规格型号" TextAlignment="MiddleCenter" Dpi="254" Font="微软雅黑, 8.5pt, style=Bold" />
+                <Item4 Ref="58" ControlType="XRTableCell" Weight="0.09473684210526316" Text="生产批号" TextAlignment="MiddleCenter" Dpi="254" Font="微软雅黑, 8.5pt, style=Bold" />
+                <Item5 Ref="59" ControlType="XRTableCell" Weight="0.08947368421052632" Text="灭菌批号" TextAlignment="MiddleCenter" Dpi="254" Font="微软雅黑, 8.5pt, style=Bold" />
+                <Item6 Ref="60" ControlType="XRTableCell" Weight="0.08421052631578947" Text="生产日期" TextAlignment="MiddleCenter" Dpi="254" Font="微软雅黑, 8.5pt, style=Bold" />
+                <Item7 Ref="61" ControlType="XRTableCell" Weight="0.08421052631578947" Text="有效期至" TextAlignment="MiddleCenter" Dpi="254" Font="微软雅黑, 8.5pt, style=Bold" />
+                <Item8 Ref="62" ControlType="XRTableCell" Weight="0.06315789473684211" Text="计划数" TextAlignment="MiddleCenter" Dpi="254" Font="微软雅黑, 8.5pt, style=Bold" />
+                <Item9 Ref="63" ControlType="XRTableCell" Weight="0.06315789473684211" Text="赋码数" TextAlignment="MiddleCenter" Dpi="254" Font="微软雅黑, 8.5pt, style=Bold" />
+                <Item10 Ref="64" ControlType="XRTableCell" Weight="0.10526315789473684" Text="单位" TextAlignment="MiddleCenter" Dpi="254" Font="微软雅黑, 8.5pt, style=Bold" />
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item2>
+    <Item3 Ref="65" ControlType="DetailBand" HeightF="65" Dpi="254">
+      <Controls>
+        <Item1 Ref="66" ControlType="XRTable" SizeF="1900,65" LocationFloat="0,0" Dpi="254" BorderColor="255,120,120,120" Borders="All">
+          <Rows>
+            <Item1 Ref="67" ControlType="XRTableRow" Weight="1" Dpi="254">
+              <Cells>
+                <Item1 Ref="68" ControlType="XRTableCell" Weight="0.03684210526315789" TextAlignment="MiddleCenter" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="69" EventName="BeforePrint" PropertyName="Text" Expression="[序号]" />
+                  </ExpressionBindings>
+                </Item1>
+                <Item2 Ref="70" ControlType="XRTableCell" Weight="0.10526315789473684" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="71" EventName="BeforePrint" PropertyName="Text" Expression="[物料编码]" />
+                  </ExpressionBindings>
+                </Item2>
+                <Item3 Ref="72" ControlType="XRTableCell" Weight="0.2736842105263158" TextAlignment="MiddleCenter" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="73" EventName="BeforePrint" PropertyName="Text" Expression="[产品名称] + ' ' + [规格型号]" />
+                  </ExpressionBindings>
+                </Item3>
+                <Item4 Ref="74" ControlType="XRTableCell" Weight="0.09473684210526316" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="75" EventName="BeforePrint" PropertyName="Text" Expression="[批号]" />
+                  </ExpressionBindings>
+                </Item4>
+                <Item5 Ref="76" ControlType="XRTableCell" Weight="0.08947368421052632" TextAlignment="MiddleCenter" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="77" EventName="BeforePrint" PropertyName="Text" Expression="[灭菌批号]" />
+                  </ExpressionBindings>
+                </Item5>
+                <Item6 Ref="78" ControlType="XRTableCell" Weight="0.08421052631578947" TextAlignment="MiddleCenter" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="79" EventName="BeforePrint" PropertyName="Text" Expression="[生产日期]" />
+                  </ExpressionBindings>
+                </Item6>
+                <Item7 Ref="80" ControlType="XRTableCell" Weight="0.08421052631578947" TextAlignment="MiddleCenter" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="81" EventName="BeforePrint" PropertyName="Text" Expression="[有效期至]" />
+                  </ExpressionBindings>
+                </Item7>
+                <Item8 Ref="82" ControlType="XRTableCell" Weight="0.06315789473684211" TextAlignment="MiddleCenter" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="83" EventName="BeforePrint" PropertyName="Text" Expression="[单据数量]" />
+                  </ExpressionBindings>
+                </Item8>
+                <Item9 Ref="84" ControlType="XRTableCell" Weight="0.06315789473684211" TextAlignment="MiddleCenter" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="85" EventName="BeforePrint" PropertyName="Text" Expression="[单据数量]" />
+                  </ExpressionBindings>
+                </Item9>
+                <Item10 Ref="86" ControlType="XRTableCell" Weight="0.10526315789473684" TextAlignment="MiddleCenter" Dpi="254" Font="微软雅黑, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="87" EventName="BeforePrint" PropertyName="Text" Expression="[单位]" />
+                  </ExpressionBindings>
+                </Item10>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item3>
+    <Item4 Ref="88" ControlType="ReportFooterBand" HeightF="260" Dpi="254">
+      <Controls>
+        <Item1 Ref="89" ControlType="XRTable" SizeF="1900,250" LocationFloat="0,0" Dpi="254" BackColor="White" BorderColor="255,60,60,60" Borders="All">
+          <Rows>
+            <Item1 Ref="90" ControlType="XRTableRow" Weight="1" Dpi="254">
+              <Cells>
+                <Item1 Ref="91" ControlType="XRTableCell" Weight="1" Text="本批合计品项: [汇总统计.总品项数] 种        生产总数量: [汇总统计.总数量] 支/盒        赋码打印总数: [汇总统计.打印总数] 贴        作废标签销毁数: 0 贴" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8.5pt" />
+              </Cells>
+            </Item1>
+            <Item2 Ref="92" ControlType="XRTableRow" Weight="1" Dpi="254">
+              <Cells>
+                <Item1 Ref="93" ControlType="XRTableCell" Weight="1" Text="【GMP物料平衡评价】：标签发放数与成品合格贴签数、残损销毁数平衡率达 100%，无外流风险，准予流转入库。" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8.5pt" />
+              </Cells>
+            </Item2>
+            <Item3 Ref="94" ControlType="XRTableRow" Weight="1" Dpi="254">
+              <Cells>
+                <Item1 Ref="95" ControlType="XRTableCell" Weight="0.25" Text="生产操作/制单人签字:&#xA;[单头信息.制单人]    日期: [单头信息.单据日期]" TextAlignment="TopLeft" Dpi="254" Font="微软雅黑, 8.5pt" />
+                <Item2 Ref="96" ControlType="XRTableCell" Weight="0.25" Text="质检复核员签字:&#xA;[单头信息.质检人]    日期: [单头信息.单据日期]" TextAlignment="TopLeft" Dpi="254" Font="微软雅黑, 8.5pt" />
+                <Item3 Ref="97" ControlType="XRTableCell" Weight="0.25" Text="车间生产主管签字:&#xA;[单头信息.审核人]    日期: [单头信息.单据日期]" TextAlignment="TopLeft" Dpi="254" Font="微软雅黑, 8.5pt" />
+                <Item4 Ref="98" ControlType="XRTableCell" Weight="0.25" Text="仓库接料确认签字:&#xA;[单头信息.验收人]    日期: [单头信息.单据日期]" TextAlignment="TopLeft" Dpi="254" Font="微软雅黑, 8.5pt" />
+              </Cells>
+            </Item3>
+            <Item4 Ref="99" ControlType="XRTableRow" Weight="1" Dpi="254">
+              <Cells>
+                <Item1 Ref="100" ControlType="XRTableCell" Weight="0.75" Text="生产受控记录 | 保存期限至产品有效期届满后2年 | 飞行检查随调随审" TextAlignment="MiddleLeft" Dpi="254" Font="微软雅黑, 8pt" />
+                <Item2 Ref="101" ControlType="XRTableCell" Weight="0.25" Text="第 1/1 页" TextAlignment="MiddleRight" Dpi="254" Font="微软雅黑, 8pt" />
+              </Cells>
+            </Item4>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item4>
+    <Item5 Ref="102" ControlType="PageFooterBand" HeightF="50" Dpi="254">
+      <Controls>
+        <Item1 Ref="103" ControlType="XRLabel" Text="加密等级: 受控文件 (机密)" TextAlignment="MiddleLeft" SizeF="600,40" LocationFloat="0,5" Dpi="254" Font="微软雅黑, 8pt" />
+        <Item2 Ref="104" ControlType="XRLabel" Text="表单格式生效日期: 2025年07月09日" TextAlignment="MiddleRight" SizeF="600,40" LocationFloat="1300,5" Dpi="254" Font="微软雅黑, 8pt" />
+      </Controls>
+    </Item5>
+  </Bands>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v24.1" Ref="0" Content="~Xtra#NULL" Type="System.Data.DataSet" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>
