@@ -1,10 +1,10 @@
 {
-    "version":  "1.3.5",
-    "publishtime":  "2026-09-07 01:14:01",
+    "version":  "1.3.6",
+    "publishtime":  "2026-09-07 01:34:34",
     "force":  false,
-    "versionCode":  135,
+    "versionCode":  136,
     "apkUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/UmiPDA.apk",
     "wgtUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/update.wgt",
-    "note":  "Release PDA WGT v1.3.5",
-    "versionName":  "v1.3.5"
+    "note":  "修复出库扫码量纲与可用库存防呆",
+    "versionName":  "v1.3.6"
 }
