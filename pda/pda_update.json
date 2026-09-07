@@ -1,10 +1,10 @@
 {
-    "version":  "1.3.28",
-    "publishtime":  "2026-09-07 20:33:36",
+    "version":  "1.3.29",
+    "publishtime":  "2026-09-07 21:55:27",
     "force":  false,
-    "versionCode":  158,
+    "versionCode":  159,
     "apkUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/UmiPDA.apk",
     "wgtUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/update.wgt",
-    "note":  "Release PDA WGT v1.3.28",
-    "versionName":  "v1.3.28"
+    "note":  "1. 新增【UDI 全生命周期追溯】模块\n2. 支持条码要素、生产工单、首检抽检、多级包装与在箱单品下钻、出入库流向及客户全景呈现\n3. 关联查询与追溯无缝联动，支持最近查验历史与异常声光预警",
+    "versionName":  "v1.3.29"
 }
