@@ -1,10 +1,10 @@
 {
     "version":  "1.3.30",
-    "publishtime":  "2026-09-07 22:15:00",
+    "publishtime":  "2026-09-07 22:14:52",
     "force":  false,
     "versionCode":  160,
     "apkUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/UmiPDA.apk",
     "wgtUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/update.wgt",
-    "note":  "1. 修复质检综合评级显示'PDA不支持'问题，多维合规自检动态评级\n2. 修复质检历史记录排序问题，最新检测记录稳定置顶在最上方\n3. 修复产品名称显示'未关联产品'问题，完善工单与DI多级回退机制\n4. 修复质检页面及报告弹窗按钮文字偏下问题，规范居中布局",
+    "note":  "Release PDA WGT v1.3.30",
     "versionName":  "v1.3.30"
 }
