@@ -1,10 +1,10 @@
 {
-    "version":  "1.3.19",
-    "publishtime":  "2026-09-07 15:52:27",
+    "version":  "1.3.20",
+    "publishtime":  "2026-09-07 16:06:04",
     "force":  false,
-    "versionCode":  149,
+    "versionCode":  150,
     "apkUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/UmiPDA.apk",
     "wgtUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/update.wgt",
-    "note":  "1. 修复PDA入库扫描纯批次码未弹出数量输入框问题\n2. 修复单据明细抽屉数据错位问题，严格对齐PC端扫码流水展示",
-    "versionName":  "v1.3.19"
+    "note":  "1. 恢复入库纯原生弹窗交互：修复变量作用域阻断扫码问题，原生输入框100%稳定唤起\n2. 修复单据明细抽屉数据错位问题，严格对齐PC端扫码流水展示",
+    "versionName":  "v1.3.20"
 }
