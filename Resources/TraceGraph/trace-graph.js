@@ -216,9 +216,10 @@ class TraceGraphEngine {
 
     const hGap = 65; // 列间距
 
-    // 向左延展: 2, 1, 0
+    // 向左延展: 所有 < 3 的 level 从大到小降序排列 (2, 1, 0, -1...)
     let curLeftEdge = -(levelWidths[3] || 220) / 2;
-    [2, 1, 0].forEach(lvl => {
+    const leftLevels = Object.keys(levels).map(x => parseInt(x)).filter(x => x < 3).sort((a, b) => b - a);
+    leftLevels.forEach(lvl => {
       if (levelWidths[lvl] !== undefined) {
         const w = levelWidths[lvl];
         levelXMap[lvl] = curLeftEdge - hGap - w / 2;
@@ -226,9 +227,10 @@ class TraceGraphEngine {
       }
     });
 
-    // 向右延展: 4, 5, 6
+    // 向右延展: 所有 > 3 的 level 从小到大升序排列 (4, 5, 6, 7...)
     let curRightEdge = (levelWidths[3] || 220) / 2;
-    [4, 5, 6].forEach(lvl => {
+    const rightLevels = Object.keys(levels).map(x => parseInt(x)).filter(x => x > 3).sort((a, b) => a - b);
+    rightLevels.forEach(lvl => {
       if (levelWidths[lvl] !== undefined) {
         const w = levelWidths[lvl];
         levelXMap[lvl] = curRightEdge + hGap + w / 2;
