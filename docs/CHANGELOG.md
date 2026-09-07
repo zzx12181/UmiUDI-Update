@@ -9,6 +9,38 @@
 >    - 每个版本精炼为 1~4 条业务要点，杜绝冗长堆砌；不直接影响用户日常操作的底层稳定性与内部机制优化，一律不得向用户展示。
 > 4. **原详尽日志保留于技术归档区**：历史详尽记录、技术排查细节与全量变更统一归档在 `### 开发环境（完整原日志与技术变更详情）` 节中，供技术团队内部回溯，严防被前端升级弹窗读取展示给用户。
 
+## [1.2.1.36] - 2026-09-08
+
+### 生产环境（业务与操作变动）
+
+1. **【UDI打印流转单与出库报表全面代码级重构】**：
+   - 将“UDI生产与赋码打印流转单”更名为“UDI 打印流转单”，重写为原生代码级 Excel 生成引擎，彻底剔除旧版报表中间组件与重复日期，导出位置统一锁定为桌面。
+   - 出库单列表新增“UDI明细表”与“随货同行单”代码级 Excel 导出功能，自动聚合同 DI 同批次明细记录，动态读取医疗器械注册证号与多级包装规格（单品显示为“/”），提升打印与随货出库流转效率。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **代码级报表生成引擎与菜单导出改造 (Services/PrintTaskExcelService.cs, Services/OutboundExcelService.cs, Core/ExportHelper.cs, Pages/UDI_DY_List.cs, Pages/CK_OUT_List.cs)**：
+  - 新增 `PrintTaskExcelService.cs`，使用 EPPlus 纯代码构造生成《UDI 打印流转单.xlsx》，支持单品与多级包装自动折算与物料平衡评价签名行；
+  - 新增 `OutboundExcelService.cs`，使用 EPPlus 纯代码生成《UDI明细表.xlsx》与《随货同行单.xlsx》，实现同 DI 与同批次聚合汇总、动态计算包装规格（单品显示 /，多包装如 8盒/箱）、动态读取注册证号与默认单位（个）；
+  - `ExportHelper.cs`：重构“导出”下拉菜单，将流转单更名并增加 UDI明细表 与 随货同行单 项，移除废弃的报表项；所有 Excel 文件默认自动输出保存至当前用户桌面；
+  - 清理废弃的 DevExpress repx 报表模板。
+
+## [1.2.1.35] - 2026-09-07
+
+### 生产环境（业务与操作变动）
+
+1. **【首页看板视觉优化】**：优化 PC 端首页看板布局，隐藏版本更新记录看板组件，将注意事项面板扩展为全宽舒适展示，界面更加整洁专注，减少视觉干扰。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **首页看板视觉优化与组件隐藏 (Pages/HomePage.cs, Pages/HomePage.Designer.cs)**：
+  - `HomePage.Designer.cs`：将 `label_ver_title`、`label_current_ver`、`divider_ver`、`panel_changelog`、`divider_v` 设为不可见（`Visible = false`）；
+  - `HomePage.cs`：在 `AdjustResponsiveLayout()` 中保持更新记录组件隐藏，并将 `divider16` 与注意事项标签（`label10`, `label4`, `label7`, `label8`, `label9`, `label5`, `label6`）自适应拓宽至面板全宽展示；`LoadChangelog()` 设置为空返回，避免冗余解析。
+
 ## [1.2.1.34] - 2026-09-07
 
 ### 生产环境（业务与操作变动）
