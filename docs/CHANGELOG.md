@@ -9,6 +9,23 @@
 >    - 每个版本精炼为 1~4 条业务要点，杜绝冗长堆砌；不直接影响用户日常操作的底层稳定性与内部机制优化，一律不得向用户展示。
 > 4. **原详尽日志保留于技术归档区**：历史详尽记录、技术排查细节与全量变更统一归档在 `### 开发环境（完整原日志与技术变更详情）` 节中，供技术团队内部回溯，严防被前端升级弹窗读取展示给用户。
 
+## [1.2.1.38] - 2026-09-17
+
+### 生产环境（业务与操作变动）
+
+1. **【医疗器械 DI 编码自动生成与界面即时联动优化】**：
+   - 修复医疗器械新增/编辑时，自动生成“本体产品标识 (BTCPBS)”及“使用单元产品标识 (SYDYCPBS)”时弹窗异常报错的问题，确保 14 位合规 UDI 编码可稳定自动计算与保存。
+   - 优化生成结果与主界面的实时数据联动，弹窗确定后编码立即回填至对应输入框并保持数据绑定，彻底解决此前生成后界面未回填、保存时被置空的缺陷。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **DI生成向导模型映射与界面双向绑定修复 (Models/di_gen.cs, Forms/DI_Gen.cs, Pages/DI_SC.cs)**：
+  - `Models/di_gen.cs`：补充 `[SugarTable("di_gen")]` 映射与 `id` 自增主键特性 `[SugarColumn(IsPrimaryKey = true, IsIdentity = true)]`；
+  - `Forms/DI_Gen.cs`：`db.Storageable(di_Gen)` 显式指定联合条件列 `.WhereColumns(it => new { it.BZZSF, it.CSDM, it.XMDM })`，补全审计字段（`createtime`, `createperson`, `updatetime`），并在异常捕获中保留窗口防止输入丢失；
+  - `Pages/DI_SC.cs`：`TranslateValueEvent` 事件回调中同步给 `input_BTCPBS.Text` 与 `input_SYDYCPBS.Text` 赋值，修复界面无回填导致被保存覆盖的缺陷，重置时联动清空输入框文本。
+
 ## [1.2.1.37] - 2026-09-08
 
 ### 生产环境（业务与操作变动）
