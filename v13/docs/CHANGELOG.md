@@ -1,0 +1,919 @@
+# UmiUDI 更新日志 (CHANGELOG)
+
+> ### 📌 生产环境更新日志编写铁律与规范（强制执行）
+> 1. **严禁出现与实际业务变动无关的内容**：坚决禁止将纯内部重构、中间件封装、内部排查步骤等无实际业务价值的内容展示给用户。
+> 2. **严禁出现任何代码或数据库变动相关内容**：坚决禁止出现任何代码文件名（如 `.cs`、`.vue`）、类名、方法/函数名、异常类名、数据库表名（如 `di_devicepackage`、`udi_scd`、`ck_inout` 等）、字段名、SQL 语句或底层技术术语。
+> 3. **只允许显示真正影响用户操作的更新日志**：
+>    - 生产环境日志面向医院、药械企业客户及车间一线操作人员，必须纯粹立足于用户操作视角编写；
+>    - 必须言简意赅，只展示真正改变了用户操作方式、界面交互、声光防呆警示、合规拦截卡点或新增业务功能的核心条目；
+>    - 每个版本精炼为 1~4 条业务要点，杜绝冗长堆砌；不直接影响用户日常操作的底层稳定性与内部机制优化，一律不得向用户展示。
+> 4. **原详尽日志保留于技术归档区**：历史详尽记录、技术排查细节与全量变更统一归档在 `### 开发环境（完整原日志与技术变更详情）` 节中，供技术团队内部回溯，严防被前端升级弹窗读取展示给用户。
+
+## [1.3.0.0] - 2026-11-11
+
+### 生产环境（业务与操作变动）
+
+1. **【云端登录安全与密码保护全面升级】**：
+   - 全面升级云端账套登录认证与账号密码安全防护体系，增强异常登录拦截与在线会话稳定性校验，保障企业账套访问安全。
+   - 企业注册试用时增加邮箱验证码安全校验，进一步规范新企业开通申请与后续审核流程。
+2. **【在线合规对接与第三方服务链路加固】**：
+   - 优化国家药监局 UDI 申报对接、药品追溯码上传、AI 业务助手及在线支付订单等云端协同服务的数据传输安全性与响应稳定性。
+3. **【离线授权校验与版本兼容提醒优化】**：
+   - 强化本地离线授权校验与授权有效期防护机制，确保单机/局域网授权环境下的合规运行稳定性；同步支持客户端最低安全版本基线提醒与平滑升级引导。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **Phase 1 云端服务架构升级与安全加固 (`1.3.0.0`)**：
+  - 将客户端云端中心认证与高敏第三方外部协同链路统一收口至服务端 API 安全网关，移除客户端本地配置中的历史直连认证凭据与第三方密钥明文依赖，改为登录后内存态会话令牌及运行期动态校验。
+  - 完成密码安全存储平滑迁移、会话自动续期机制、管理端严格访问隔离与离线授权非对称签名校验加固，并完善缓冲期平滑兼容策略。
+  - 统一客户端程序集、安装包、服务端网关及共享契约工程版本至 `1.3.0.0`（详细技术变更归档于内部开发日志 `docs/DEVLOG.md`）。
+
+## [1.2.1.41] - 2026-11-10
+
+### 生产环境（业务与操作变动）
+
+1. **【多企业精准识别登录与本地历史记忆】**：
+   - 登录窗口首行升级为“公司名称 / 统一信用代码”，精准消歧不同企业同名账号；同企业内部存在重名登录账号时，自动弹出使用人与部门确认列表防误登。
+   - 新增本地企业历史记忆与下拉删除功能（循环保留最近 3 家登录企业，本地与云端账套各自独立记忆账号密码），并优化登录窗体底部排版间距。
+2. **【公司所属行业隔离与双行业工作台管控】**：
+   - 新增、复制、编辑公司信息及企业初始配置时新增“所属行业（医疗器械 / 医药）”配置项；未单独配置的历史企业默认按“医疗器械”运行，未升级旧版客户端可继续正常使用不受任何影响。
+   - 普通企业账号严格锁定所属行业界面、首页统计口径、功能菜单、飞检入口与 AI 业务助手知识边界，选错行业登录时自动拦截并切回企业授权行业；支持平台超级管理员按需自由登录及在主界面右上角实时切换“医疗器械 / 医药”工作台。
+3. **【账号授权名称规范与密码维护体验优化】**：
+   - 将账号授权配置窗口名称统一规范为“账号授权”，并在保存授权时自动保护留存未升级老客户既有的历史跨行业权限不被误删。
+   - 用户管理支持便捷修改登录密码与“小眼睛”明密文一键切换，全面强化账号归属及企业配额校验。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **多租户企业消歧登录、本地 3 家历史记忆与用户密码维护 (`Login.cs`, `Login.Designer.cs`, `App.config`, `Pages/Base_User.cs`, `Forms/UserRegisterForm.cs`)**：
+  - `Login.Designer.cs` & `Login.cs`：将 `input_company` 调整为登录首行并支持“公司名称 / 统一信用代码 (`TYSHXYDM`)”精确检索，接入 `%LocalAppData%\UmiUDI\company_history.json` FIFO 3 家企业历史记录与 `ClosedItem` 单项移除；`App.config` 新增 `LocalCompany` / `LocalUsername` / `LocalPassword` 与 `OnlineCompany` / `OnlineUsername` / `OnlinePassword` 分账套持久化；同企业存在多条重名 `cer_user` 时弹出 `ShowDuplicateUserPickerModal` 展示姓名、部门与账号 ID 进行二次消歧；新增 `EnsureLoginWindowVerticalSpacing()` 优化底部留白。
+  - `Pages/Base_User.cs`：编辑账号开放密码修改及 `input_password_SuffixClick` 明密文切换，收敛超级管理员跨企业操作判定，补充目标部门存在性、企业账号上限与越权修改防护。
+  - `Forms/UserRegisterForm.cs`：禁止自助注册直接挂靠既有企业，仅允许新企业注册并默认设置 `industry = 0`（医疗器械）。
+- **公司所属行业字段、兼容降级与全链路行业硬隔离 (`Core/IndustryHelper.cs`, `Models/cer_company.cs`, `Models/umi_basic_cerContext.cs`, `Pages/Base_Company.cs`, `Pages/Base_Company.Designer.cs`, `Pages/Base_Config.cs`, `Pages/Base_Customer.cs`, `Pages/Base_Department.cs`, `Pages/Base_Register.cs`, `Pages/DTC_Config.cs`, `Forms/DataBase.cs`, `Core/SecurityGuard.cs`, `Core/YaoJianJu.cs`, `Core/AiAgent/*`, `Forms/AiCopilotControl.cs`, `Resources/AiCopilot/index.html`)**：
+  - 新增 `Core/IndustryHelper.cs`：定义 `IndustryDevice = 0` / `IndustryDrug = 1` 及双行业专属菜单映射表；`EnsureCompanyIndustryColumn` 先探测 `INFORMATION_SCHEMA` 后按需追加 `cer_company.industry TINYINT(1) NOT NULL DEFAULT 0`，无 DDL 权限时安全降级按 `0`（医疗器械）运行；`cer_company.industry` 标注 `[SugarColumn(IsIgnore = true)]`，彻底保证共享数据库的未升级旧版客户端零兼容性异常。
+  - `Pages/Base_Company.cs` & `Pages/Base_Company.Designer.cs`：公司管理新增“所属行业”列表列、搜索筛选字段、新增/复制/编辑必选配置与行复制工具栏，编辑当前登录企业变更行业后提醒重登生效；同步加固 `Pages/Base_Config.cs` 本地初始化建库与权限过滤。
+  - `Core/AiAgent/*` & `Forms/AiCopilotControl.cs` & `Resources/AiCopilot/index.html`：`AiPermissionService`、`AiKernelManager`、`KnowledgeBaseEngine`、`ComplianceInspectionPlugin`、`MedicalDeviceExpertPlugin`、`AiSecurityInvocationFilter` 接入行业上下文快照与跨行业拒答规则，隔离知识切片、系统提示词、插件工具与前端快捷指令。
+- **授权窗口正名、历史跨行业权限保护与仅平台超级管理员 `zzx` 双行业切换 (`Forms/Auth_Select.Designer.cs`, `Forms/Auth_Select.cs`, `Pages/Base_User.cs`, `Core/GlobalConfig.cs`, `Login.cs`, `Mian.Designer.cs`, `Mian.cs`, `Pages/HomePage.cs`, `Properties/AssemblyInfo.cs`, `UmiUDI.iss`)**：
+  - `Forms/Auth_Select.Designer.cs` & `Pages/Base_User.cs`：统一窗口标题 `Text` 与 `pageHeader.Text` 为“账号授权”；`Auth_Select.cs` 对普通企业仅展示所属行业菜单树并在保存时完整留存 `_preservedCrossIndustryMenuIds` 防止误抹未升级老用户权限；对超级管理员 `zzx` 展示“（超级管理员·全行业）”节点且不误报警告。
+  - `Core/GlobalConfig.cs`：新增 `IsSuperAdminUser(int userId, int companyId, string? userName)`，严格限定 `userId == 1` 或 `companyId == 1 && username == "zzx"`，同步替换 `Base_Customer.cs`、`Base_Department.cs`、`Base_User.cs`、`DTC_XSD.cs`、`UDI_XSD.cs` 等多处裸 `zzx` 判断防跨租户提权。
+  - `Login.cs` & `Mian.Designer.cs` & `Mian.cs` & `Pages/HomePage.cs`：登录校验仅放行平台超级管理员自由选行业，其他账号选错时弹窗拦截、自动切换回授权行业并要求二次确认点击登录；主窗体标题栏右侧新增仅超级管理员可见的 `panel_super_industry` / `segmented_super_industry`（医疗器械 | 医药）切换开关，切换时支持确认关闭非首页 Tab 并释放扫码映射、全量重载 `cer_menu`（不受旧 `cer_permission` 缺漏限制）、调用 `HomePage.ReloadForIndustry()` 与 `AiCopilotControl.RefreshForIndustryChange()` 同步刷新；同步升级程序集与安装包版本号至 `1.2.1.41`。
+
+## [1.2.1.40] - 2026-10-14
+
+### 生产环境（业务与操作变动）
+
+1. **【各核心业务列表页数据加载与页面切换响应提速】**：
+   - 全面优化生产单列表、销售单列表、UDI打印列表等各核心单据界面的数据加载与层级解析机制，大幅削减远程网络传输等待时间。
+   - 解决切换单据列表卡顿等待问题，进入列表页面耗时由秒级缩减至百毫秒内（提速 80%~95%），显著提升日常高频查单与任务切换流畅度。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **核心列表页公网远程加载性能优化与层级缓存重构 (Pages/UDI_DY_List.cs, Pages/UDI_SCD_List.cs, Pages/UDI_XSD_List.cs, Pages/DI_SC_List.cs, Pages/DI_List.cs, Core/PackageLevelHelper.cs)**：
+  - `Core/PackageLevelHelper.cs`：实现 `PackagingHierarchyCache`，支持单次列表刷新生命周期内多规格层级信息内存安全复用，杜绝逐行重复检索包装层级；
+  - `Pages/UDI_DY_List.cs`：将逐行订单状态查询重构为单次批量 `In()` 查询，采用大小写不敏感字典映射，消除 N+1 次远程网络往返；
+  - `Pages/UDI_SCD_List.cs` & `Pages/UDI_XSD_List.cs`：引入包装层级缓存机制并添加空集合防护拦截，避免无数据时触发空条件数据库查询；
+  - `Pages/DI_SC_List.cs` & `Pages/DI_List.cs`：重构物料编码关联逻辑，由 $O(N \times M)$ 循环嵌套匹配改写为 $O(N)$ 预构建物料字典匹配，移除冗余的全表无条件绑定，页面响应显著提速。
+
+## [1.2.1.39] - 2026-10-12
+
+### 生产环境（业务与操作变动）
+
+1. **【UDI 标签设计器工具栏紧凑化与常用元件平铺展示】**：
+   - 彻底移除工具栏多余的“保存到本地”按钮，强化“另存为”新模板功能；释放横向空间，确保二维码、插入文本、一维码、图片/Logo等常用元件完整直接展开平铺，杜绝折叠菜单。
+   - “对齐与均分”工具栏全面九宫格化，重构为小图标紧凑网格，横向宽度大幅缩减 70%，视觉精致整洁；新增“文字旋转（90°/270°/水平）”一键切换按钮，便捷支持细长药械标签排版。
+2. **【标签底部空白一键消除与多排并联打印优化】**：
+   - 标签规格工具栏新增“紧凑底边”一键贴合功能，自动识别标签文字底边并精准裁切纸张高度，彻底消除卷筒多排标签底部多余空白。
+   - 优化四排并联打印的数据源与防截断机制，确保整排标签内容紧凑、对齐严谨。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **UDI 标签设计器交互重构与自适应排版 (Pages/UDI_BQSJ.cs)**：
+  - 工具栏：移除 `BtnSaveLoc_ItemClick`，引入 `BarButtonGroup` 组织吸附选框、位置对齐与间距尺寸工具，统一应用 `RibbonItemStyles.SmallWithoutText`；
+  - 规格输入：`groupSize` 改用双列紧凑矩阵排布，缩减横向占用；
+  - 自动贴合：新增 `FitDetailHeightToContent()` 遍历计算控件 Y 轴底部最大坐标，自适应调整 `DetailBand.HeightF` 及 `PageHeight` 并反向同步数值；
+  - 文字旋转：新增 `RotateSelectedLabels()`，循环切换选中文本框 `Angle` (0° / 270° / 90°)；
+  - 关联单据补全：完善销售单列表与出库流程中相关字段类型与映射。
+
+## [1.2.1.38] - 2026-09-17
+
+### 生产环境（业务与操作变动）
+
+1. **【医疗器械 DI 编码自动生成与界面即时联动优化】**：
+   - 修复医疗器械新增/编辑时，自动生成“本体产品标识 (BTCPBS)”及“使用单元产品标识 (SYDYCPBS)”时弹窗异常报错的问题，确保 14 位合规 UDI 编码可稳定自动计算与保存。
+   - 优化生成结果与主界面的实时数据联动，弹窗确定后编码立即回填至对应输入框并保持数据绑定，彻底解决此前生成后界面未回填、保存时被置空的缺陷。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **DI生成向导模型映射与界面双向绑定修复 (Models/di_gen.cs, Forms/DI_Gen.cs, Pages/DI_SC.cs)**：
+  - `Models/di_gen.cs`：补充 `[SugarTable("di_gen")]` 映射与 `id` 自增主键特性 `[SugarColumn(IsPrimaryKey = true, IsIdentity = true)]`；
+  - `Forms/DI_Gen.cs`：`db.Storageable(di_Gen)` 显式指定联合条件列 `.WhereColumns(it => new { it.BZZSF, it.CSDM, it.XMDM })`，补全审计字段（`createtime`, `createperson`, `updatetime`），并在异常捕获中保留窗口防止输入丢失；
+  - `Pages/DI_SC.cs`：`TranslateValueEvent` 事件回调中同步给 `input_BTCPBS.Text` 与 `input_SYDYCPBS.Text` 赋值，修复界面无回填导致被保存覆盖的缺陷，重置时联动清空输入框文本。
+
+## [1.2.1.37] - 2026-09-08
+
+### 生产环境（业务与操作变动）
+
+1. **【出库UDI明细表序列号完整保留与合并导出优化】**：
+   - 优化出库单列表“UDI明细表”导出功能，完整保留一件一码带序列号产品的真实 UDI 完整条码，确保随货流转与溯源信息合规完整。
+   - 优化多张出库单合并导出时的产品信息与排序展示，自动精准对齐各单据物料规格与批次，明细排版更加清晰规范。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **出库原生 Excel 报表导出序列号保留与多单精准匹配优化 (Services/OutboundExcelService.cs)**：
+  - `FormatCleanUdi`：完整保留包含 (21) 序列号的 UDI 条码，清洗非打印不可见控制字符；
+  - 明细导出按 `(crkdh, CleanUdi)` 分组聚合，序列号产品逐件独立展示，无序列号批次自动聚合求和；
+  - 修复多张出库单合并勾选导出时 DI 信息回退导致数据错位的缺陷，按单号精准匹配；明细与主表均按勾选单据次序严格排序。
+
+## [1.2.1.36] - 2026-09-08
+
+### 生产环境（业务与操作变动）
+
+1. **【UDI打印流转单与出库报表全面代码级重构】**：
+   - 将“UDI生产与赋码打印流转单”更名为“UDI 打印流转单”，重写为原生代码级 Excel 生成引擎，彻底剔除旧版报表中间组件与重复日期，导出位置统一锁定为桌面。
+   - 出库单列表新增“UDI明细表”与“随货同行单”代码级 Excel 导出功能，自动聚合同 DI 同批次明细记录，动态读取医疗器械注册证号与多级包装规格（单品显示为“/”），提升打印与随货出库流转效率。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **代码级报表生成引擎与菜单导出改造 (Services/PrintTaskExcelService.cs, Services/OutboundExcelService.cs, Core/ExportHelper.cs, Pages/UDI_DY_List.cs, Pages/CK_OUT_List.cs)**：
+  - 新增 `PrintTaskExcelService.cs`，使用 EPPlus 纯代码构造生成《UDI 打印流转单.xlsx》，支持单品与多级包装自动折算与物料平衡评价签名行；
+  - 新增 `OutboundExcelService.cs`，使用 EPPlus 纯代码生成《UDI明细表.xlsx》与《随货同行单.xlsx》，实现同 DI 与同批次聚合汇总、动态计算包装规格（单品显示 /，多包装如 8盒/箱）、动态读取注册证号与默认单位（个）；
+  - `ExportHelper.cs`：重构“导出”下拉菜单，将流转单更名并增加 UDI明细表 与 随货同行单 项，移除废弃的报表项；所有 Excel 文件默认自动输出保存至当前用户桌面；
+  - 清理废弃的 DevExpress repx 报表模板。
+
+## [1.2.1.35] - 2026-09-07
+
+### 生产环境（业务与操作变动）
+
+1. **【首页看板视觉优化】**：优化 PC 端首页看板布局，隐藏版本更新记录看板组件，将注意事项面板扩展为全宽舒适展示，界面更加整洁专注，减少视觉干扰。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **首页看板视觉优化与组件隐藏 (Pages/HomePage.cs, Pages/HomePage.Designer.cs)**：
+  - `HomePage.Designer.cs`：将 `label_ver_title`、`label_current_ver`、`divider_ver`、`panel_changelog`、`divider_v` 设为不可见（`Visible = false`）；
+  - `HomePage.cs`：在 `AdjustResponsiveLayout()` 中保持更新记录组件隐藏，并将 `divider16` 与注意事项标签（`label10`, `label4`, `label7`, `label8`, `label9`, `label5`, `label6`）自适应拓宽至面板全宽展示；`LoadChangelog()` 设置为空返回，避免冗余解析。
+
+## [1.2.1.34] - 2026-09-07
+
+### 生产环境（业务与操作变动）
+
+1. **【包装关联与层级拆解全流程优化】**：优化多级包装扫码关联与层级拆解操作，支持扫描任意子级单品或中间包装直接精准查询所属整箱关联关系。支持无缝反复组包与安全拆解，拆解后单品独立可查，彻底杜绝历史孤立残留数据干扰。
+2. **【扫码条码智能对齐与 GS 分隔符全链路保留】**：增强条码识别与纠偏能力，全链路严密保留标准 GS1 分隔字符。针对部分扫描枪在普通键盘模式下丢失控制符的情况，系统在入口自动智能比对赋码明细并无缝补齐，确保不同批次与设备间条码解析始终精准一致。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **包装关联业务优化、GS 分隔符保留与多端对齐 (Core/PackageLevelHelper.cs, Pages/UDI_BZGL.cs, Pages/UDI_SMGL.cs, Pages/UDI_GLCX2.cs)**：
+  - `PackageLevelHelper.cs`：新增 `NormalizeUdi` 与 `ResolveCanonicalUdi`，全流程杜绝主动剥离 `\u001d`（ASCII 29），若因键盘模式丢失 GS 字符，自动从 `udi_dy_detail` 或 `udi_package` 原始赋码数据中根据前缀与序列号匹配补齐带 `\u001d` 的标准原串；
+  - `PackageLevelHelper.cs`：`GetRootUdi` 强化 `OrderByDescending(id)` 并过滤有效非空父级，优先命中最新关联记录，增加环路防呆与回退机制；
+  - `UDI_BZGL.cs` & `UDI_SMGL.cs`：重构盲插逻辑为“存在则更新并清理历史孤立重复行，不存在则插入”，且同步更新 `ck_inout_record.udi_parent`；
+  - `UDI_GLCX2.cs`：全面接入条码权威规范化，拆解单品或整包时对无子级的叶子单品安全出表清理（由 `udi_package_review` 审计留痕），避免留下 `parent=NULL` 幽灵记录；母箱拆空同步清理空箱行；
+  - 数据库索引补齐：在 `udi_package`、`udi_package_review`、`dtc_package`、`dtc_package_review` 上创建复合索引，彻底消除关联检索全表扫描。
+
+## [1.2.1.33] - 2026-09-07
+
+### 生产环境（业务与操作变动）
+
+1. **【UDI追溯全景图谱包装链路完整穿透】**：优化追溯查询图谱与关联明细算法，实现多级包装树（大箱、中箱、小盒、单品明细）的双向全链路穿透溯源。查询二级或任意高阶包装时，完整呈现下级所有子包装及在箱单品明细，追溯链路真实清晰无断层。
+2. **【出库追溯客户信息精准呈现】**：出库记录明细表与追溯全景图谱中，全面对齐收货客户信息，图谱出库节点准确展示“出库给: 客户名称”，消除出库信息空白。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **UDI 追溯全景图谱双向 BFS 穿透与出库客户加载 (Pages/UDI_ZS.cs, Resources/TraceGraph/trace-graph.js)**：
+  - `UDI_ZS.cs`：在 `LoadTraceabilityData` 中引入双向广度优先搜索（BFS），向上溯源所有祖先母包装，向下逐级穿透查询所有在箱子包装、孙包装及叶子单品明细，解决高阶包装追溯下级单品缺失的断层缺陷；
+  - `UDI_ZS.cs`：在出库记录查询后，建立多层级客户名称精准提取链（优先 `ck_inout.customer` ➔ 其次 `erp_xsckd.FCustomerID` ➔ 再次 `udi_xsd.xsd_khmc` ➔ 兜底默认类型），出库明细表 `table8` 新增客户名称列，图谱节点准确显示“出库给: 客户名称”；
+  - `UDI_ZS.cs` 与 `trace-graph.js`：仓储出入库节点所属层级动态计算为 `Math.Max(6, maxChildLevel + 1)`，`applyLayout()` 自适应动态提取各层级深度计算 X/Y 坐标，支持任意深度包装树流畅排布。
+
+## [1.2.1.32] - 2026-09-07
+
+### 生产环境（业务与操作变动）
+
+1. **【企业专属更新按需受控】**：全面优化版本更新检测机制，严格由企业后台配置管控。未设置专属更新服务的企业客户端静默平稳运行，彻底屏蔽外网公共升级提示与弹窗干扰，为特定生产环境提供纯净无扰的使用体验。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **企业未配置更新地址时彻底关闭更新检测与提示 (Mian.cs, Login.cs, App.config)**：
+  - 彻底拔除自动回退至公共更新源的降级机制，`GetEffectiveUpdatePath()` 严格以 `GlobalConfig.UpdatePath` 为准；
+  - `CheckUpdates()` 与 `DownloadAndInstall()` 检测到更新地址为空时直接终止，不发出任何网络请求，右上角与顶部不再显示更新按钮与提示条；
+  - `CheckAndShowUpgradeLog()` 区分首次解压运行与真实版本升级，新安装或新目录运行时仅静默记录版本，不再误触发“升级成功”弹窗；
+  - 清空 `App.config` 中预设的默认外部更新地址。
+
+## [1.2.1.31] - 2026-09-07
+
+### 生产环境（业务与操作变动）
+
+1. **【出入库扫码蜂鸣报警全面补齐】**：出库与入库扫码作业时，针对“已有包装请扫包装码”、“已扫描”、“空箱未关联”、“无库存”、“超发拦截”及产品不匹配等全部拦截与异常分支，全面接入系统错误蜂鸣报警音，扫码防呆声光提示更加醒目，彻底杜绝盲扫与误操作。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **出入库页面统一补齐蜂鸣提示音 (Pages/CK_IN.cs, Pages/CK_OUT.cs)**：
+  - 封装 `PlayAlarmSound()` 触发 `System.Media.SystemSounds.Hand.Play()`；
+  - 覆盖入库与出库所有扫码拦截与校验分支（已有包装、重复扫描、无库存、空箱未关联、工单超限拦截等）。
+
+## [1.2.1.30] - 2026-09-07
+
+### 生产环境（业务与操作变动）
+
+1. **【销售出库防超发量纲对齐】**：彻底修复多包装产品整箱扫码时即时防超发拦截单位错位缺陷，扫码件数与销售订单量纲严格对齐，消除扫描第 1 箱误报超发的问题，保证销售出库顺畅高效。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **修复销售出库即时防超发与订单明细数量量纲错位缺陷 (Pages/CK_OUT.cs)**：
+  - 扫码即时拦截移除 `GetMinUnitCount` 强制展开，传递真实的扫码物理件数；
+  - 封装 `CalculateXsdItemScannedQty` 统一量纲换算方法，同级包装直接累加件数，跨级包装按包装倍率折算；
+  - 统一扫码即时超发拦截、明细表格【本次已扫】列展示以及单据保存防呆的量纲换算逻辑，并在拦截提示中附带清晰的度量单位。
+
+## [1.2.1.29] - 2026-09-07
+
+### 生产环境（业务与操作变动）
+
+1. **【出库单列表关联销售单展示】**：销售出库单列表增加【销售订单号】展示列，操作人员可直观核对出库单关联的销售源单号。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **销售出库单列表增加销售订单号列展示 (Pages/CK_OUT_List.cs)**：在数量列旁展示关联销售订单号 `scdh`。
+
+## [1.2.1.28] - 2026-09-07
+
+### 生产环境（业务与操作变动）
+
+1. **【出库在库库存校验优化】**：彻底修复多包装产品在出库保存时的库存校验单位不对齐缺陷，消除误报“超出可用库存”的弹窗拦截，保证出库单顺畅保存。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **修复出库保存库存校验单位错位与误拦截缺陷 (Pages/CK_OUT.cs)**：
+  - 移除扫码明细预乘包装倍率的遗留逻辑，使扫码明细 `ck_Inout_Detail.sl` 与扫码流水 `ck_Inout_Record.sl`、界面输入数量保持一致；
+  - 保存出库单主表（`ck_inout`）与在库可用库存校验数据源统一使用 `sourceRecords`；
+  - 在在库可用库存校验中加入包装层级穿透（`minDi`）与智能倍率兼容折算，彻底消除因单品/箱数单位不一致导致的在库防呆误拦截。
+
+## [1.2.1.27] - 2026-09-06
+
+### 生产环境（业务与操作变动）
+
+1. **【合规报表设计】**：内置飞检五大合规报表模板，支持动态载入真实单据数据与即时打印预览。
+2. **【工单多品排产】**：生产工单支持一单一品或一单多品批量排产，单据明细支持精准独立选择与流转。
+3. **【多物料全流程入库】**：PC 客户端与手持 PDA 同步支持一单多产品入库，各产品额度独立核算防超入库。
+4. **【发货严格在库防重】**：销售出库强力校验条码在库状态与销售订单配额，严禁未入库、重复出库或超额发货。
+5. **【出入库单据协同】**：列表支持多品单据整单联动与去重删除，精准提示冲突单号，消除误报与卡顿。
+6. **【标签设计与即时预览】**：标签设计器提供 DataMatrix 二维码与一维码一键拖拽插入，支持真机效果即时预览。
+7. **【追溯图谱并发稳定】**：全面重构追溯全景图谱数据加载机制，多任务高并发查询更流畅稳定。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **飞检合规五大核心报表模板与真实单据数据源设计器 (Pages/UDI_BBSJ.cs & Services/FlyInspectionTemplateHelper.cs)**：
+  - 依据国家飞检规范及 GMP/GSP 检查标准，内置 5 种权威合规报表模板：UDI赋码打印流转卡、医疗器械销售出库复核单、产品放行单(COA)、采购验收记录表、外包装层级分包装清单；
+  - 新增 `ReportDataService.cs`，动态提取真实单据数据源构建对象模型；新增 `FlyInspectionTemplateHelper.cs` 自动释放与管理本地报表模板；
+- **生产工单多物料支持与生产单选择框明细级联动 (Forms/SCD_Select.cs & Pages/UDI_SCD.cs)**：
+  - 重构 `SCD_Select.cs`，支持单号和单据明细行双维展示，操作员可查看同一生产任务单下包含的不同产品明细并支持按行精准选中带入；
+  - 统一多物料工单累计完工核算与“已审核”、“已下推”、“已完成”状态流转逻辑；
+- **PC 端生产入库一单多物料录入与数据库模型扩展 (Pages/CK_IN.cs & Models/ck_inout.cs)**：
+  - `CK_IN.cs` 升级支持同一入库单号下录入和批量添加多个不同产品的明细分录，选单后自动分行展开带入并分行校验工单余量；
+  - `ck_inout` 与 `ck_inout_review` 表结构无损扩展 `scd_id` 字段，`DbMigrator.cs` 自动增量升级，入库保存按明细行原子事务落库；
+- **PDA 移动端多产品入库全流程与 API 服务支持 (UmiPDA & UmiPDA - API)**：
+  - 新增 `GET /api/scd/itemsByDjbh` 接口供 PDA 读取同一工单全部产品，`POST /api/inbounds` 支持多产品原子批量入库事务与审计落库；
+  - 手持端 `inbound/index.vue` 支持选择多产品工单并实时切换物料标签，实现流水扫码与多产品一键提交；
+- **出库单严格在库校验、防重与发货超限拦截 (Pages/CK_OUT.cs & OutboundService.cs)**：
+  - 严格校验出库条码在库状态与一物一码唯一性，严禁未入库条码直接出库或已出库条码二次出库；
+  - 严格比对销售订单总需求量与历史累计出库量，严防超限发货，多物料分物料独立核算；
+- **PC 端列表复选框首行点击崩溃、内存残留与多产品单据删除/审核/作废全链路修复 (Pages/CK_IN_List.cs & Pages/CK_OUT_List.cs)**：
+  - 修复 `table1_CellClick` 中 `e.RowIndex != 0` 导致第 0 行复选框失效并抛空引用异常；
+  - 新增 `SyncCheckedList()` 彻底消除分页与筛选时残留的“僵尸单据”，避免跨单误校验出库记录；
+  - 实现同单号多物料明细行自动联动，审核/作废重构为 `distinctCrkdhs.Count != 1` 判定，删除按单号去重执行；精准提示冲突出库单号；
+  - PDA 端 `InboundService.DeleteInbound` 同步优化为软删除，记录全量明细审计日志；
+- **可视化标签设计器一键插入条码控件与真实数据即时预览 (Pages/UDI_BQSJ.cs)**：
+  - 深度集成 `IDesignerHost` 事务与 `ISelectionService`，支持一键插入 UDI DataMatrix 二维码、Code128 一维码、文本框与图片 Logo 并支持自由拖拽与缩放；
+  - 新增 `ShowRealDataPreview()`，自动加载真实 UDI 示例数据调出真机打印效果预览弹窗；
+- **全景追溯跨线程数据绑定重构与图谱异步容错 (Pages/UDI_ZS.cs & Resources/TraceGraph/index.html)**：
+  - 新增 `ApplyTraceabilityDataToTables()`，安全切回 UI 主线程原子绑定 9 大关联表格，彻底根治跨线程操作异常与卡死；
+  - 规范追溯全景图谱标题，加固 WebView2 执行脚本 `ContinueWith` 异常观察与双轨消息解析；
+- **页面激活与标签页切换智能脏刷新机制 (Mian.cs & Pages/CK_IN_List.cs)**：
+  - 主框架 `Mian.cs` 标签页切换联动 `AutoRefreshIfDirty()`，子页面提交后切回列表自动无感刷新最新单据。
+
+---
+
+## [1.2.1.26] - 2026-09-05
+
+### 生产环境（业务与操作变动）
+
+1. **【生产入库防重】**：序列号严禁重复入库，批次产品支持分批入库。
+2. **【条码规格识别】**：自动识别多级包装层级与倍率，兼容各类条码。
+3. **【单据格式容错】**：智能兼容各类工单数量格式，保障入库稳定保存。
+4. **【全景层级拓扑】**：全景展开包装层级树，标明法定等级与装箱比例。
+5. **【拆装数据联动】**：拆装箱实时联动在箱件数，多端数据保持一致。
+6. **【包装层级规范】**：全界面规范法定层级名称，完整追溯拆装箱历史。
+7. **【溯源图谱辨识】**：图谱默认排除移出关系，支持红字虚线查看历史。
+8. **【销售下推备注带入】**：销售单下推生产单时，备注信息自动一并带入。
+9. **【多级包装维护防崩】**：优化包装维护选择逻辑，修复下拉点击异常。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **多级包装维护抽屉 (DI_DevicePackage.cs) 树节点选择与双表穿透加固**：
+  - 修复点击内含包装下拉树节点时因单表查询返回 null 及 `int.Parse` 引发的 `ArgumentNullException`；
+  - 引入 `GetPackageRecord` 穿透查询 `di_devicepackage` 与 `di_download_devicepackage` 双表，并优先从 `TreeItem.Tag` 获取包装等级，提供 `PackageLevelHelper` 兜底推导与防空保护；
+- **销售单下推生产单 (UDI_SCD.cs & DTC_SCD.cs) 备注信息一并带入**：
+  - 在生产单 `setDatas()` 下推分支与 `openXsdSelect` 手动选单回调中，补全 `input_bz.Text` 自动带入销售单 `xsd_bz` / `remark`，确保直接下推与编辑下推时单据备注完整贯通；
+- **PC 端 UDI 全链路追溯 (UDI_ZS.cs) 包装层级全面贯通 PackageLevelHelper 权威规范**：
+  - 核心属性与产品明细 `table1`：`search_pkg_level_desc`、`search_min_unit_di` 全面接入 `PackageLevelHelper.GetPackagingLevelName`、`GetDiPackagingLevelRank` 与 `GetMinimalUnitDi`，列头规范为“是否最小单元”、“最小单元DI”，消除“最小销售单元”、“二级包装【中包】”等历史遗留字符串；
+  - 打印任务 `table3`：`udi_dy_bzcj` 规整为统一规范名称（“一级”、“二级”、“三级”、“最小单元”）；
+  - 全景图谱 `BuildGraphData`：中心追溯节点、子包装、孙包装、母包装节点标签与 Tag 全面统一为规范层级名称（如“二级 (当前)”、“一级”、“最小单元”），彻底剔除“【单品】”、“【大箱】”、“包装”等后缀；
+- **PC 端 UDI 全景溯源图谱 (UDI_ZS.cs & trace-graph.js) 历史移出排除与虚线红字标注**：
+  - `BuildGraphData()` 结合 `udi_package` 实时在箱数据构建 `activePairSet`，逐一比对操作类型（`移出包装`、`整包拆解`）及有效性，精准输出 `isRemoved = true` 与 `removed` 样式；
+  - 包装层级名称同步接入 `PackageLevelHelper.GetPackagingLevelName(db, di)` 权威规范；
+  - `TraceGraphEngine` 默认排除隐藏已拆除节点与连线，顶部工具栏提供“显示已拆除历史”切换开关；勾选开启后连线与节点均以红色虚线及红字“已拆除”渲染。
+- **PC 端 UDI 全链路追溯 (UDI_ZS.cs) 包装层级与拆装箱记录重构**：
+  - 表格 `table6` 新增 `pkg_action`（“拆装箱操作”）列，区域标题明确为“包装明细与拆装箱记录”；
+  - 包装层级全面接入 `PackageLevelHelper.GetPackagingLevelName(db, di)` 统一标准与拓扑兜底算法计算层级（如“二级 (当前)”、“一级”、“最小单元”等）；
+  - 全量联合 `udi_package_review` 追溯审计表与 `udi_package`、`udi_dy_detail`，完整保留发生过的 `装包`、`移出包装`、`整包拆解`、`调换` 等全量操作动作与操作人、操作时间，并按时间倒序清晰呈现；
+- **入库防呆与条码占用排他机制**：
+  - PC 端 `CK_IN.cs`：以所选生产单明细 `scd_detail_isxlh == "1"` 为基准；对启用序列号产品引入 `GetOccupiedPendingInboundBillNo` 排查未审核入库单在途占用互斥，并阻断已有库存；纯批次管理产品彻底放行；
+  - PDA 端 `inbound/index.vue`：引入 `formData.isSerialManaged` 严格联动生产单明细 `scd_detail_isxlh`；扫码时分流序列号与纯批次逻辑；
+  - API 端 `InboundService.cs` 与 `CkInoutRecordService.cs`：`CheckSerialInboundAvailable` 与 `AddInoutRecords` 均根据关联生产单 `scd_detail_isxlh` 精准研判，纯批次管理免序列号产品直接放行。
+- **单据保存数值转换容错与格式健壮性**：
+  - `Pages/CK_IN.cs`、`Pages/CK_IN_List.cs`、`Pages/UDI_DY.cs`：封装 `ParseQuantity` 辅助方法，全面改用 `decimal.TryParse` 安全转换并取整，替换原始 `Convert.ToInt32`，彻底解决工单生产数量带浮点小数（如 `'2.0000'`）触发 `System.FormatException` 的缺陷；在生产单带入时自动格式化为标准整数展示。
+- **条码多级包装关联层级（批次号管理产品）全景拓扑重构**：
+  - `Forms/UDI_View.cs`：重构包装层级树构建逻辑，引入双轨查询模式。
+  - 轨 1（物理组包）：查询 `udi_package` 扫码物理绑定表，增加向上追溯 `root` 根节点逻辑，即使操作人员点击单品或中盒也能自顶向下展示完整物理包装树；
+  - 轨 2（批次规格拓扑）：针对无物理绑定记录的批次管理产品，提取条码 DI，联合 `di_devicepackage` 与 `di_download_devicepackage` 关系表，向上自动回溯至顶层根包装（外箱），自顶向下递归构建包装层级树，自动匹配同批次打印记录或同批条码，标注包装等级、装量比例与 `(当前条码)`，并默认全展开呈现。
+- **底层通用逻辑加固**：
+  - 包装规格表 `di_devicepackage` 与 `di_download_devicepackage` 双表联合穿透与前导零容差；
+  - `Core/PackageLevelHelper.cs`：全面增强 `GetDiPackagingLevelRank`、`GetDiPackagingMultiplier`、`IsOuterPackagingDi` 及 `GetMinimalUnitDi`，增加 `TrimStart('0')` 与 `PadLeft(14, '0')` 规范化支持；
+  - PDA 端 `PackageService.cs`（`GetTopPackage`、`FillNodeInfo`、`SearchPackageTree`、`ResolveBatchUdiForDiAsync`）同步采用双表穿透与前导零容差。
+
+---
+
+## [1.2.1.25] - 2026-09-05
+
+### 生产环境（业务与操作变动）
+
+1. **【声光防呆升级】**：升级右上角卡片提示，关键卡点联动警示音。
+2. **【扫码连续作业】**：扫码后输入框自动清空并聚焦，大幅提升效率。
+3. **【首检打印联动】**：首检合格即刻自动解锁打印功能，无需手动刷新。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+- **系统稳定性加固**：
+  - 【多任务多页面并发切换稳定性加固】：全面加固多业务页面频繁切换与后台异步业务处理的系统稳定性，杜绝窗口切换过程中的卡顿或异常提示。
+- **UI 架构与设计规范**：
+  - 彻底清理过度封装，移除 `Utils/Notice.cs` 冗余中间层，业务页面直接就地调用原生 `AntdUI.Notification`。
+  - 通过反射底层 `NotificationFrm.PrintBit` 机制，确认基于 `AntdUI.Style.Set(AntdUI.Colour.BgElevated, ..., "Notification")` 驱动卡片底色。
+- **涉及核心文件**：
+  - `Pages/UDI_DY.cs`, `Pages/UDI_DY_List.cs`: 首检拦截、保存模板拦截、打印按钮联动与 OnVisibleChanged。
+  - `Pages/CK_OUT.cs`, `Pages/CK_OUT_List.cs`: 效期过期/近效期声音防呆、散件防呆预警通知。
+  - `Pages/CK_IN.cs`, `Pages/CK_IN_List.cs`: 入库校验拦截 Notification 升级。
+  - `Pages/UDI_SMGL.cs`: 扫码关联防呆拦截、声音报警联动与 ResetUdiFocus 焦点自动回正。
+  - `Pages/UDI_SJ.cs`, `Pages/UDI_SJ_List.cs`: 首检明细与列表 Notification 升级与输入框回正。
+  - `Pages/UDI_SCD.cs`, `Pages/UDI_SCD_List.cs`: 生产单审核/反审核/保存分录校验全面升级。
+  - `Pages/UDI_ZJ.cs`, `Pages/UDI_ZJ_List.cs`: 质检评级与识别拦截 Notification 升级。
+  - `Pages/UDI_XSD.cs`, `Pages/UDI_XSD_List.cs`: 销售单审核/反审核/删除拦截全面升级。
+  - `Pages/UDI_GLCX2.cs`: 关联查询树形节点与错误拦截声音防呆与焦点锁定。
+  - `Pages/UDI_CJ.cs`, `Pages/UDI_CDY.cs`, `Pages/UDI_BZGL.cs`, `Pages/UDI_JX.cs`, `Pages/UDI_BBSJ.cs`, `Pages/UDI_BQSJ.cs`: 全量完成升级。
+
+---
+
+## [1.2.1.23] - 2026-09-05
+
+### 生产环境（业务与操作变动）
+
+1. **【包装规范换算】**：规范法定层级称谓，实时呈现装箱换算比例。
+2. **【组包防混拦截】**：增加跨层级装入硬核校验，严禁跨级混装。
+3. **【批次免码折算】**：纯批次产品免序列号，按装量比例自动出入库。
+4. **【工单打印联动】**：生成打印任务后锁定批号效期，防脱节风险。
+5. **【装箱出库防错】**：已出库条码严禁二次装箱或替换，杜绝串货。
+
+---
+
+### 开发环境（完整原日志与技术变更详情）
+
+#### 原业务变更历史全量清单（含管理与非直接操作细节归档）：
+
+1. **【多级包装规范与装量换算体系重构】**
+   - **命名权威统一**：全面规范包装层级称谓为“最小单元”、“一级”、“二级”等法定术语，严格剔除冗余称谓，根绝视觉歧义与业务歧义；
+   - **装量级联换算**：支持多级复杂包装规格的装量级联计算，在关系维护、关联查询、选择弹窗等业务界面实时呈现精准装量换算比率。
+
+2. **【包装关联拓扑查询与跨级防混淆拦截】**
+   - **全面升级关联查询引擎**：全面上线升级版拓扑树查询引擎，支持多级包装关系维护、动态层级展开与图形化拓扑展现；
+   - **手工组包跨级装入强制拦截**：在包装关联与条码调换界面增加跨层级装入硬核校验，严禁大外箱直接跨级装入单品/最小销售单元，强制要求装入中包装，从源头杜绝跨级混淆合规风险。
+
+3. **【智能仓储出入库包装比例穿透与扫码防崩溃加固】**
+   - **批次产品免序列号直接折算**：针对仅按批次管理的医疗器械产品，出入库扫码时全面支持免物理序列号自动按包装装量比例折算入库与出库；
+   - **扫码异常容错与防崩溃**：彻底消除扫码异常卡顿缺陷，增强数据空值安全容错机制；
+   - **高频连续扫码作业防卡死**：重构录入弹窗交互并引入高频扫码防重锁控，全面保障车间现场高频连续扫码作业绝对稳定。
+
+4. **【生产工单母品通用名全链路穿透保护】**
+   - **母品通用名真实穿透**：修复工单绑定中盒、外箱等包装条码时品名显示异常的缺陷，系统自动穿透多级包装拓扑反向锁定母品最小单元，确保工单全生命周期法定品名、规格型号 100% 正确展示。
+
+5. **【AI 智能排产多轮会话交互优化】**
+   - **指令精准理解与防死锁**：操作员在多轮对话中输入“外箱”、“二级”、“选第1个包装”等指令可即时精准命中，彻底消除重复弹出包装选择卡片问题；
+   - **指令与品名消歧保护**：精准区分“规格初筛”与“包装确认”阶段，避免将包装确认指令误当作品名检索；
+   - **车间扫码穿透直查排产**：支持外箱/中盒包装条码直接扫描识别并自动锁定所属母品下达排产；
+   - **多级装量公式与总量联动**：选定包装后自动计算多级装量级联公式与生产总量，确保原始计量单位与包装折算精准对应；
+   - **多规格候选集隔离保护**：精准命中产品后即时清空历史候选集，防止后续排产受到旧产品信息干扰。
+
+6. **【复合批号与全周期效期算法支持】**
+   - **特殊字符复合批号支持**：全面支持包含特殊分隔符的复合生产批号规范提取与校验；
+   - **智能时长换算与效期推导**：支持自然语言时长（如“24个月”、“2年”）转换为标准月数；
+   - **多种生产日期格式兼容**：兼容常见生产日期格式，自动推导失效日期并支持历史工单效期继承。
+
+7. **【跨单据任务链闭环与质量合规防护】**
+   - **工单流转任务链闭环**：工单创建后支持在对话中一键快捷下达【打印条码标签】、【办理入库】、【查看追溯图谱】与【修改批号/效期】；
+   - **打印脱节合规拦截**：工单若已下推并生成物理条码打印任务，严格禁止在对话中修改批号或效期，从底层根绝纸质标签批号与系统工单不一致的严重质量风险；
+   - **数量与单位跨轮记忆**：多轮确认包装时自动继承原始下单数量与单位，防止数量意外回退；
+   - **无菌器械灭菌信息智能提取**：支持自然语言识别灭菌批号与灭菌日期，自动填充工单明细灭菌参数。
+
+8. **【全景追溯图谱 8 节点穿透与条码解构】**
+   - **生产批号全链路闭环**：追溯报告与交互卡片中生产批号完整贯通至质检首检、成品入库与销售出库各环节；
+   - **条码多格式逆向穿透**：无论是扫码枪扫出的完整带括号条码、平铺条码还是外箱包装条码，均能精准识别并穿透展现从工单下达到销售发运的完整 8 节点生命周期图谱。
+
+9. **【工单打印执行进度实时准确统计】**
+   - 准确聚合各工单对应打印任务的已喷印数量与完成百分比，确保工单执行进度卡片实时反映真实生产进度。
+
+10. **【手工装箱与换箱出库防错加固】**
+    - **已出库条码二次操作拦截**：严禁将已办理出库发运的单品或中包条码再次装入或替换入箱，杜绝串货风险；
+    - **出入库明细与包装拓扑强一致**：换箱或装箱成功后，库存明细与实际装箱拓扑实时保持一致。
+
+11. **【飞行检查模拟自检假阳性/假阴性消除】**
+    - **消除重码误报**：优化防重码检测逻辑，支持“一次入库+一次出库”的合法商品流向，排除正常商品误判重码；
+    - **消除过期漏报**：全面支持紧凑效期解析，并严格基于在库结存进行过期筛查，杜绝历史已出库记录误报。
+
+12. **【物料标识业务规范统一】**
+    - 严格遵循系统无物料编码业务规范，工单物料标识统一规范为产品标识码（DI）。
+
+13. **【移动端 PDA 包装作业出库拦截与合规防呆】**
+    - **出库校验全环节覆盖**：全面加固移动端包装服务出库校验，在拆解、移出、整包拆解、单件装入与条码替换各环节，严格拦截已出库发运商品；
+    - **外箱与原条码双向出库防呆**：装箱与条码替换时对目标父箱与原条码进行双向出库状态核验，严防违规作业。
+
+14. **【移动端 PDA 包装流水强同步】**
+    - 移动端拆包、移出、装包、换码及批量组包所有作业，实时联动更新库存明细，确保移动端作业与电脑端库存强一致。
+
+15. **【移动端 PDA 条码替换在库防混校验】**
+    - 严禁将尚未办理入库手续的条码直接替换到已在库的外箱中，杜绝库存台账账实不符。
+
+16. **【GS1 标准紧凑效期日期解析】**
+    - 生产工单与效期管理原生支持 GS1 标准 6 位紧凑日期格式，扫码识别或人工录入紧凑效期时精准识别计算。
+
+17. **【移动端条码拓扑树向上寻顶】**
+    - 扫描箱内任意单品或中包时，系统自动向上溯源并锁定最顶层外箱，完整展开整箱多级包装树。
+
+18. **【批次产品总量折算与顶层包装穿透】**
+    - 移动端针对批次管理产品自动根据包装比例表计算装量，并支持穿透反查顶层包装条码。
+
+19. **【移动端包装扫码首枪即时防呆拦截】**
+    - 操作员扫描外箱或单件条码的第一时间即刻阻断已出库条码，防止整箱扫描完成后才提示错误。
+
+20. **【GS1 带括号标准条码格式兼容解析】**
+    - 全面兼容条码枪输出的带括号格式与平铺格式，自动提取产品标识。
+
+21. **【GS1 生产批号工业级解析】**
+    - 精准识别复杂条码中的生产批号，彻底消除因条码格式差异导致的批号截断或误判，确保节点批号、工单号与品名准确回填。
+
+22. **【包装容器与单品判别规范化】**
+    - 规范包装层级判定，明确最小单元与各级包装容器属性，确保中盒与包装箱在移动端正常执行拆装与移出操作。
+
+23. **【移动端工单包装任务过滤层级对齐】**
+    - 严格对齐移动端与电脑端包装层级编号，确保移动端能精准查询各级包装任务。
+
+24. **【扫码枪末尾格式清洗与兼容】**
+    - 自动剥离条码枪自带的回车换行符，防止破坏条码格式导致解析失败。
+
+25. **【出入库与数据查询多级格式容错】**
+    - 全面支持条码枪扫入各种格式条码（带括号、平铺、特殊控制符等），杜绝合法条码被误判为“未在系统中注册”。
+
+26. **【移动端批量组包批号一致性强校验（严禁混批）】**
+    - 批量组包时严格核验所有子件之间及子件与外箱的批号一致性，杜绝车间混装造成混批质量事故。
+
+27. **【批次产品禁止手动组包拆箱友好拦截】**
+    - 批次管理产品由系统按生产单包装比例自动管理装量，无需手动组包；在移动端扫码组包与拆箱时给出清晰合规引导，电脑端同步增加指引提示。
+
+28. **【GS1 月度失效期规则 (YYMM00) 安全支持】**
+    - 全面兼容 GS1 规则下以 00 结尾代表当月最后一日的特殊效期，消除日期转换异常，保障标签打印与出入库正常运行。
+
+29. **【出入库条码库存查询格式归一】**
+    - 无论扫入带括号条码还是平铺条码，系统均自动归一化匹配库存，避免误判为无库存。
+
+30. **【移动端出库单保存月末效期容错】**
+    - 移动端出库遇到月末效期时自动解析为当月最后一天，杜绝保存出库单时异常报错。
+
+31. **【批次管理产品跨包装层级库存折算】**
+    - 出库库存核验支持批次产品按包装倍率自动折算，畅通“整箱入库、散件出库”与“散件入库、整箱出库”业务流程。
+
+32. **【GS1 序列号最大长度合规校验】**
+    - 在序列号生成与扫码管理中增加总长度不超过 20 位的强校验，杜绝超出国际标准导致下游扫码质检违规。
+
+33. **【智能排产建议失效日期推算标准统一】**
+    - 排产建议失效日期公式与生产工单及药监 GMP 审计标准保持一致。
+
+34. **【批次产品打印整批标签与自动完结联动】**
+    - 批次产品点击“打印所有”时自动将打印份数设为整批生产数量；当实际累计打印张数达到生产总量时，系统才正式标记为已完成。
+
+35. **【销售出库外箱扫码穿透与订单多级装量核验】**
+    - 销售出库支持仓管员直接扫描外箱条码出库，出库数量核验自动按实际包含的最小单元件数计算，彻底解决外箱扫码被拦截及数量脱节问题。
+
+36. **【扫码组包车间尾箱封箱产码功能】**
+    - 生产最后一箱数量不足整包装比例时，支持操作工触发尾箱封箱确认，自动按实际装入数量生成专属外箱码并建立包装关联，畅通车间尾箱流转。
+
+37. **【扫码组包多工位并发外箱流水号排他防重】**
+    - 优化外箱流水号生成逻辑，杜绝多工位并发打包时生成重复外箱条码。
+
+38. **【移动端出库单非工单条码基础信息自动提取】**
+    - 扫描历史库存或非系统工单条码出库时，系统自动穿透母品信息提取法定品名与规格型号，避免异常报错阻断发货。
+
+39. **【自定义包装比例模式批次产品安全拦截闭环】**
+    - 完善自定义包装比例模式下的合规校验，勾选自定义比例后同样严格拦截批次产品组包，落实统一业务规范。
+
+40. **【生产入库外箱码穿透与母品工单智能放行】**
+    - 生产入库扫码时外箱条码自动穿透母品信息比对工单，支持单品工单直接扫描大箱入库。
+
+41. **【出库记录高频扫码防重加固】**
+    - 优化出库记录生成机制，根除车间快速连续扫码时的记录冲突与明细覆盖问题。
+
+42. **【包装关联拓扑批次条码精准识别】**
+    - 全面兼容各种条码枪格式，精准识别批次管理产品并给出合规业务指引。
+
+43. **【移动端库存汇总品名规格完整展示】**
+    - 移动端库存汇总列表全面支持非工单条码与外箱条码自动回填品名与规格型号，消除品名空白显示。
+
+44. **【普通及退货入库模式外箱扫码支持】**
+    - 入库扫码区包含外箱包装时，放行件数与箱数的装量倍率差，畅通退货与非生产入库扫箱作业。
+
+45. **【打印预览月末效期正常显示】**
+    - 打印预览全面支持 GS1 规则下的月末失效期，杜绝预览异常。
+
+46. **【出入库单据效期转换与主档精确关联】**
+    - 电脑端销售出库与生产入库保存时，统一效期日期转换标准，确保效期与主档精确匹配。
+
+47. **【车间扫码关联批次产品全流程防呆拦截】**
+    - 在选生产单、选打印任务以及扫码入口全面补齐批次管理产品拦截与指引，杜绝因相同条码卡死及产生冗余数据。
+
+48. **【车间扫码关联效期格式兼容与防闪退】**
+    - 扫码组包各环节全面兼容月末效期等特殊格式，消除异常闪退。
+
+49. **【打印任务新增“月末效期 (YYMM00)”标准标签生成功能】**
+    - 在失效日期旁新增“月末效期”选项开关，勾选后系统自动生成并打印符合 GS1 标准的月末效期标签。
+
+50. **【生产入库工单计划数箱件单位智能换算】**
+    - 工单以“箱”为单位下达而扫码入库按“件”展开时，系统自动识别换算关系，避免误报“超工单计划入库”。
+
+51. **【批次整箱出库开箱残箱作业防呆提醒】**
+    - 销售出库扫整箱时，若该批次曾发生过散件出库，系统即刻弹出预警提示核对箱体封条完整性，杜绝现场将已开箱的零头残箱当做整箱发货。
+
+---
+
+### 开发环境（技术架构与代码变更全景）
+
+本次更新共涉及 **28 个文件**（修改 24 个、新增 1 个、彻底下线删除 3 个冗余旧文件），累计变更代码量达 **5,200+ 行**：
+
+#### 模块一：包装层级算法与关联拓扑查询引擎
+- `Core/PackageLevelHelper.cs` (+338 行)：重写核心辅助类，新增并完善 `GetDiPackagingMultiplier`（递归级联计算包装乘积）、`GetDiPackagingLevelRank`（基于数据库树递归识别层级深度）、`GetPackagingLevelName`（统一规范包装层级名称，严格剔除“包装”后缀）、`IsBatchUdi`（基于 GS1 规则判定无序列号的批次产品）与 `GetMinimalUnitDi`（反查最小销售单元 DI）。
+- `Pages/UDI_GLCX2.cs` (+297 行)：重构包装树构建逻辑（`BuildHierarchyMap` 与 `ResolveNodeLevel`），智能研判拓扑层级，增加批次管理产品的自动装量展开与友好提示，消除递归死锁风险。
+- `Pages/UDI_GLCX.cs`、`Pages/UDI_GLCX.Designer.cs`、`Pages/UDI_GLCX.resx` (-1,093 行)：彻底下线并删除旧版已废弃的冗余关联页面及资源文件。
+- `Forms/UDI_GLCX_Add.cs` & `Forms/UDI_GLCX_Exchange.cs`：
+  - 在包装关系维护与更换弹窗中加入三级大箱禁止直接装入最小单元的跨级拦截校验，并适配最新规范命名；
+  - 修复出库状态校验逻辑：由错误的 `type == "2"` 改为标准的 `(type == "-1" || type == "2") && status == "1"`，严格拦截已出库单品被调换或重新装包；
+  - 调换或装入成功后，事务内联动同步更新 `ck_inout_record.udi_parent`，保持入库单散件/包装明细与包装表一致。
+- `Forms/DI_Select.cs`：在通用 DI 选择组件中统一接入 `PackageLevelHelper` 规范名称与多级装量呈现。
+
+#### 模块二：智能仓储出入库与扫码稳定性加固
+- `Pages/CK_IN.cs` (+122 行) & `Pages/CK_OUT.cs` (+119 行) & `Pages/CK_ALL.cs` (+8 行)：
+  - 在 `GetTotalCount`、`GetMinUnitCount` 与 `HasParent` 中引入 `PackageLevelHelper.IsBatchUdi` 检测，批次管理产品跳过物理序列号追溯，直接通过包装比例表穿透换算；
+  - 修复 `udi_Dy_Detail_Child` 空列表时直接访问 `[0]` 抛出 `IndexOutOfRangeException` 的致命缺陷，增加 `targetChild` 安全降级回填。
+- `Forms/NumForm.Designer.cs`：将数量录入弹窗重构为严格的跨线程安全 `Invoke` 机制，增加 `using` 资源释放与 `_isProcessingScan` 扫码防重锁。
+
+#### 模块三：生产工单主档反查与母品通用名保护
+- `Pages/UDI_SCD.cs` (+5 行)：引入 `PackageLevelHelper.GetMinimalUnitDi(db, item.scd_di)` 反向穿透提取母品 DI，彻底修复绑定外箱/中盒包装 DI 时工单品名变为空或“1”的问题。
+
+#### 模块四：AI MRP 包装树递归展开引擎
+- `Core/AiAgent/Manufacturing/MrpPackagingTreeEngine.cs` (+281 行)：重构多级包装递归计算引擎，支持 1:2:8:200 多级包装 BOM 树完整构建、倍率级联乘积展开与包装节点汇总，为工单自动排产提供精准的基础装量换算与原料需求分解服务。
+
+#### 模块五：AI 排产业务插件与多轮意图消歧引擎
+- `Core/AiAgent/Plugins/WorkOrderPlugin.cs` (+405 行)：
+  - 包装层级解析改传融合用户最新输入的 `combinedSearchText`，解决无限重复弹卡片死锁；
+  - 收紧 `hasExplicitConfirmedPkgDi` 判定边界，结合 `AllPackages` 验证实际外包装码，防止母品兜底 DI 误命中而静默跳过首轮包装确认卡片；
+  - 增加生产数量 `quantity` 与单位 `unit` 跨轮槽位继承与精准刷新；
+  - 严格对齐卡片表格映射：行号 0 对应最小单元（倍率 1），行号 1/2 对应一级/二级包装；
+  - 选定包装后联动递归计算装量倍率（`RatioMultiplier`）、折算总量（`BaseUnitsQuantity`）及多级级联公式（`ConversionFormula`）；
+  - 移除包含“箱”字盲目将单位设为“箱”的隐患，保护原始计量单位；
+  - 完善安全产品族判定（兼容 `LastCandidates` 规格集），防止多轮规格选择误清空会话槽位；
+  - 修复工单执行进度统计：通过 `udi_dy.udi_dy_scdh == first.scd_djbh` 关联获取打印任务号，再统计 `udi_dy_detail`，消除已打印量恒为 0 缺陷；
+  - 工单生成完成后持久化单号、产品名、DI 与批号至 `UserIntentExtractor`，打通任务链。
+- `Core/AiAgent/Cognitive/UserIntentExtractor.cs` (+145 行)：
+  - 新增 `isPackagingContext` 状态识别，严密区分规格型号初筛与包装层级确认；
+  - 包装确认阶段拦截“选第N个/选N/外箱/单品/选0”指令并重写为包含原始数量的标准格式，杜绝包装指令当作品名检索查空报错与数量丢失；
+  - 升级工单号正则支持全类型真实系统工单（`SCRWD`、`DSCRW`、`SCD`），支持跨单据上下文代词指代。
+- `Core/AiAgent/Services/ProductionOrderService.cs` (+660 行) & `IProductionOrderService.cs` (+38 行)：
+  - 增加 Step 0.3 外箱/中盒条码穿透直查；
+  - 文本清洗剔除 `[DI:...]`、`指定包装规格码`、`包装级别` 等辅助标签，防止污染品名切词；
+  - 引入智能 `scd_detail_isxlh` 判定（用户显式意图 ➔ 历史工单明细 ➔ IVD 类型默认值 ➔ 默认启用序列号），解决批次产品在喷码机被拦截报错；
+  - 引入灭菌批号（`mjph`）与灭菌日期（`mjrq`）正则提取并自动配置 `scd_detail_ismjph`/`scd_detail_ismjrq` 开关；
+  - 在 `ModifyWorkOrderBatchAndExpiryAsync` 中增加 `udi_dy` 打印记录检查，已生成打印任务的工单严禁修改批号与效期；
+  - 精准命中后即时清空 `AiKernelManager.Session.LastCandidates` 候选集缓存防串批；
+  - 彻底移除 `scd_wlbm` 赋值中的 `CPHHHBH` 兜底残留，工单物料编码统一直接取 `orderDi`；
+  - 支持 `yyyy.MM.dd`、`yyyy/MM/dd`、`yyyy-MM-dd`、`yyyyMMdd` 完整生产日期格式解析。
+
+#### 模块六：全景穿透追溯图谱与飞行检查合规引擎
+- `Core/AiAgent/Plugins/TraceQueryPlugin.cs` (+70 行)：
+  - 在 `QueryFullTraceGraphAsync` 中引入 `UdiZjEvaluator.ParseUdi` 与 `PackageLevelHelper.GetMinimalUnitDi`，支持物理扫码枪条码与外箱包装 DI 自动解构反查；
+  - 修复 `batchNo` 未赋值导致质检首检、成品入库与销售出库节点断链的缺陷；
+  - 修复节点 2 工单批号匹配（联动 `udi_scd_detail.scd_detail_ph`），支持输入批号直接追溯工单；
+  - 修复节点 3 打印明细关联合并，通过 `udi_dy_scdh == scdh` 联查打印任务，实现 8 节点全链路穿透。
+- `Core/AiAgent/Plugins/ComplianceInspectionPlugin.cs` (+40 行)：
+  - 优化重码检测：按 `(udi, type)` 联合分组排除正常“一出一入”合格品，消除假阳性误报；
+  - 优化过期检测：增加 `ParseExpiryDate` 引擎支持 GS1 6 位 `yyMMdd` 效期识别，并结合 `balance > 0` 真实在库结存进行过滤，消除假阴性漏报。
+
+#### 模块七：批次效期中枢、交互卡片与 UI 状态同步
+- `Core/AiAgent/Manufacturing/ShelfLifeHelper.cs` (新增 160 行)：新建批次与效期统一计算工具类，封装生产日期、保质期月数、失效日期换算算法（`scrq.AddMonths(bzq).AddDays(-1)`）、中文时长解析、复合批号清洗规范，并原生支持 GS1 标准 6 位日期格式（`yyMMdd`）。
+- `Core/AiAgent/AiKernelManager.cs` (+190 行)：扩充效期关键词识别池，支持带 `#` 复合批号正则；在 `AgentSessionContext` 中增设 `LastQuantity`、`LastUnit`、`LastSterilizationBatchNo`、`LastSterilizationDate` 槽位持久化记忆。
+- `Core/AiAgent/Models/ActionCardFactory.cs` (+170 行)：升级包装确认卡片、包装无换算预警卡片、规格选择卡片与工单执行卡片，卡片明细动态增加灭菌批号、灭菌日期与赋码管控模式（批次免序列号 vs 序列号单品追溯）展示。
+- `Forms/AiCopilotControl.cs` (+139 行)：卡片按钮点击后清空候选集缓存并与 `UserIntentExtractor` 双向同步状态，确保 UI 点击与对话交互行为 100% 幂等一致。
+
+#### 模块八：移动端 PDA 包装服务出库合规、整箱寻顶与库存流水强同步
+- `UmiPDA - API/Services/Implementations/PackageService.cs` (+260 行) & `Classes/PackageLevelHelper.cs`：
+  - 全面修正 5 处出库状态拦截漏洞，统一替换为 `(it.type == "-1" || it.type == "2") && it.status == "1"`；
+  - 在 `AddChildAsync` 中补全目标父箱出库拦截；在 `ReplacePackageAsync` 中补全原条码与目标父箱出库拦截；在 `AssociatePackageBatch` 中补全外箱出库拦截；
+  - 在 `ValidatePackageScan` 单码扫码校验中增加即时出库状态防呆拦截，首枪扫描即可报警阻断已出库条码；
+  - 升级 `SearchPackageTree`：序列号产品增加向上追溯顶层根包装逻辑，扫描任意单品自动展开整箱包装树；
+  - 修复 `GetTotalCount`：批次管理产品接入 `PackageLevelHelper.GetDiPackagingMultiplierAsync` 换算比例，根除恒定返回 0 缺陷；
+  - 升级 `GetTopPackage`：支持批次管理产品穿透 `di_devicepackage` 反查顶层包装 DI，并强化序列号条码 `\u001d` 与打印任务明细多级容错；
+  - 优化 `FillNodeInfo` 与 `ResolveBatchUdiForDiAsync`：封装 `PackageLevelHelper.ExtractBatchNo`（结合 `UDIZjEvaluator.ParseUdi` 与括号/FNC1正则），彻底解决 `IndexOf("10")` 截断带右括号 `)` 污染及假阳性缺陷；
+  - 规范容器与单品判定：`FillNodeInfo` 移出一级包装单品误判，补齐“最小单元”判定；
+  - 修正 `GetDysByScdAndLevel` 包装任务过滤错位，正确映射 0 为最小单元、1 为一级、2 为二级；
+  - 在 `AddPackageOrProduct` 中补齐“最小单元”父级防充当拦截；
+  - 在 `ReplacePackageAsync` 中补齐在库外箱禁止替换未入库条码的在库防混校验；
+  - 在 `UnpackAsync`、`RemoveChildAsync`、`AddChildAsync`、`ReplacePackageAsync` 与 `AssociatePackageBatch` 事务中全量联动同步 `ck_inout_record.udi_parent`。
+- `Properties/AssemblyInfo.cs`：主程序集版本升级至 `1.2.1.23`。
+- **构建状态验证**：PC 端与 PDA 后端全工程编译通过，0 错误。
+
+---
+
+---
+
+## [1.2.1.22] - 2026-09-04
+
+### 生产环境（业务与功能）
+1. **【首检流程优化】**：优化首检记录保存逻辑，保障审核记录归档。
+
+### 开发环境（技术与构建）
+- fix(sj): 在 `UDI_SJ.cs`、`UDI_DY_List.cs`、`UDI_CJ.cs` 中增加工单主键防 null 安全穿透回填。
+- feat(migrator): 注册 DbMigrator Migration 10018，将 `udi_dy_review` 与 `udi_dy` 的 `udi_dy_scdid` 列调整为可空。
+- chore: 升级主程序集版本为 1.2.1.22。
+
+---
+
+## [1.2.1.21] - 2026-09-04
+
+### 生产环境（业务与功能）
+1. **【库存级别显示】**：汇总表新增包装级别列，清晰区分各级规格。
+
+### 开发环境（技术与构建）
+- feat(stock): 封装统一的 `PackageLevelHelper` 工具，在 PC 端、PDA 端与 API 端三端对齐包装级别计算逻辑。
+- fix(drawer): 重构 `CK_ALL.cs` 数量列点击抽屉呼出机制，废弃硬编码索引 `quantityColumnIndex`，改为按列名 `quantityLinks`、标题动态匹配与 500ms 防抖。
+- fix(sql): 修复库存查询按 DI 分组统计时包含空值导致的 SQL 语法异常。
+- chore: 升级主程序集版本为 1.2.1.21，更新增量更新热部署清单。
+
+---
+
+## [1.2.1.20] - 2026-09-02
+
+### 生产环境（业务与功能）
+1. **【AI智能助手】**：支持自然语言工单排产、全景追溯与库存速查。
+2. **【打印单据上查】**：新增上查功能，一键反查来源工单与订单信息。
+
+### 开发环境（技术与构建）
+- feat(ai): 集成 Microsoft Semantic Kernel 与本地 RAG 向量知识库检索架构，重构 `AiKernelManager`、`AiPermissionService`、`SemanticMemoryEngine`。
+- feat(ai-ui): 采用现代化 Web 技术原生内嵌 AI 抽屉控件 `AiCopilotControl.cs`，实现打字机流式渐进渲染与交互式业务卡片（ActionCard）。
+- feat(trace-up): 在 `UDI_DY_List.Designer.cs` 与 `DTC_DY_List.Designer.cs` 中新增 `dropdown_trace_up` 控件，并于代码后置文件中实现工单与销售单多表关联穿透。
+- refactor(order): 调整 `ProductionOrderService` 中工单原生状态为 `scd_djzt="创建"`, `scd_ywzt="未下推"`，在列表端由审核逻辑把控单据流通，合规审计留痕。
+- feat(security): 在 `Mian.cs` 与 `Login.cs` 中增加会话上下文销毁与重置逻辑，长期记忆按 `{CompanyId}_{UserId}` 分片落盘。
+- docs(sop): 全量重构 `说明文档/UmiUDI&Drug系统业务标准操作规程(SOP)全集.md` 与内置 AI 知识库，系统性增补下推、上下查与全部表单必填项校验矩阵。
+- feat(ai-config): 创建 `sys_ai_config` 集中管控表并增补 DbMigrator 10016 迁移，API Key 统一由数据库安全加密存储与多企业隔离管理，支持自动迁移与离线降级。
+- feat(ai-quota): 建立 `sys_ai_usage_log` 台账表并增补 DbMigrator 10017 迁移，支持企业积分配额管控、按次/按Token精准扣减计费规则配置、配额充值及历史用量明细台账。
+- feat(ai-tenant-portal): 在公司管理表格中增设“AI配置”列作为企业级大模型与配额入口；在 AI 助手侧栏将原设置按钮改为“用量消耗”，实现配置与用量对账视图彻底解耦。
+- feat(ai-initial-quota): 积分配额与计费规则中增设“初始分配总额”可配置输入项（支持-1不限额与任意点数），保存后即刻更新当前企业配额余额与数据库记录。
+- feat(ai-usage-permission): 取消 AI 对话侧栏设置按钮权限限制（全体用户均可查看用量消耗明细），用量明细视图仅保留流水列表并移除积分配额与规则选项卡；普通用户访问时隐藏 Token 列以简化展示。
+- feat(ai-sop-standardization): 移除 AI 助手顶部的“AI偏好”按钮与偏好记忆抽屉，系统 Prompt 与知识库全面对齐确定性业务 SOP（如多级包装右键菜单操作标准），杜绝模糊主观臆测。
+- feat(ai-security-redline): 设立 AI Agent 最高安全红线防线，全链路禁止泄露系统源代码、底层架构、数据库表结构（Schema/DDL/表名/字段名）及敏感凭证；在 System Prompt 注入不可覆盖安全指令、升级前置多维越狱与探针拦截（`IsSecurityViolation`）、增加后置输出安全二次脱敏（`SanitizeSecurityOutput`），并清洗 RAG 知识库中的内部代码与库表标识。
+- feat(ui-package-watermark): 在多级包装维护抽屉 `DI_DevicePackage` 中，将“包装级别”输入框占位水印更新为“包装级别。例：盒、箱”，直观指引操作员规范录入。
+
+---
+
+## [1.2.1.19] - 2026-08-31
+
+### 生产环境（业务与功能）
+1. **【追溯图谱增强】**：非最小包装条码在图谱中直观呈现包装比例。
+2. **【图谱文本复制】**：支持图谱条码与详细文本自由选取与便捷复制。
+
+### 开发环境（技术与构建）
+- feat(trace): 追溯图谱增加包装比例推导策略，优化抽屉面板展示。
+- refactor(trace-ui): 清理追溯界面冗余组件，放开文本自由选中。
+- feat(security): 新增安全守护引擎，完善登录认证核验与运行期状态监测。
+- fix(menu): 修复一级菜单排序在特定场景下未生效的问题。
+
+---
+
+## [1.2.1.18] - 2026-08-31
+
+### 生产环境（业务与功能）
+1. **【药监标准适配】**：全面适配国家药监局最新数据申报共享标准。
+2. **【官方模板内置】**：更新内置最新41列官方数据导入导出模板。
+3. **【试剂编码支持】**：支持新旧分类代码及最多20个医保分类编码。
+4. **【申报模式增强】**：支持变更申报与修改模式，自动带入说明主键。
+5. **【录入占位优化】**：为医保编码及分类增加清晰占位与悬浮说明。
+
+### 开发环境（技术与构建）
+- feat(udi): 部署药监局官方最新版 `医疗器械唯一标识信息系统数据导入模板v3.xlsx` 与 `产品标识数据.xlsx` 至项目 `Exl/` 目录。
+- refactor(import-export): 重构 `DI_SC_List.cs` Excel 导入/导出引擎，对齐 41 项主表列及 3 张子表，修复体外诊断试剂类别转换、灭菌方式判断及本体/注册证标识映射。
+- feat(api): 扩展 `YaoJianJu.cs` 中的 `UDISaveAsync` 接口，支持动态 `uploadType`（add/change/modify）及变更说明和主键自动补全。
+- feat(ui): 在 `DI.cs` 中为医保耗材编码、分类编码及变更说明增加针对 V3 规范的精准占位提示文本。
+- test: 完成 Excel 导入导出结构与数据保真度全链路测试，以及药监局 API 报文格式校验。
+
+---
+
+## [1.2.1.17] - 2026-08-31
+
+### 生产环境（业务与功能）
+1. **【关联查询优化】**：修复无父级节点时的异常，提升加载稳定性。
+2. **【移动端拆解】**：包装解绑拆分为移出与整包拆解，避免误操作。
+3. **【包装扫码装入】**：优化装入流程，支持扫码快速添加子件与单品。
+4. **【首页看板上线】**：首页新增版本更新记录看板，自适应满屏展示。
+
+### 开发环境（技术与构建）
+- fix(glcx): 修复关联查询中无父级节点时 ToDictionary 抛出 ArgumentNullException 问题 (`UDI_GLCX2.cs`, `DTC_GLCX2.cs`)
+- feat(pda): 后端 API 新增 `POST /package/removeFromParent` 和 `POST /package/unpackContents` 接口 (`IPackageService.cs`, `PackageService.cs`, `PackageController.cs`)
+- feat(ui): PDA 前端拆分包装解除操作按钮，更新为“移出包装”与“整包拆解”独立确认模态框 (`searchpackage/index.vue`)
+- feat(home): 首页 Notes 区域分栏重构，新增 `panel_changelog` 异步更新日志解析器 (`HomePage.cs`, `HomePage.Designer.cs`)
+
+---
+
+## [1.2.1.16] - 2026-08-29
+
+### 生产环境（业务与功能）
+1. 【系统性能】优化客户端本地组件加载机制，提升页面响应与启动速度。
+
+### 开发环境（技术与构建）
+- fix(ci): pull --rebase before changelog push to avoid rejected push in CI
+- fix(ci): replace DevExpress NuGet refs with local libs/ DLL refs to avoid version mismatch in CI
+
+---
+
+## [1.2.1.15] - 2026-08-28
+
+### 生产环境（业务与功能）
+1. 【包装管理】包装关联关系支持散件独立登记至入库单明细。
+2. 【数据同步】增强多级包装与出入库记录的自动关联与动态汇总机制。
+
+### 开发环境（技术与构建）
+- feat(glcx): 增加 `EnsureChildInInboundRecord` 与 `RemoveFromInboundRecordWhenPacked` 机制
+- refactor(inout): 优化 `ck_inout_record` 中 `udi_parent` 同步逻辑
+
+---
+
+## [1.0.0.14] - 2026-05-21
+
+### 生产环境（业务与功能）
+1. **【智能质检】**：条码防伪与防重码自动校验，合规检测更智能。
+2. **【质量报告】**：报告支持ISO规范评级指标与三级签字打印。
+3. **【设备授权】**：支持管理员一键清空和重置授权设备，更换更便捷。
+4. **【质检历史】**：统一历史列表分页规格，页面响应速度全面提升。
+5. **【版本提示】**：升级成功后首次启动弹出更新亮点说明，功能更直观。
+
+### 开发环境（技术与构建）
+- fix: trim ~314MB unused Halcon runtime DLLs and include CameraWorkerApp in publish output
+  - Remove Halcon XL variants (~154MB), HDevelop engine (~55MB), Qt WebEngine (~94MB), AI/visualization components (~11MB)
+  - Keep only core Halcon runtime: halcon.dll, halcondl.dll, halconcpp.dll, halconc.dll + MindVision camera driver + essential Qt5
+  - Add CameraWorker build step in release.yml to deploy CameraWorkerApp/ into bin/publish/ for installer and incremental updates
+- fix(installer): add UninstallDelete section to cleanly delete all runtime residual files during uninstallation
+- fix(update): increase HttpClient timeout to 30 minutes to support downloading large DLLs
+- fix(changelog): prevent git workflow encoding corruption by using UTF-8 explicitly in PowerShell Get-Content
+- **质检列表分页规格一致性**：修正了质检历史列表页（UDI_ZJ_List）的分页规格，将其 PageSize 统一设置为 50 条，并配置 PageSizeOptions 支持 50、100、200、500、1000、2000 条的分页规格，并增加 `filterManager` 初始化判空保护，完美根治值改变事件提前触发引发的 `NullReferenceException` 闪退异常，确保与系统中其他所有列表页的分页体验完全一致。
+- **Gitee 增量更新超大文件下载限制绕过**：针对国内大厂部署环境中，由于 Gitee 限制匿名用户下载 > 1MB 的超大原始文件（报错 403 Forbidden，导致 `DevExpress.Spreadsheet.v24.1.Core.dll` 等核心动态库增量更新中断）的底层问题，对 `update.json` 内的超大文件下载 URL 规则进行了全面重构，转换为通过国内高速 GitHub Proxy CDN 代理拉取，并在 C# 客户端增量更新引擎（`Mian.cs`）中注入自动容灾备用下载降级逻辑，实现 100% 自动绕过网络壁垒，彻底打通国内用户的在线安全更新通道。
+- **Gitee 同步稳定性与流水线增强**：重写 GitHub Actions 发布流水线逻辑，解耦 GitHub 和 Gitee 同步步骤，为克隆和推送环节注入双重 5次重试与退避休眠机制，并彻底移除在长传输大文件时会导致 Connection Reset 阻断的 `postBuffer` 限制，保障国内发布通道的极端稳定性。
+
+#### 新增
+- **资源限额管理**：在公司模型中引入 `max_accounts` 和 `max_devices` 字段，支持动态配置每个公司的账号和设备上限。
+- **全自动激活逻辑**：登录时自动根据公司授权日期通过注册表激活软件，实现无感授权。
+- **多维度限额追踪**：在管理弹窗中实时显示 `已用账号数` 和 `已用设备数`，并支持超额颜色预警（变红）。
+- **一键清空设备**：在公司管理弹窗中增加“一键清空已授权设备”功能，解决用户更换设备后的授权重置问题。
+- **自定义更新引擎**：重构更新逻辑，全面转向“公司配置驱动”。支持为不同公司配置私有更新源，且仅在配置了地址时开启更新检查，增强了私有化部署的灵活性与安全性。
+- **UDI质检 - 码制与编码体系自动校验**：新增对识别码制（如 GS1-128、DataMatrix、EAN-13）及编码体系（如 GS1）的自动分析与合规性检验业务逻辑，补全了质检校验底层的核心板块。
+- **UDI质检 - 双击穿透跳转**：支持双击质检历史记录列表行，无缝打开并穿透跳转至对应的“UDI质检- 详情”选项卡页面，显著提升操作连贯性。
+- **DevExpress 中文汉化包自动部署**：在 `UmiUDI.csproj` 中内置了 `libs\zh-Hans\` 附属程序集的编译链接与自动部署规则。解决在没有系统安装 DevExpress 时，**报表设计 (UDI_BBSJ)** 与 **标签设计 (UDI_BQSJ)** 依然退回英文界面的问题，确保客户部署环境完美汉化。
+- **ISO 15415 印刷质量 PDF 报告深度升级**：
+  - **8大指标完美对应**：将此前遗漏的 **反射率容限 (Reflectance Margin - RM)** 接入 PDF 导出，实现与软件前端质检页完全一致的 8 项物理评级展示。
+  - **诊断参数科学呈现**：新增“二、 诊断数据与测试参数”核心光学网格，完美体现测试波长（660nm）、测量孔径（08 mil）、单元尺寸（X-Dimension）、全局二值化阈值（Global Threshold）、最值反射率等底层光学测试指标，满足大厂供应链及进货查验记录追溯标准。
+  - **三级审核签字网格**：预留“检测人 (Tested by)”、“审核人 (Reviewed by)”、“批准人 (Approved by)”签字横线栏，完美对接药监局 GMP 规范及第三方检测机构（中国物品编码中心、SGS、TÜV）的审计追溯流程。
+- **质量管理与合规培训文档编写**：
+  - 新增《[质量管理（QCQA）培训材料 - 内部.md](file:///e:/backup/UmiUDI&Drug/UmiUDI&Drug_1.0.0.0/docs/质量管理（QCQA）培训材料 - 内部.md)》，为现场技术人员提供 ISO/IEC 15415 物理含义、木桶最低分定律、三级签字机制及设备现场调校实操排查要领。
+
+#### 优化与抛光
+- **公司管理交互重构**：将“公司管理”页面由表格内编辑升级为 **Modal (弹窗)** 驱动模式，支持双击行编辑。
+- **界面布局优化**：弹窗表单采用 5x2 矩阵布局，并针对长连接字符串优化了列宽显示。
+- **增量更新机制优化**：扫描清单时排除了 `.config` 文件，防止版本升级覆盖用户的本地个性化配置。
+- **质检详情选项卡更名**：将质检详情页 Tab 名称优化并确立为更明确的 `UDI质检- 详情`。
+- **表格列宽及结构重构**：
+  - 移除了冗余的“序号列”，为表格内容释放更多空间。
+  - 精确限制了首列多选框 (Checkbox) 的列宽，防止分配过宽。
+  - 调换了“状态”列与“检测结果”列的位置，更贴合国内业务阅读和审计直觉。
+  - 将表格表头高度调整为与质量评级表头完全等高，实现视觉结构统一。
+- **异常警示与视觉回馈**：
+  - 将所有“不合规”异常质检记录行的背景色高亮标红，突出显示待整改数据。
+  - 优化综合等级判定图标，在综合评级不合格时正确呈现 Error 红色错误状态，而非先前的 Success 成功状态。
+  - 修复进度条警告色逻辑，当有部分指标触发降级警告（如 A/C 警告评级）时正确呈现黄色/警告色，严重不合格时显示失败红色。
+  - 修复了可能出现的 `-100%` 进度溢出 Bug，并为法规检索结果为空时补全了合理的缺省提示说明。
+- **PDF 报告版面与高度重排**：精细控制 Y 轴高度占比，将所有新增图表、签字区和页脚高度精简限制在 A4 打印尺寸内，完美实现一页无溢出高保真打印，杜绝了生成空白尾页的排版缺陷。
+
+#### 修复
+- **更新提醒逻辑漏洞**：彻底修复了在未配置公司更新地址的情况下，主界面右上角仍会错误亮起更新按钮的问题（优化了 Login 状态同步与 Mian 界面显示校验）。
+- **自动更新逻辑清理**：移除了登录界面中冗余的自动更新弹窗，并清理/优化了软件启动逻辑，提供更流畅的启动体验。
+- **表格全选删除逻辑漏洞**：彻底修复了在勾选表格头部“全选” Checkbox 后点击删除，依然错误弹出“请至少选择一条记录”警告的问题，实现了顺畅的批量删除。
+- **打印设置持久化**：解决打印机名称保存后重启软件变回默认值的问题（移除了主程序中的强制重置逻辑）。
+- **自动加载补全**：补全了喷码IP (JetIP) 和扫码波特率在软件启动时的自动加载逻辑。
+- **模型主键支持**：为 `cer_company` 补全了 SqlSugar 主键特性，解决了无法保存更新的问题。
+- **UI 库兼容性**：修正了 AntdUI 部分控件属性名错误导致的编译失败问题。
+
+---
+
+## [1.0.0.12] - 2026-04-30
+
+### 生产环境（业务与功能）
+1. **【打印单号递增】**：修复生产单下推时打印单号自动递增逻辑。
+2. **【审计日志校正】**：修正首检与抽检动作标签，追溯更准确。
+3. **【界面单位统一】**：将标签打印页面保质期输入后缀统一为月。
+
+### 开发环境（技术与构建）
+#### 修复
+- 修复了 UDI 打印页面下推生产单时由于序列号计数器未递增导致的打印单号重复问题。
+- 修复了 DTC 打印页面下推逻辑中的相同单号重复漏洞。
+- 修正了 UDI 首检 and 抽检审计日志中的动作标签（由“下推”改为“首检”/“抽检”）。
+
+#### 优化
+- 完善了审计日志的元数据映射，增加了 `udi_dy_ditype` 字段。
+- UI 优化：将打印页面保质期输入框的后缀单位由“年”修正为“月”。
+- 部署优化：汉化了发布流程，建立了 Git Tag 规范。
+- 部署优化：移除增量更新时的调试信息弹窗，实现无感更新。
+
+---
+
+## [1.0.0.10] - 2026-04-30
+
+### 生产环境（业务与功能）
+1. 【系统发布】UmiUDI 医疗器械唯一标识追溯与质检管理系统正式发布。
+
+### 开发环境（技术与构建）
+- 部署: v1.0.0.10 - 重新发布以建立增量更新的基线版本。
+
+---
+
+## 运维与发布流程
+
+为了确保版本一致性与更新引擎的稳定性，发布新版本时请遵循以下流程：
+
+### 1. 版本号同步 (Mandatory)
+每次发布前，必须在以下文件中同步更新版本号：
+- **程序集版本**: `Properties/AssemblyInfo.cs` 中的 `AssemblyVersion` 和 `AssemblyFileVersion`。
+- **安装脚本**: `UmiUDI.iss` 中的 `#define MyAppVersion` 及 `VersionInfoVersion`。
+- **更新日志**: `docs/CHANGELOG.md` 中新增对应的版本条目。
+
+### 2. 自动化发布 (CI/CD)
+- **同步分支**: `git push origin master --force` (确保远程代码与本地一致)。
+- **触发方式**: `git tag -d v1.0.0.14 ; git push origin :refs/tags/v1.0.0.14 ; git tag v1.0.0.14 ; git push origin v1.0.0.14 --force` (推送符合 `v*` 格式的 Tag 触发自动化构建)。
+- **流程说明**: GitHub Actions 会自动执行构建、打包，并生成发布产物。
+
+### 3. 更新引擎配置流程 (Multi-tenant Update)
+本系统采用**公司配置驱动**的增量更新机制，运维步骤如下：
+1. **部署产物**: 将构建生成的 `bin/publish` 目录下的文件及 `update.json` 部署至远程服务器（如 Gitee Raw 或 私有 CDN）。
+2. **地址分配**: 
+   - 登录系统进入“公司管理”页面。
+   - 双击目标公司，在“更新地址”字段中填入远程 `update.json` 的原始 URL。
+3. **生效验证**: 客户端重启后将自动检测该地址。若地址为空，则该公司的客户端不会触发任何更新检查。

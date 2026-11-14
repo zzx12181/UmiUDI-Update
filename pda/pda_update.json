@@ -1,0 +1,10 @@
+{
+    "version":  "1.3.39",
+    "versionName":  "v1.3.39",
+    "versionCode":  169,
+    "wgtUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/update.wgt",
+    "apkUrl":  "https://gitee.com/zzx12181/UmiUDI-Update/raw/master/pda/UmiPDA.apk",
+    "note":  "1. 接入统一网关鉴权与 PDA 功能模块精细权限管控；\n2. 新增同账号 PDA 单设备互踢保护与医药/器械双行业界面自适应。",
+    "force":  true,
+    "publishtime":  "2026-11-14 21:17:59"
+}
